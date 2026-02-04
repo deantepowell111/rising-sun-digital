@@ -1,0 +1,26 @@
+# robots.txt for Rising Sun Digital
+# https://risingsun.digital
+
+User-agent: *
+Allow: /
+Disallow: /thank-you.html
+
+# Sitemap location
+Sitemap: https://risingsun.digital/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
+# Block common bad bots (optional)
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Allow Google and Bing full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
