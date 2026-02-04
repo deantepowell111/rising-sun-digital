@@ -1108,6 +1108,88 @@
         .guarantee-description { color: #555; font-size: 1.1rem; line-height: 1.7; margin-bottom: var(--space-sm); }
         .guarantee-fine { font-size: 0.9rem; color: #888; }
 
+        /* Founder Story / About */
+        .founder-story { padding: var(--space-xl) 0; background: var(--white); }
+        .founder-container { max-width: 900px; margin: 0 auto; }
+        .founder-card {
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFE5D9 100%);
+            border-radius: 32px;
+            padding: clamp(2rem, 5vw, 3.5rem);
+            position: relative;
+            overflow: hidden;
+        }
+        .founder-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(10,122,92,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .founder-content { position: relative; z-index: 1; }
+        .founder-label {
+            display: inline-block;
+            background: rgba(10,122,92,0.1);
+            color: var(--wave-green);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+        .founder-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+            line-height: 1.2;
+        }
+        .founder-story-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: var(--space-md);
+        }
+        .founder-story-text strong {
+            color: var(--wave-green);
+            font-weight: 700;
+        }
+        .founder-values {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+        }
+        .founder-value {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-xs);
+            padding: 1rem;
+            background: rgba(255,255,255,0.5);
+            border-radius: 16px;
+            transition: transform 0.3s ease;
+        }
+        .founder-value:hover {
+            transform: translateY(-2px);
+        }
+        .founder-value-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .founder-value-text { flex: 1; }
+        .founder-value-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.25rem;
+        }
+        .founder-value-desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
 
         /* Lead Magnets */
         .lead-magnets {
@@ -1506,6 +1588,243 @@
         }
         .form-disclaimer { font-size: 0.75rem; color: #888; text-align: center; margin-top: var(--space-sm); }
 
+        /* What Happens Next */
+        .what-next {
+            padding: var(--space-lg) 0;
+            background: var(--cream);
+        }
+        .what-next-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .what-next-title {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: var(--space-xs);
+            color: var(--text-primary);
+        }
+        .what-next-subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: var(--space-md);
+        }
+        .what-next-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--space-md);
+            margin-top: var(--space-md);
+        }
+        .what-next-step {
+            background: var(--white);
+            border-radius: 20px;
+            padding: 1.5rem;
+            position: relative;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            transition: transform 0.3s ease;
+        }
+        .what-next-step:hover {
+            transform: translateY(-4px);
+        }
+        .what-next-step-number {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 32px;
+            height: 32px;
+            background: var(--gradient-ocean);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+        .what-next-step-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .what-next-step-title {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+        .what-next-step-desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Exit Intent Popup */
+        .exit-popup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            padding: 1rem;
+        }
+        .exit-popup.show {
+            display: flex;
+            opacity: 1;
+        }
+        .exit-popup-content {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 2.5rem;
+            max-width: 500px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .exit-popup.show .exit-popup-content {
+            transform: scale(1);
+        }
+        .exit-popup-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+        .exit-popup-close:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+        .exit-popup-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .exit-popup-title {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+        .exit-popup-text {
+            font-size: 1.05rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .exit-popup-cta {
+            display: inline-block;
+            background: var(--gradient-ocean);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(10,122,92,0.3);
+        }
+        .exit-popup-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 36px rgba(10,122,92,0.4);
+        }
+        .exit-popup-note {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 1rem;
+        }
+
+        /* Sticky CTA Bar */
+        .sticky-cta-bar {
+            position: fixed;
+            bottom: -100px;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+            z-index: 999;
+            transition: bottom 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 1rem;
+        }
+        .sticky-cta-bar.show {
+            bottom: 0;
+        }
+        .sticky-cta-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .sticky-cta-text {
+            flex: 1;
+            min-width: 200px;
+        }
+        .sticky-cta-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        .sticky-cta-subtitle {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .sticky-cta-button {
+            display: inline-block;
+            background: var(--gradient-ocean);
+            color: var(--white);
+            padding: 0.9rem 1.8rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(10,122,92,0.25);
+            white-space: nowrap;
+        }
+        .sticky-cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(10,122,92,0.35);
+        }
+        .sticky-cta-close {
+            background: transparent;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: #999;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        .sticky-cta-close:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
         /* FAQ */
         .faq { padding: var(--space-xl) 0; }
         .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-md); max-width: 1000px; margin: 0 auto; }
@@ -1763,6 +2082,45 @@
         </div>
     </section>
 
+    <!-- Founder Story / Why Rising Sun -->
+    <section class="founder-story" id="about">
+        <div class="container founder-container">
+            <div class="founder-card scroll-scale">
+                <div class="founder-content">
+                    <span class="founder-label">Why Rising Sun Digital</span>
+                    <h2 class="founder-title">Built by Someone Who Actually Gets It</h2>
+                    <div class="founder-story-text">
+                        <p>I'm not some big agency with 50 employees and generic templates. I'm <strong>Dean Powell</strong>, a <strong>certified responsive web design specialist</strong> who's spent years in the digital trenches — learning what actually converts, what's just noise, and what small businesses in El Paso really need.</p>
+                        <p>I'm always learning, always testing, always optimizing. Most agencies overcomplicate things or sell you stuff you don't need. I do the opposite: <strong>I build conversion-focused systems that work while you sleep</strong> — no jargon, no bloated retainers, no wasted ad spend.</p>
+                        <p>When you work with Rising Sun, you're working directly with me. Your success becomes my portfolio. That's not a slogan — it's how I operate.</p>
+                    </div>
+                    <div class="founder-values">
+                        <div class="founder-value">
+                            <div class="founder-value-icon">⚡</div>
+                            <div class="founder-value-text">
+                                <div class="founder-value-title">Speed Over Perfection</div>
+                                <div class="founder-value-desc">I move fast, test often, and optimize based on real data — not opinions.</div>
+                            </div>
+                        </div>
+                        <div class="founder-value">
+                            <div class="founder-value-icon">🎯</div>
+                            <div class="founder-value-text">
+                                <div class="founder-value-title">Results Over Vanity</div>
+                                <div class="founder-value-desc">I care about leads and revenue — not how many "likes" your post got.</div>
+                            </div>
+                        </div>
+                        <div class="founder-value">
+                            <div class="founder-value-icon">🤝</div>
+                            <div class="founder-value-text">
+                                <div class="founder-value-title">Partnership Over Contracts</div>
+                                <div class="founder-value-desc">You're not a client number. You're a partner in building something that lasts.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Lead Magnets -->
     <section class="lead-magnets" id="free-resources">
@@ -1844,6 +2202,40 @@
                     <div class="calendly-inline-widget" data-url="https://calendly.com/risingsundigital4/30min?hide_event_type_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
                     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
                     <!-- Calendly inline widget end -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Happens Next -->
+    <section class="what-next">
+        <div class="container what-next-container">
+            <h2 class="what-next-title">What Happens After You Book?</h2>
+            <p class="what-next-subtitle">Here's exactly what to expect — no surprises, no pressure</p>
+            <div class="what-next-steps">
+                <div class="what-next-step">
+                    <div class="what-next-step-number">1</div>
+                    <div class="what-next-step-icon">📅</div>
+                    <div class="what-next-step-title">You Pick a Time</div>
+                    <div class="what-next-step-desc">Choose a slot that works for you. You'll get a calendar invite and reminder.</div>
+                </div>
+                <div class="what-next-step">
+                    <div class="what-next-step-number">2</div>
+                    <div class="what-next-step-icon">🔍</div>
+                    <div class="what-next-step-title">We Audit Your Site Live</div>
+                    <div class="what-next-step-desc">I'll walk through your current digital presence and identify what's working (and what's not).</div>
+                </div>
+                <div class="what-next-step">
+                    <div class="what-next-step-number">3</div>
+                    <div class="what-next-step-icon">📋</div>
+                    <div class="what-next-step-title">You Get a Custom Plan</div>
+                    <div class="what-next-step-desc">Walk away with a clear, actionable roadmap — whether we work together or not.</div>
+                </div>
+                <div class="what-next-step">
+                    <div class="what-next-step-number">4</div>
+                    <div class="what-next-step-icon">🚀</div>
+                    <div class="what-next-step-title">You Decide Next Steps</div>
+                    <div class="what-next-step-desc">Zero pressure. If it makes sense to work together, great. If not, you still got value.</div>
                 </div>
             </div>
         </div>
@@ -2094,7 +2486,73 @@
             document.querySelector('.hero-text').classList.add('visible');
             document.querySelector('.hero-visual').classList.add('visible');
         }, 100);
+
+        // Exit Intent Popup
+        let exitPopupShown = false;
+        const exitPopup = document.getElementById('exit-popup');
+
+        document.addEventListener('mouseout', (e) => {
+            if (e.clientY < 10 && !exitPopupShown && !localStorage.getItem('exitPopupSeen')) {
+                exitPopup.classList.add('show');
+                exitPopupShown = true;
+                localStorage.setItem('exitPopupSeen', 'true');
+            }
+        });
+
+        function closeExitPopup() {
+            exitPopup.classList.remove('show');
+        }
+
+        // Close on background click
+        exitPopup.addEventListener('click', (e) => {
+            if (e.target === exitPopup) closeExitPopup();
+        });
+
+        // Sticky CTA Bar
+        const stickyCTA = document.getElementById('sticky-cta-bar');
+        let stickyShown = false;
+
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const pageHeight = document.documentElement.scrollHeight;
+            const viewportHeight = window.innerHeight;
+
+            // Show after scrolling 50% down the page
+            if (scrolled > viewportHeight * 0.5 && !stickyShown && !localStorage.getItem('stickyCTAClosed')) {
+                stickyCTA.classList.add('show');
+                stickyShown = true;
+            }
+        });
+
+        function closeStickyCTA() {
+            stickyCTA.classList.remove('show');
+            localStorage.setItem('stickyCTAClosed', 'true');
+        }
     </script>
+
+    <!-- Exit Intent Popup -->
+    <div class="exit-popup" id="exit-popup">
+        <div class="exit-popup-content">
+            <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
+            <div class="exit-popup-icon">🎁</div>
+            <h3 class="exit-popup-title">Wait! Before You Go...</h3>
+            <p class="exit-popup-text">Grab our free CTA Conversion Guide and learn the 5 mistakes that are killing your conversions right now.</p>
+            <a href="#free-resources" class="exit-popup-cta" onclick="closeExitPopup()">Get My Free Guide →</a>
+            <p class="exit-popup-note">✓ Instant access • No credit card required</p>
+        </div>
+    </div>
+
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta-bar" id="sticky-cta-bar">
+        <div class="sticky-cta-content">
+            <div class="sticky-cta-text">
+                <div class="sticky-cta-title">Ready to turn your website into a customer machine?</div>
+                <div class="sticky-cta-subtitle">Book your free strategy session — limited spots available</div>
+            </div>
+            <a href="#booking" class="sticky-cta-button">Book My Free Call →</a>
+            <button class="sticky-cta-close" onclick="closeStickyCTA()">×</button>
+        </div>
+    </div>
 
     <!-- Start of HubSpot Embed Code -->
     <script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/245055639.js"></script>
