@@ -300,6 +300,9 @@
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 145px;
+        }
+        html.countdown-hidden {
             scroll-padding-top: 80px;
         }
         body {
@@ -457,14 +460,22 @@
             top: 0;
             left: 0;
             right: 0;
-            z-index: 1000;
+            z-index: 999;
             padding: var(--space-sm) 0;
-            transition: var(--transition-smooth);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateY(0);
+        }
+        .nav.with-countdown {
+            transform: translateY(65px);
         }
         .nav.scrolled {
-            background: rgba(255,250,245,0.94);
+            background: rgba(255,250,245,0.96);
             backdrop-filter: blur(20px);
             box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+            transform: translateY(0);
+        }
+        .nav.scrolled.with-countdown {
+            transform: translateY(0);
         }
         .nav-inner { display: flex; align-items: center; justify-content: space-between; }
         .nav-logo { display: flex; align-items: center; gap: var(--space-xs); }
@@ -532,7 +543,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 140px 0 var(--space-xl);
+            padding: 160px 0 var(--space-xl);
             position: relative;
             overflow: hidden;
         }
@@ -691,9 +702,17 @@
             color: var(--white);
             padding: 1rem 0;
             text-align: center;
-            position: relative;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
             overflow: hidden;
             box-shadow: 0 4px 20px rgba(255,122,61,0.3);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .countdown-bar.hidden {
+            transform: translateY(-100%);
         }
         .countdown-bar::before {
             content: '';
@@ -734,9 +753,32 @@
             transform: translateY(-2px) scale(1.03);
             box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
+        .countdown-close {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.2);
+            color: white;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            line-height: 1;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        .countdown-close:hover {
+            background: rgba(0,0,0,0.4);
+            transform: translateY(-50%) scale(1.1);
+        }
 
 
-        /* Capabilities Snapshot */
 
         /* About */
         .about {
@@ -927,6 +969,23 @@
             background-clip: text;
         }
         .proof-label { font-size: 0.9rem; color: #666; }
+
+        .capabilities-inline {
+            margin-top: var(--space-sm);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 1rem;
+            justify-content: center;
+            color: #666;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .capabilities-inline span {
+            background: rgba(255,255,255,0.7);
+            border: 1px solid var(--card-border);
+            border-radius: 999px;
+            padding: 0.35rem 0.85rem;
+        }
 
         /* Services */
         .services { padding: var(--space-xl) 0; }
@@ -1554,6 +1613,7 @@
 
     <!-- Countdown Timer Bar -->
     <div class="countdown-bar">
+        <button class="countdown-close" onclick="closeCountdown()" aria-label="Close banner">×</button>
         <div class="countdown-inner">
             <span class="countdown-text">🔥 Limited Spots: Free Strategy Calls Ending Soon!</span>
             <div class="countdown-timer">
@@ -1612,7 +1672,7 @@
                         <a href="#booking" class="btn btn-primary">Get Your Free Strategy Call →</a>
                         <a href="#free-resources" class="btn btn-secondary">Get Free Resources</a>
                     </div>
-                    <p class="hero-cta-note">Not ready to book? Start with a free resource below — <a href="#free-resources">PDF or site audit</a>.</p>
+                    <p class="hero-cta-note">Not ready to book? Start with a free resource below — <a href="#free-resources">CTA guide or site audit</a>.</p>
                 </div>
                 <div class="hero-visual scroll-scale">
                     <div class="hero-image-container">
@@ -1628,79 +1688,19 @@
         </div>
     </header>
 
-    <!-- Capabilities Snapshot -->
-    <section class="capabilities">
-        <div class="container">
-            <div class="capabilities-inner">
-                <span class="capabilities-label">Capabilities Snapshot</span>
-                <h2 class="capabilities-title">What We Build, Launch, and Grow</h2>
-                <p class="capabilities-subtitle">A focused stack built to turn attention into revenue — without bloated retainers or empty deliverables.</p>
-            </div>
-            <div class="capabilities-grid">
-                <div class="capability-card scroll-fade">
-                    <div class="capability-icon">🎨</div>
-                    <div class="capability-title">Brand & Web Systems</div>
-                    <p class="capability-desc">Premium positioning, clear messaging, and a site that earns trust fast.</p>
-                </div>
-                <div class="capability-card scroll-fade">
-                    <div class="capability-icon">🎯</div>
-                    <div class="capability-title">Lead Capture + Automation</div>
-                    <p class="capability-desc">Forms, follow-ups, and CRM handoffs that keep leads warm.</p>
-                </div>
-                <div class="capability-card scroll-fade">
-                    <div class="capability-icon">📍</div>
-                    <div class="capability-title">Local SEO Foundations</div>
-                    <p class="capability-desc">On-page SEO, speed, and content structure that Google rewards.</p>
-                </div>
-                <div class="capability-card scroll-fade">
-                    <div class="capability-icon">⚡️</div>
-                    <div class="capability-title">Launch in 2–4 Weeks</div>
-                    <p class="capability-desc">Tight sprints, rapid feedback loops, and momentum you can feel.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-grid">
-                <div class="about-copy">
-                    <span class="about-kicker">Why Rising Sun</span>
-                    <h2 class="about-title">We build for the small business owner feeding their family</h2>
-                    <p class="about-text">We started Rising Sun for the shop owners, service pros, and local founders who carry the weight of their business on their shoulders. You don't need a fancy agency — you need someone who cares, moves fast, and builds a system that brings in real work.</p>
-                    <p class="about-text">That means clear messaging, a site that earns trust in seconds, and lead capture that actually follows up. We treat every project like your livelihood depends on it — because it does.</p>
-                    <div class="about-values">
-                        <div class="about-value">
-                            <div class="about-value-title">Human-first</div>
-                            <div class="about-value-desc">Simple, respectful, and built for real people — not just algorithms.</div>
-                        </div>
-                        <div class="about-value">
-                            <div class="about-value-title">Outcome-obsessed</div>
-                            <div class="about-value-desc">We measure wins in calls booked and jobs won, not vanity metrics.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-panel">
-                    <div class="about-panel-title">What you can expect</div>
-                    <ul class="about-panel-list">
-                        <li>Direct communication with the people doing the work</li>
-                        <li>Fast turnarounds with honest timelines</li>
-                        <li>Clarity on pricing, deliverables, and next steps</li>
-                        <li>Support after launch so you're never left hanging</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Services -->
     <section class="services" id="services">
         <div class="container">
             <header class="section-header scroll-fade">
                 <span class="section-label">What We Do</span>
                 <h2 class="section-title">Three Pillars of Digital Domination</h2>
-                <p class="section-subtitle">We've distilled digital success into three core services that work together to transform your online presence.</p>
+                <p class="section-subtitle">A focused stack built to turn attention into revenue ??? without bloated retainers or empty deliverables.</p>
+                <div class="capabilities-inline">
+                    <span>Brand & Web Systems</span>
+                    <span>Lead Capture + Automation</span>
+                    <span>Local SEO Foundations</span>
+                    <span>Launch in 2???4 Weeks</span>
+                </div>
             </header>
             <div class="services-grid">
                 <article class="service-card scroll-fade stagger-delay-1">
@@ -1771,13 +1771,13 @@
                 <div class="magnet-card scroll-slide-left">
                     <div class="magnet-badge">Popular</div>
                     <div class="magnet-icon">📘</div>
-                    <h3 class="magnet-title">Digital Growth Blueprint</h3>
-                    <p class="magnet-description">Our 27-page guide with the exact strategies we use to help clients 3x their online presence.</p>
+                    <h3 class="magnet-title">CTA Conversion Guide</h3>
+                    <p class="magnet-description">Our 5-page PDF explaining the exact CTA mistakes that are killing your conversions and how to fix them.</p>
                     <ul class="magnet-includes">
-                        <li>5 website mistakes killing conversions</li>
-                        <li>Content formula that attracts leads</li>
-                        <li>SEO checklist for top rankings</li>
-                        <li>Social media posting template</li>
+                        <li>5 CTA mistakes killing conversions</li>
+                        <li>Proven CTA formulas that convert</li>
+                        <li>Real-world examples and fixes</li>
+                        <li>Button placement and design tips</li>
                     </ul>
                     <form class="magnet-form" id="pdf-form" action="https://script.google.com/macros/s/AKfycbylkq5n3m5q9SlCFT4fqFQ65FEXzknF1Z5FH_i-UNcsU7KlcBbZeQN7zovQzkaGjosueA/exec" method="POST">
                         <input type="text" name="firstname" class="magnet-input" placeholder="First name" required>
@@ -1799,8 +1799,8 @@
                             <option value="Ads">Paid ads performance</option>
                             <option value="Other">Other</option>
                         </select>
-                        <input type="hidden" name="form_type" value="Digital Growth Blueprint">
-                        <input type="hidden" name="_subject" value="New PDF Download Request">
+                        <input type="hidden" name="form_type" value="CTA Conversion Guide">
+                        <input type="hidden" name="_subject" value="New CTA Guide PDF Download Request">
                         <input type="hidden" name="redirect" value="https://risingsun.digital/thank-you.html">
                         <input type="hidden" name="_next" value="https://risingsun.digital/thank-you.html">
                         <button type="submit" class="magnet-btn magnet-btn-pdf">Get Free PDF 📥</button>
@@ -1969,10 +1969,38 @@
     </footer>
 
     <script>
+        // Countdown Banner Close
+        function closeCountdown() {
+            const countdownBar = document.querySelector('.countdown-bar');
+            const nav = document.querySelector('.nav');
+            countdownBar.classList.add('hidden');
+            nav.classList.remove('with-countdown');
+            document.documentElement.classList.add('countdown-hidden');
+            localStorage.setItem('countdownClosed', 'true');
+        }
+
+        // Check if countdown was previously closed
+        window.addEventListener('DOMContentLoaded', () => {
+            const nav = document.querySelector('.nav');
+            if (localStorage.getItem('countdownClosed') === 'true') {
+                closeCountdown();
+            } else {
+                nav.classList.add('with-countdown');
+            }
+        });
+
         // Navigation
         const nav = document.querySelector('.nav');
         window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 50);
+            const isScrolled = window.scrollY > 50;
+            nav.classList.toggle('scrolled', isScrolled);
+
+            // Remove with-countdown class when scrolled
+            if (isScrolled && !document.querySelector('.countdown-bar').classList.contains('hidden')) {
+                nav.classList.remove('with-countdown');
+            } else if (!isScrolled && !document.querySelector('.countdown-bar').classList.contains('hidden') && localStorage.getItem('countdownClosed') !== 'true') {
+                nav.classList.add('with-countdown');
+            }
         });
 
         function toggleMenu() {
