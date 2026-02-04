@@ -252,14 +252,29 @@
     
     <style>
         :root {
+            /* Logo Colors - Green, Red, Yellow */
+            --primary-green: #0A7A5C;
+            --primary-green-dark: #065942;
+            --primary-green-light: #17A77A;
+            --primary-red: #E84B4F;
+            --primary-red-dark: #D63840;
+            --primary-yellow: #F6C945;
+            --primary-yellow-light: #FFE6A3;
+
+            /* Legacy aliases for backward compatibility */
             --sun-orange: #FF7A3D;
             --sun-gold: #F6C945;
             --sun-red: #E84B4F;
             --wave-green: #0A7A5C;
             --wave-green-dark: #065942;
             --wave-green-light: #17A77A;
+
+            /* Gradients using logo colors */
             --gradient-sunset: linear-gradient(135deg, #E84B4F 0%, #FF7A3D 32%, #F6C945 72%, #FFE6A3 100%);
             --gradient-ocean: linear-gradient(135deg, #065942 0%, #0A7A5C 55%, #17A77A 100%);
+            --gradient-logo: linear-gradient(135deg, #0A7A5C 0%, #F6C945 50%, #E84B4F 100%);
+
+            /* Neutrals */
             --white: #FFFFFF;
             --off-white: #FFF8F0;
             --cream: #FFF2DD;
@@ -342,14 +357,14 @@
             background: linear-gradient(
                 45deg,
                 #FFF9E6 0%,
-                #FFE5D9 20%,
-                #FFDDD2 40%,
-                #E8C1B4 60%,
-                #F7C531 80%,
-                #FF6B35 100%
+                #E8F5F1 20%,
+                #FFF2DD 40%,
+                #FFE8E9 60%,
+                #F6C945 80%,
+                #0A7A5C 100%
             );
             animation: gradientShift 15s ease infinite;
-            opacity: 0.3;
+            opacity: 0.25;
         }
         @keyframes gradientShift {
             0%, 100% { transform: translate(0, 0) rotate(0deg); }
@@ -366,7 +381,7 @@
         .orb-1 {
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(247,197,49,0.6), transparent);
+            background: radial-gradient(circle, rgba(246,201,69,0.5), transparent);
             top: 10%;
             left: 10%;
             animation-delay: 0s;
@@ -374,7 +389,7 @@
         .orb-2 {
             width: 400px;
             height: 400px;
-            background: radial-gradient(circle, rgba(255,107,53,0.5), transparent);
+            background: radial-gradient(circle, rgba(10,122,92,0.4), transparent);
             top: 60%;
             right: 10%;
             animation-delay: -5s;
@@ -382,7 +397,7 @@
         .orb-3 {
             width: 350px;
             height: 350px;
-            background: radial-gradient(circle, rgba(230,57,70,0.4), transparent);
+            background: radial-gradient(circle, rgba(232,75,79,0.4), transparent);
             bottom: 20%;
             left: 50%;
             animation-delay: -10s;
@@ -1034,24 +1049,63 @@
         .lead-magnets {
             padding: var(--space-xl) 0;
             background: linear-gradient(180deg, var(--off-white) 0%, var(--cream) 100%);
+            position: relative;
+        }
+        .lead-magnets::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(10,122,92,0.03) 0%, transparent 70%);
+            pointer-events: none;
         }
         .magnets-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: var(--space-lg); max-width: 900px; margin: 0 auto; }
         .magnet-card {
             background: var(--white);
-            border-radius: 24px;
-            padding: var(--space-lg);
-            border: 2px solid rgba(247,197,49,0.25);
+            border-radius: 28px;
+            padding: clamp(1.75rem, 4vw, 2.5rem);
+            border: 2px solid rgba(246,201,69,0.3);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            overflow: visible;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 0 0 1px rgba(246,201,69,0.1) inset;
+        }
+        .magnet-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 28px;
+            padding: 2px;
+            background: linear-gradient(135deg, rgba(246,201,69,0.5), rgba(232,75,79,0.3), rgba(10,122,92,0.4));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .magnet-card:hover::before {
+            opacity: 1;
         }
         .magnet-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.12);
-            border-color: rgba(247,197,49,0.5);
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(246,201,69,0.2) inset;
+            border-color: rgba(246,201,69,0.5);
         }
-        .magnet-card.magnet-audit { border-color: rgba(0,135,90,0.3); }
+        .magnet-card.magnet-audit {
+            border-color: rgba(10,122,92,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08), 0 0 0 1px rgba(10,122,92,0.1) inset;
+        }
+        .magnet-card.magnet-audit::before {
+            background: linear-gradient(135deg, rgba(10,122,92,0.5), rgba(246,201,69,0.3), rgba(232,75,79,0.3));
+        }
+        .magnet-card.magnet-audit:hover {
+            border-color: rgba(10,122,92,0.5);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(10,122,92,0.2) inset;
+        }
         .magnet-badge {
             position: absolute;
             top: 20px;
@@ -1059,20 +1113,92 @@
             background: var(--gradient-sunset);
             color: var(--white);
             font-size: 0.7rem;
-            font-weight: 700;
-            padding: 0.3rem 2.5rem;
+            font-weight: 800;
+            padding: 0.35rem 2.5rem;
             transform: rotate(45deg);
             text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(246,201,69,0.4);
         }
-        .magnet-audit .magnet-badge { background: var(--gradient-ocean); }
-        .magnet-icon { font-size: 2.5rem; margin-bottom: var(--space-sm); }
-        .magnet-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin-bottom: var(--space-xs); }
-        .magnet-description { color: #666; margin-bottom: var(--space-md); line-height: 1.6; }
-        .magnet-includes { list-style: none; margin-bottom: var(--space-md); padding: var(--space-sm); background: var(--off-white); border-radius: 12px; }
-        .magnet-includes li { padding: 0.4rem 0; display: flex; align-items: flex-start; gap: var(--space-xs); font-size: 0.9rem; color: #555; }
-        .magnet-includes li::before { content: '✓'; color: var(--sun-orange); font-weight: 700; }
-        .magnet-audit .magnet-includes li::before { color: var(--wave-green); }
-        .magnet-form { display: flex; flex-direction: column; gap: var(--space-xs); }
+        .magnet-audit .magnet-badge {
+            background: var(--gradient-ocean);
+            box-shadow: 0 4px 12px rgba(10,122,92,0.4);
+        }
+        .magnet-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-md);
+            display: inline-block;
+            padding: 1rem;
+            background: linear-gradient(135deg, rgba(10,122,92,0.08), rgba(246,201,69,0.08));
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+        .magnet-card:hover .magnet-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: linear-gradient(135deg, rgba(10,122,92,0.12), rgba(246,201,69,0.12));
+        }
+        .magnet-title {
+            font-family: var(--font-display);
+            font-size: clamp(1.3rem, 3vw, 1.5rem);
+            font-weight: 700;
+            margin-bottom: var(--space-sm);
+            line-height: 1.3;
+            color: var(--ink);
+        }
+        .magnet-description {
+            color: #555;
+            margin-bottom: var(--space-md);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        .magnet-includes {
+            list-style: none;
+            margin-bottom: var(--space-lg);
+            padding: var(--space-md);
+            background: linear-gradient(135deg, rgba(246,201,69,0.05), rgba(10,122,92,0.05));
+            border-radius: 16px;
+            border: 1px solid rgba(246,201,69,0.15);
+        }
+        .magnet-audit .magnet-includes {
+            background: linear-gradient(135deg, rgba(10,122,92,0.05), rgba(246,201,69,0.05));
+            border-color: rgba(10,122,92,0.15);
+        }
+        .magnet-includes li {
+            padding: 0.6rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.5;
+        }
+        .magnet-includes li::before {
+            content: '✓';
+            color: var(--primary-yellow);
+            font-weight: 800;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            background: rgba(246,201,69,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .magnet-audit .magnet-includes li::before {
+            color: var(--primary-green);
+            background: rgba(10,122,92,0.15);
+        }
+        .magnet-form {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            padding: var(--space-md);
+            background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,248,240,0.8));
+            border-radius: 20px;
+            border: 1px solid rgba(0,0,0,0.04);
+        }
         .field-hidden {
             max-height: 0;
             opacity: 0;
@@ -1085,64 +1211,105 @@
         }
         .magnet-input {
             width: 100%;
-            padding: 0.9rem 1rem;
-            border: 2px solid #e8e8e8;
-            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            border: 2px solid rgba(0,0,0,0.08);
+            border-radius: 12px;
             font-size: 1rem;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             font-family: inherit;
             background: var(--white);
+            font-weight: 500;
         }
-        .magnet-input:hover { border-color: #d0d0d0; }
+        .magnet-input:hover {
+            border-color: rgba(10,122,92,0.2);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
         .magnet-input:focus {
             outline: none;
-            border-color: var(--wave-green);
-            box-shadow: 0 0 0 4px rgba(10,122,92,0.08);
-            transform: translateY(-1px);
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 4px rgba(10,122,92,0.1), 0 4px 12px rgba(10,122,92,0.08);
+            transform: translateY(-2px);
         }
         .magnet-input::placeholder {
             color: #999;
             opacity: 1;
+            font-weight: 400;
+        }
+        .magnet-input:focus::placeholder {
+            opacity: 0.6;
         }
         .magnet-btn {
-            padding: 1rem;
-            border-radius: 10px;
-            font-size: 1rem;
+            padding: 1.15rem 1.5rem;
+            border-radius: 14px;
+            font-size: 1.05rem;
             font-weight: 700;
             color: var(--white);
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: var(--space-xs);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            gap: 0.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.5px;
             position: relative;
             overflow: hidden;
+            border: none;
+            text-transform: none;
         }
         .magnet-btn::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+            background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
+        .magnet-btn::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.3), transparent);
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease;
+        }
         .magnet-btn:hover::before { opacity: 1; }
+        .magnet-btn:active::after {
+            opacity: 1;
+            transform: scale(2);
+            transition: all 0s;
+        }
         .magnet-btn-pdf {
             background: var(--gradient-sunset);
-            box-shadow: 0 6px 20px rgba(255,107,53,0.3);
+            box-shadow: 0 8px 24px rgba(246,201,69,0.4), 0 0 0 1px rgba(246,201,69,0.3) inset;
         }
         .magnet-btn-audit {
             background: var(--gradient-ocean);
-            box-shadow: 0 6px 20px rgba(10,122,92,0.3);
+            box-shadow: 0 8px 24px rgba(10,122,92,0.4), 0 0 0 1px rgba(10,122,92,0.3) inset;
         }
         .magnet-btn:hover {
-            transform: translateY(-3px);
+            transform: translateY(-4px) scale(1.02);
         }
-        .magnet-btn-pdf:hover { box-shadow: 0 10px 30px rgba(255,107,53,0.45); }
-        .magnet-btn-audit:hover { box-shadow: 0 10px 30px rgba(10,122,92,0.45); }
-        .magnet-disclaimer { font-size: 0.75rem; color: #999; text-align: center; margin-top: var(--space-xs); }
+        .magnet-btn-pdf:hover {
+            box-shadow: 0 12px 36px rgba(246,201,69,0.5), 0 0 0 1px rgba(246,201,69,0.4) inset;
+        }
+        .magnet-btn-audit:hover {
+            box-shadow: 0 12px 36px rgba(10,122,92,0.5), 0 0 0 1px rgba(10,122,92,0.4) inset;
+        }
+        .magnet-btn:active {
+            transform: translateY(-2px) scale(0.98);
+        }
+        .magnet-disclaimer {
+            font-size: 0.8rem;
+            color: #888;
+            text-align: center;
+            margin-top: 0.5rem;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+        .magnet-disclaimer:first-of-type {
+            margin-top: var(--space-sm);
+        }
         .magnets-divider { display: flex; align-items: center; justify-content: center; margin: var(--space-lg) 0; }
         .magnets-divider span { background: var(--cream); padding: 0 var(--space-md); font-family: var(--font-display); font-weight: 700; color: #aaa; }
         .magnets-cta-text { text-align: center; color: #666; }
