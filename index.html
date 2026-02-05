@@ -2134,15 +2134,15 @@
                 <div class="magnet-card scroll-slide-left">
                     <div class="magnet-badge">$50 Value • FREE</div>
                     <div class="magnet-icon">📘</div>
-                    <h3 class="magnet-title">CTA Conversion Guide</h3>
-                    <p class="magnet-description">Our 5-page PDF explaining the exact CTA mistakes that are killing your conversions and how to fix them. <strong>Normally $50 — yours free today.</strong></p>
+                    <h3 class="magnet-title">The CTA Blueprint</h3>
+                    <p class="magnet-description">A 15-page lead magnet revealing the conversion killers costing you thousands and how to fix them in 15 minutes. <strong>Normally $50 — yours free today.</strong></p>
                     <ul class="magnet-includes">
-                        <li>5 CTA mistakes killing conversions</li>
-                        <li>Proven CTA formulas that convert</li>
-                        <li>Real-world examples and fixes</li>
-                        <li>Button placement and design tips</li>
+                        <li>The 7 CTA killers destroying conversions</li>
+                        <li>15-minute fixes with exact steps</li>
+                        <li>Before/after case studies with real numbers</li>
+                        <li>Proprietary framework you can use today</li>
                     </ul>
-                    <form class="magnet-form" id="pdf-form" action="https://script.google.com/macros/s/AKfycbylkq5n3m5q9SlCFT4fqFQ65FEXzknF1Z5FH_i-UNcsU7KlcBbZeQN7zovQzkaGjosueA/exec" method="POST">
+                    <form class="magnet-form" id="pdf-form" action="https://script.google.com/macros/s/AKfycbxzh0_sVhsDXVcfCY0GEweOrbmkMP3RMh-YFGjfJaOBZdSEvA-CRQ0Jza-azV4K8Z7ipw/exec" method="POST">
                         <input type="text" name="name" class="magnet-input" placeholder="Your name" required>
                         <input type="email" name="email" class="magnet-input" placeholder="Your email" required>
                         <input type="hidden" name="form_type" value="CTA Conversion Guide">
@@ -2164,7 +2164,7 @@
                         <li>Mobile responsiveness review</li>
                         <li>Conversion opportunity report</li>
                     </ul>
-                    <form class="magnet-form" id="audit-form" action="https://script.google.com/macros/s/AKfycbylkq5n3m5q9SlCFT4fqFQ65FEXzknF1Z5FH_i-UNcsU7KlcBbZeQN7zovQzkaGjosueA/exec" method="POST">
+                    <form class="magnet-form" id="audit-form" action="https://script.google.com/macros/s/AKfycbxzh0_sVhsDXVcfCY0GEweOrbmkMP3RMh-YFGjfJaOBZdSEvA-CRQ0Jza-azV4K8Z7ipw/exec" method="POST">
                         <input type="text" name="name" class="magnet-input" placeholder="Your name" required>
                         <input type="email" name="email" class="magnet-input" placeholder="Your email" required>
                         <input type="url" name="website" class="magnet-input" placeholder="Your website URL" required>
@@ -2406,30 +2406,65 @@
         }
         startCountdown();
 
-        // Form Handlers (non-blocking, preserves native form submission)
+        // Form Handlers (async with error handling)
         function enhanceFormSubmit(form, successMsg, formLabel) {
             if (!form) return;
-            form.addEventListener('submit', () => {
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault(); // Prevent default form submission
+
+                // Track in GA4
                 if (typeof gtag === 'function') {
                     gtag('event', 'generate_lead', {
                         event_category: 'lead',
                         event_label: formLabel
                     });
                 }
+
                 const btn = form.querySelector('button[type="submit"]');
                 if (!btn) return;
                 const originalText = btn.innerHTML;
                 btn.innerHTML = 'Sending...';
                 btn.disabled = true;
-                setTimeout(() => {
+
+                // Get form data
+                const formData = new FormData(form);
+                const actionUrl = form.getAttribute('action');
+
+                try {
+                    console.log('Submitting to:', actionUrl);
+                    console.log('Form data:', Object.fromEntries(formData));
+
+                    // Submit to Google Apps Script
+                    const response = await fetch(actionUrl, {
+                        method: 'POST',
+                        body: formData,
+                        mode: 'no-cors' // Google Apps Script requires this
+                    });
+
+                    console.log('Form submitted successfully!');
+
+                    // Show success
                     btn.innerHTML = '✓ ' + successMsg;
                     btn.style.background = 'var(--wave-green)';
+
+                    // Redirect to thank you page after brief delay
+                    setTimeout(() => {
+                        console.log('Redirecting to thank-you.html');
+                        window.location.href = 'thank-you.html';
+                    }, 1000);
+
+                } catch (error) {
+                    console.error('Form submission error:', error);
+                    alert('Error submitting form: ' + error.message);
+                    btn.innerHTML = '❌ Error - Try Again';
+                    btn.style.background = '#E63946';
+                    btn.disabled = false;
+
                     setTimeout(() => {
                         btn.innerHTML = originalText;
                         btn.style.background = '';
-                        btn.disabled = false;
-                    }, 2500);
-                }, 800);
+                    }, 3000);
+                }
             });
         }
 
