@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rising Sun Digital - Light OG Image</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1200px;
+            height: 630px;
+            overflow: hidden;
+            background: #FEF9F0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Subtle watercolor texture background */
+        .background-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.04;
+            background-image:
+                radial-gradient(circle at 20% 30%, #E9A820 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, #1A5C54 0%, transparent 50%),
+                radial-gradient(circle at 60% 20%, #D4652F 0%, transparent 35%);
+        }
+
+        /* Content container */
+        .og-container {
+            width: 100%;
+            height: 100%;
+            padding: 80px 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Logo container */
+        .logo-container {
+            width: 140px;
+            height: 140px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        /* Multicolored circular logo */
+        .logo-circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: conic-gradient(
+                from 0deg at 50% 50%,
+                #E9A820 0deg,
+                #D4652F 72deg,
+                #1B5E3B 144deg,
+                #1A5C54 216deg,
+                #E9A820 288deg,
+                #E9A820 360deg
+            );
+            position: relative;
+            box-shadow: 0 25px 70px rgba(26, 92, 84, 0.12);
+        }
+
+        /* Center circle */
+        .logo-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            background: #FEF9F0;
+            border-radius: 50%;
+        }
+
+        /* Inner geometry */
+        .logo-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            border: 3px solid #1B5E3B;
+            border-radius: 50%;
+        }
+
+        /* Headline */
+        .headline {
+            font-size: 72px;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            color: #1A1A2E;
+            margin-bottom: 30px;
+            max-width: 900px;
+        }
+
+        /* Gradient accent on key word */
+        .gradient-text {
+            background: linear-gradient(135deg, #1B5E3B 0%, #1A5C54 50%, #0A7A5C 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Subheadline */
+        .subheadline {
+            font-size: 28px;
+            font-weight: 400;
+            color: rgba(26, 26, 46, 0.6);
+            letter-spacing: -0.01em;
+            max-width: 800px;
+        }
+
+        /* Accent line */
+        .accent-line {
+            position: absolute;
+            bottom: 80px;
+            left: 90px;
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #1A5C54 0%, transparent 100%);
+            border-radius: 2px;
+        }
+
+        /* Brand mark in corner */
+        .corner-mark {
+            position: absolute;
+            bottom: 80px;
+            right: 90px;
+            font-size: 18px;
+            font-weight: 600;
+            color: rgba(26, 26, 46, 0.35);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-pattern"></div>
+
+    <div class="og-container">
+        <div class="logo-container">
+            <div class="logo-circle">
+                <div class="logo-center">
+                    <div class="logo-inner"></div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="headline">
+            Predictable Leads.<br><span class="gradient-text">Real Growth.</span>
+        </h1>
+
+        <p class="subheadline">
+            Built for Home Service Leaders
+        </p>
+
+        <div class="accent-line"></div>
+        <div class="corner-mark">Rising Sun Digital</div>
+    </div>
+
+    <!-- Screenshot Instructions:
+    1. Open this file in Chrome/Firefox
+    2. Press F12 to open DevTools
+    3. Press Ctrl+Shift+M (Cmd+Shift+M on Mac) for device mode
+    4. Set dimensions to exactly 1200 x 630
+    5. Take screenshot (Ctrl+Shift+P → "Capture screenshot")
+    6. Save as: og-light.jpg or og-light.png
+    -->
+</body>
+</html>

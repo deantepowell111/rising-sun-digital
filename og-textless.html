@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rising Sun Digital - Textless OG Image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1200px;
+            height: 630px;
+            overflow: hidden;
+            background: #0F1419;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        /* Sacred geometry background */
+        .background-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.05;
+        }
+
+        /* Geometric circles */
+        .geo-circle {
+            position: absolute;
+            border: 1px solid rgba(233, 168, 32, 0.3);
+            border-radius: 50%;
+        }
+
+        .geo-circle-1 {
+            width: 800px;
+            height: 800px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .geo-circle-2 {
+            width: 600px;
+            height: 600px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .geo-circle-3 {
+            width: 400px;
+            height: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-color: rgba(26, 92, 84, 0.3);
+        }
+
+        /* Center logo container */
+        .logo-container {
+            width: 280px;
+            height: 280px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Large multicolored circular logo */
+        .logo-circle {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: conic-gradient(
+                from 0deg at 50% 50%,
+                #E9A820 0deg,
+                #D4652F 72deg,
+                #1B5E3B 144deg,
+                #1A5C54 216deg,
+                #E9A820 288deg,
+                #E9A820 360deg
+            );
+            position: relative;
+            box-shadow:
+                0 40px 100px rgba(233, 168, 32, 0.25),
+                0 0 200px rgba(26, 92, 84, 0.15);
+            animation: subtle-glow 4s ease-in-out infinite;
+        }
+
+        @keyframes subtle-glow {
+            0%, 100% {
+                box-shadow:
+                    0 40px 100px rgba(233, 168, 32, 0.25),
+                    0 0 200px rgba(26, 92, 84, 0.15);
+            }
+            50% {
+                box-shadow:
+                    0 40px 120px rgba(233, 168, 32, 0.35),
+                    0 0 250px rgba(26, 92, 84, 0.25);
+            }
+        }
+
+        /* Center circle */
+        .logo-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background: #0F1419;
+            border-radius: 50%;
+        }
+
+        /* Inner sacred geometry */
+        .logo-inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            border: 4px solid #E9A820;
+            border-radius: 50%;
+        }
+
+        .logo-inner-2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 120px;
+            height: 120px;
+            border: 4px solid #1A5C54;
+            border-radius: 50%;
+            opacity: 0.6;
+        }
+
+        /* Corner watermark */
+        .watermark {
+            position: absolute;
+            bottom: 50px;
+            right: 60px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.25);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-pattern">
+        <div class="geo-circle geo-circle-1"></div>
+        <div class="geo-circle geo-circle-2"></div>
+        <div class="geo-circle geo-circle-3"></div>
+    </div>
+
+    <div class="logo-container">
+        <div class="logo-circle">
+            <div class="logo-center">
+                <div class="logo-inner"></div>
+                <div class="logo-inner-2"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="watermark">Rising Sun</div>
+
+    <!-- Screenshot Instructions:
+    1. Open this file in Chrome/Firefox
+    2. Press F12 to open DevTools
+    3. Press Ctrl+Shift+M (Cmd+Shift+M on Mac) for device mode
+    4. Set dimensions to exactly 1200 x 630
+    5. Take screenshot (Ctrl+Shift+P → "Capture screenshot")
+    6. Save as: og-textless.jpg or og-textless.png
+
+    USE CASE: Fallback for when text doesn't translate well or for pure brand recognition
+    -->
+</body>
+</html>
