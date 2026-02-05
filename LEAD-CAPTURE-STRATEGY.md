@@ -167,7 +167,7 @@ STEP 3: Assign to Workflow Based on Action
   - Add to calendar
   - What to prepare
 - **1 Day Before:**
-  - Subject: "Tomorrow: Your strategy call with Dean"
+  - Subject: "Tomorrow: Your strategy call with Deante"
   - Reminder
   - What to have ready (website login if applicable)
 - **2 Hours Before:**
@@ -242,7 +242,7 @@ Zero pressure. Just value.
 Book here: [Calendly Link]
 
 Talk soon,
-Dean Powell
+Deante Powell
 Rising Sun Digital
 (915) 234-3570
 ```
@@ -276,7 +276,7 @@ Book your live audit: [Calendly Link]
 
 Only 3 spots this week, so grab one while you can.
 
-Dean
+Deante
 Rising Sun Digital
 ```
 

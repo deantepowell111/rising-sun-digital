@@ -157,7 +157,7 @@ Use: "I build websites that generate leads while you sleep"
    "100% spam-free"
 
 4. **Video Intro** (optional but powerful)
-   15-second loom: "Hi, I'm Dean. Here's how I help..."
+   15-second loom: "Hi, I'm Deante. Here's how I help..."
 
 5. **Live Chat** or "Text Me" button
    Lower friction than forms for some people
