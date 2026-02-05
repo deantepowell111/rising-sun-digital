@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags -->
-    <title>Rising Sun Digital — Lead Generation & Funnels for Small Businesses</title>
-    <meta name="description" content="We help small businesses build lead generation funnels that actually convert. Predictable leads. Automated systems. Real growth.">
+    <!-- SEO Meta Tags (Optimized for Ads) -->
+    <title>Lead Generation Funnels for Small Businesses | Rising Sun Digital</title>
+    <meta name="description" content="Build lead gen funnels that convert. Small business marketing systems designed to capture, nurture, and close leads. El Paso & nationwide.">
     <meta name="author" content="Rising Sun Digital">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://risingsun.digital">
@@ -41,6 +41,79 @@
 
     <!-- Custom Styles -->
     <style>
+        /* ========================================
+           NAVIGATION
+           ======================================== */
+        .nav {
+            background: var(--color-bg-primary);
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--space-4) 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            text-decoration: none;
+            transition: opacity var(--transition-base);
+        }
+
+        .nav-logo:hover {
+            opacity: 0.8;
+        }
+
+        .nav-brand {
+            font-size: var(--font-size-lg);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text-primary);
+        }
+
+        /* ========================================
+           COUNTDOWN BANNER (Urgency)
+           ======================================== */
+        .countdown-banner {
+            background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-forest) 100%);
+            color: white;
+            padding: var(--space-3) 0;
+            text-align: center;
+        }
+
+        .countdown-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-6);
+            flex-wrap: wrap;
+        }
+
+        .countdown-text {
+            font-size: var(--font-size-sm);
+        }
+
+        .countdown-timer {
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-semibold);
+            background: rgba(255, 255, 255, 0.2);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-full);
+        }
+
+        #countdown-display {
+            font-variant-numeric: tabular-nums;
+            color: var(--brand-marigold);
+        }
+
         /* ========================================
            HERO SECTION
            ======================================== */
@@ -243,6 +316,21 @@
         }
 
         /* ========================================
+           ABOUT SECTION
+           ======================================== */
+        .about {
+            background: var(--color-bg-subtle);
+        }
+
+        .about-content {
+            text-align: left;
+        }
+
+        .about-content p {
+            line-height: var(--line-height-relaxed);
+        }
+
+        /* ========================================
            CHOICE SECTION (Funnel Bifurcation)
            ======================================== */
         .choice-section {
@@ -437,6 +525,20 @@
            MOBILE RESPONSIVENESS
            ======================================== */
         @media (max-width: 768px) {
+            .nav-brand {
+                font-size: var(--font-size-base);
+            }
+
+            .countdown-content {
+                flex-direction: column;
+                gap: var(--space-2);
+            }
+
+            .countdown-text,
+            .countdown-timer {
+                font-size: var(--font-size-xs);
+            }
+
             .hero {
                 min-height: 80vh;
                 padding-top: var(--space-8);
@@ -468,6 +570,37 @@
     </style>
 </head>
 <body>
+
+    <!-- ========================================
+         NAVIGATION
+         ======================================== -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="/" class="nav-logo">
+                    <img src="rising-sun-logo.png" alt="Rising Sun Digital" height="40">
+                    <span class="nav-brand">Rising Sun Digital</span>
+                </a>
+                <a href="#booking" class="btn btn-primary">Book Your Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         COUNTDOWN BANNER (Urgency)
+         ======================================== -->
+    <div class="countdown-banner">
+        <div class="container">
+            <div class="countdown-content">
+                <span class="countdown-text">
+                    <strong>Limited Availability:</strong> Only <span id="spots-left">3</span> strategy calls this week
+                </span>
+                <span class="countdown-timer">
+                    Spots reset in: <span id="countdown-display">--:--:--</span>
+                </span>
+            </div>
+        </div>
+    </div>
 
     <!-- ========================================
          HERO SECTION
@@ -632,6 +765,32 @@
     </section>
 
     <!-- ========================================
+         ABOUT SECTION
+         ======================================== -->
+    <section class="about section-sm">
+        <div class="container container-reading">
+            <div class="about-content">
+                <h2 class="text-center">Who's Behind This</h2>
+                <p class="text-lg mt-4" style="color: var(--color-text-secondary); text-align: center;">
+                    I'm Deante Powell. I build lead generation funnels for small businesses.
+                </p>
+                <p style="color: var(--color-text-secondary); margin-top: var(--space-4);">
+                    No fluff. No over-promises. Just systems that turn traffic into predictable leads.
+                    I've worked with businesses across industries — solar, roofing, professional services, local businesses —
+                    and the pattern is always the same: <strong>clear positioning + simple funnels = consistent growth</strong>.
+                </p>
+                <p style="color: var(--color-text-secondary); margin-top: var(--space-3);">
+                    If you're tired of agencies that over-complicate things or disappear after taking your money,
+                    let's talk. I keep it simple, honest, and focused on what actually drives leads.
+                </p>
+                <div class="about-cta" style="text-align: center; margin-top: var(--space-6);">
+                    <a href="#booking" class="btn btn-outline">Schedule a Call</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
          CHOICE SECTION (Schedule Call or Free Resources)
          FUNNEL LOGIC: Self-segmentation by intent
          ======================================== -->
@@ -740,6 +899,36 @@
 
     <!-- Calendly Script -->
     <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+
+    <!-- Countdown Timer -->
+    <script>
+        // Countdown to end of week (resets every Monday)
+        function startCountdown() {
+            function updateCountdown() {
+                const now = new Date();
+                const dayOfWeek = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+                const daysUntilMonday = (8 - dayOfWeek) % 7 || 7;
+                const nextMonday = new Date(now);
+                nextMonday.setDate(now.getDate() + daysUntilMonday);
+                nextMonday.setHours(0, 0, 0, 0);
+
+                const diff = nextMonday - now;
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                const display = document.getElementById('countdown-display');
+                if (display) {
+                    display.textContent = `${hours}h ${minutes}m ${seconds}s`;
+                }
+            }
+
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }
+
+        startCountdown();
+    </script>
 
     <!-- Form Handlers -->
     <script>
