@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Your Email! | Rising Sun Digital</title>
+    <meta name="description" content="Your free CTA Blueprint guide is on its way. Book a strategy call to walk through how to apply these fixes to your business.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://risingsun.digital/thank-you.html">
+    <meta property="og:title" content="Your CTA Blueprint is Ready — Rising Sun Digital">
+    <meta property="og:description" content="Download your free 15-page guide revealing the 7 conversion killers costing you thousands.">
+    <meta property="og:image" content="https://risingsun.digital/og-light.jpg">
+    <meta property="og:image:alt" content="Rising Sun Digital — Predictable Leads. Real Growth.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://risingsun.digital/thank-you.html">
+    <meta name="twitter:title" content="Your CTA Blueprint is Ready — Rising Sun Digital">
+    <meta name="twitter:description" content="Download your free 15-page guide revealing the 7 conversion killers.">
+    <meta name="twitter:image" content="https://risingsun.digital/og-light.jpg">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="rising-sun-logo-circle.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'DM Sans', -apple-system, sans-serif;
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFE5D9 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .success-box {
+            background: white;
+            border-radius: 24px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .logo {
+            max-width: 120px;
+            margin: 0 auto 1.5rem;
+        }
+        .success-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: bounce 1s ease;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            color: #1A1A2E;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+        .success-message {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .success-message strong {
+            color: #0A7A5C;
+        }
+        .next-step-box {
+            background: linear-gradient(135deg, #0A7A5C 0%, #065942 100%);
+            border-radius: 24px;
+            padding: 3rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        .next-step-label {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        .next-step-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        .next-step-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 12px;
+            font-size: 0.95rem;
+        }
+        .benefit-icon {
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .calendly-container {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        .calendly-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1A1A2E;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        .calendly-subheading {
+            text-align: center;
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+        .urgency-note {
+            background: rgba(255,255,255,0.15);
+            border-left: 3px solid #F6C945;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+        .urgency-note p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        .skip-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .skip-link a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+        .skip-link a:hover {
+            color: #0A7A5C;
+        }
+        @media (max-width: 768px) {
+            body { padding: 1rem; }
+            .success-box, .next-step-box { padding: 2rem; }
+            .benefits { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Success Confirmation -->
+        <div class="success-box">
+            <img src="rising-sun-logo.png" alt="Rising Sun Digital" class="logo">
+            <div class="success-icon">✅</div>
+            <h1>Check Your Email!</h1>
+            <p class="success-message">
+                Your <strong>free guide</strong> is on its way to your inbox right now.
+                If you don't see it in 2-3 minutes, check your spam folder.
+            </p>
+        </div>
+
+        <!-- Next Step CTA -->
+        <div class="next-step-box">
+            <span class="next-step-label">🎯 ONE MORE THING...</span>
+            <h2 class="next-step-title">Want Me to Walk You Through This?</h2>
+            <p class="next-step-subtitle">
+                Most people download the guide and <strong>still make the same mistakes</strong>.
+                Let's jump on a quick 15-minute call and I'll show you exactly how to fix YOUR specific issues — live.
+            </p>
+
+            <div class="urgency-note">
+                <p>⏰ <strong>Only 3 strategy calls available this week</strong> — these spots fill up fast</p>
+            </div>
+
+            <div class="benefits">
+                <div class="benefit">
+                    <div class="benefit-icon">🔍</div>
+                    <div>Live audit of your site</div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">💡</div>
+                    <div>Custom action plan</div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">🎯</div>
+                    <div>Specific fixes for YOUR business</div>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">✅</div>
+                    <div>100% free • Zero pressure</div>
+                </div>
+            </div>
+
+            <div class="calendly-container">
+                <h3 class="calendly-heading">Book Your Free 15-Minute Strategy Call</h3>
+                <p class="calendly-subheading">Pick a time that works for you — I'll send a calendar invite</p>
+
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/risingsundigital4/30min?hide_event_type_details=1&hide_gdpr_banner=1&primary_color=0A7A5C" style="min-width:320px;height:630px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </div>
+
+        <div class="skip-link">
+            <p><a href="index.html">No thanks, I'll just read the guide →</a></p>
+        </div>
+    </div>
+
+    <!-- Track conversion -->
+    <script>
+        // If GA4 is installed, track thank you page view
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'conversion', {
+                'event_category': 'Form',
+                'event_label': 'Thank You Page View'
+            });
+        }
+
+        // Track if they book a call (Calendly will trigger this)
+        window.addEventListener('message', function(e) {
+            if (e.data.event && e.data.event.indexOf('calendly') === 0) {
+                if (e.data.event === 'calendly.event_scheduled') {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'generate_lead', {
+                            'event_category': 'Booking',
+                            'event_label': 'Strategy Call Booked from Thank You Page',
+                            'value': 500
+                        });
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
