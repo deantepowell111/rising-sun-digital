@@ -16,3 +16,22 @@ Thumbs.db
 # Backup files
 *.backup.*
 *~
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Node (if ever needed)
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+
+# Environment files
+.env
+.env.local

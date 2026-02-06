@@ -1,113 +1,114 @@
-# Rising Sun Digital - Website Deployment Guide
+# Rising Sun Digital
 
-## 🚀 Free Hosting Setup (GitHub Pages)
+Lead generation funnels for small businesses. Built with performance and conversion in mind.
 
-### Step 1: Create a GitHub Account
-1. Go to https://github.com/signup
-2. Create a free account if you don't have one
+## 🚀 Live Site
 
-### Step 2: Create a New Repository
-1. Click the "+" icon in the top right → "New repository"
-2. Name it: `risingsun-digital`
-3. Make it **Public**
-4. Click "Create repository"
+Visit: [risingsun.digital](https://risingsun.digital)
 
-### Step 3: Upload Your Website Files
-1. Click "uploading an existing file"
-2. Drag and drop ALL files from this folder:
-   - `index.html`
-   - `rising sun logo.png` (once added)
-   - Any other images you add
-3. Scroll down and click "Commit changes"
+## 📊 Features
 
-### Step 4: Enable GitHub Pages
-1. Go to Settings (in your repository)
-2. Click "Pages" in the left sidebar
-3. Under "Source", select "main" branch
-4. Click "Save"
-5. Wait 1-2 minutes
+- **Conversion-Optimized Landing Page** - Strategic CTAs and clear value proposition
+- **GA4 Analytics** - Complete event tracking with monetary values
+- **Performance Optimized** - WebP images, lazy loading, DNS prefetch
+- **Exit-Intent Popup** - Capture leads before they leave
+- **Mobile-First Design** - Responsive across all devices
+- **SEO Ready** - Sitemap, robots.txt, meta tags, proper HTML structure
 
-Your site will be live at: `https://yourusername.github.io/risingsun-digital/`
+## 🎯 Tech Stack
 
----
+- **Frontend**: Pure HTML/CSS/JavaScript (no frameworks needed)
+- **Forms**: Google Apps Script backend
+- **Booking**: Calendly integration
+- **Analytics**: Google Analytics 4
+- **Deployment**: Vercel
+- **Domain**: Namecheap
 
-## 🌐 Connect Your Custom Domain (risingsun.digital)
+## 📁 Project Structure
 
-### After GitHub Pages is live:
-
-1. **In GitHub Settings → Pages:**
-   - Enter `risingsun.digital` in the "Custom domain" field
-   - Click "Save"
-
-2. **In Your Domain Registrar (where you bought risingsun.digital):**
-   Add these DNS records:
-
-   **A Records (for apex domain):**
-   ```
-   Type: A
-   Name: @
-   Value: 185.199.108.153
-
-   Type: A
-   Name: @
-   Value: 185.199.109.153
-
-   Type: A
-   Name: @
-   Value: 185.199.110.153
-
-   Type: A
-   Name: @
-   Value: 185.199.111.153
-   ```
-
-   **CNAME Record (for www):**
-   ```
-   Type: CNAME
-   Name: www
-   Value: yourusername.github.io
-   ```
-
-3. **Wait 24-48 hours** for DNS to propagate
-4. Enable "Enforce HTTPS" in GitHub Pages settings
-
----
-
-## 📁 File Structure
 ```
-risingsun-digital/
-├── index.html          (your main website)
-├── rising-sun-logo.png (your logo)
-└── og-image.jpg        (social media image - optional)
+/
+├── index.html              # Main landing page
+├── thank-you.html          # Post-conversion page
+├── privacy.html            # Privacy policy
+├── 404.html                # Custom 404 page
+├── robots.txt              # SEO crawling rules
+├── sitemap.xml             # SEO sitemap
+├── /images/                # Optimized WebP images
+│   ├── logo.webp
+│   ├── logo-white.webp
+│   ├── logo-black.webp
+│   ├── logo-circle.webp
+│   └── og-image.webp
+├── /assets/                # Downloadable resources
+│   └── CTA-Conversion-Guide.pdf
+└── /_archive/              # Documentation and legacy files
 ```
 
+## 🔧 Development
+
+### Local Development
+
+```bash
+# Clone the repo
+git clone https://github.com/deantepowell111/rising-sun-digital.git
+
+# Open index.html in your browser
+# No build step required!
+```
+
+### Deploy to Vercel
+
+```bash
+# Already configured with vercel.json
+# Push to main branch triggers automatic deployment
+git push origin main
+```
+
+## 📈 Analytics Setup
+
+GA4 Property ID: `G-Q3T8QXNWYV`
+
+Tracked Events:
+- `page_view` - Page loads
+- `cta_click` - CTA button clicks ($50 value)
+- `generate_lead` - Form submissions ($100-200 value)
+- `conversion` - Calendly bookings
+
+## 🎨 Design System
+
+- **Primary Brand Color**: `#1A5C54` (Teal)
+- **Accent Colors**: Forest Green, Gold
+- **Typography**: System fonts for performance
+- **Spacing**: 8px base unit system
+- **Breakpoints**: Mobile-first responsive design
+
+## 📧 Form Handling
+
+Forms submit to Google Apps Script endpoint:
+```
+https://script.google.com/macros/s/AKfycbxo8BHA3MkiHYQGAy9RmE4ECKy97QKbuny_ebZTpNvBB73p0VvRsuRhKpuMEfD4oieZMg/exec
+```
+
+Email notifications sent to: `risingsundigital4@gmail.com`
+
+## 🔐 Security & Privacy
+
+- No personal data stored client-side
+- HTTPS enforced via Vercel
+- Privacy policy available at `/privacy.html`
+- GDPR-friendly form practices
+
+## 📝 License
+
+© 2026 Rising Sun Digital. All rights reserved.
+
+## 📧 Contact
+
+Deante Powell
+Website: [risingsun.digital](https://risingsun.digital)
+Email: risingsundigital4@gmail.com
+
 ---
 
-## 🆓 Alternative Free Hosting Options
-
-### **Netlify** (Easiest, recommended!)
-1. Go to https://netlify.com
-2. Sign up with GitHub
-3. Drag and drop your folder
-4. Connect domain in Settings → Domain management
-
-### **Vercel**
-1. Go to https://vercel.com
-2. Import your GitHub repo
-3. Deploy automatically
-
-### **Cloudflare Pages**
-1. Go to https://pages.cloudflare.com
-2. Connect GitHub
-3. Deploy your site
-
----
-
-## ✅ Next Steps
-1. Find your logo file and tell me the path
-2. I'll integrate it into the HTML
-3. Choose a hosting option above
-4. Upload your site
-5. Connect risingsun.digital
-
-Need help with any step? Just ask!
+**Built for conversion. Optimized for performance. Focused on results.**
