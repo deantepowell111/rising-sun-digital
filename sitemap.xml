@@ -1,69 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-
-    <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://risingsun.digital</loc>
-        <lastmod>2026-02-04</lastmod>
+        <loc>https://risingsun.digital/</loc>
+        <lastmod>2026-02-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-        <image:image>
-            <image:loc>https://risingsun.digital/rising-sun-logo.png</image:loc>
-            <image:title>Rising Sun Digital - Digital Marketing Agency Logo</image:title>
-        </image:image>
-        <image:image>
-            <image:loc>https://risingsun.digital/og-image.jpg</image:loc>
-            <image:title>Rising Sun Digital - Revenue-Focused Digital Marketing</image:title>
-        </image:image>
     </url>
-
-    <!-- Privacy Policy -->
     <url>
-        <loc>https://risingsun.digital/privacy.html</loc>
-        <lastmod>2026-02-04</lastmod>
+        <loc>https://risingsun.digital/thank-you.html</loc>
+        <lastmod>2026-02-05</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.3</priority>
     </url>
-
-    <!-- Services Section (as anchor) -->
     <url>
-        <loc>https://risingsun.digital#services</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.9</priority>
+        <loc>https://risingsun.digital/privacy.html</loc>
+        <lastmod>2026-02-05</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.1</priority>
     </url>
-
-    <!-- Process Section -->
-    <url>
-        <loc>https://risingsun.digital#process</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-
-    <!-- Free Resources Section -->
-    <url>
-        <loc>https://risingsun.digital#free-resources</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.85</priority>
-    </url>
-
-    <!-- Booking/Contact Section -->
-    <url>
-        <loc>https://risingsun.digital#booking</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
-
-    <!-- FAQ Section -->
-    <url>
-        <loc>https://risingsun.digital#faq</loc>
-        <lastmod>2026-02-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-
 </urlset>

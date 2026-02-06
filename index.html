@@ -6,7 +6,7 @@
 
     <!-- SEO Meta Tags (Optimized for Ads) -->
     <title>Lead Generation Funnels for Small Businesses | Rising Sun Digital</title>
-    <meta name="description" content="Build lead gen funnels that convert. Small business marketing systems designed to capture, nurture, and close leads. El Paso & nationwide.">
+    <meta name="description" content="Get lead gen funnels that convert. Small business marketing systems designed to capture, nurture, and close leads. El Paso & nationwide.">
     <meta name="author" content="Rising Sun Digital">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://risingsun.digital">
@@ -28,19 +28,75 @@
     <meta name="twitter:image" content="https://risingsun.digital/og-primary.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="rising-sun-logo-circle.png">
+    <!-- Favicon - Multiple sizes for sharp rendering -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
     <meta name="theme-color" content="#1A5C54">
 
-    <!-- Fonts: Inter (Clean, Modern Sans-Serif) -->
+    <!-- Performance: DNS Prefetch & Preconnect -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://assets.calendly.com">
+    <link rel="dns-prefetch" href="https://script.google.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts: Inter (Clean, Modern Sans-Serif) - Optimized Loading -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Design System -->
     <link rel="stylesheet" href="minimal-design-system.css">
 
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3T8QXNWYV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q3T8QXNWYV', {
+            'send_page_view': true,
+            'cookie_flags': 'SameSite=None;Secure'
+        });
+    </script>
+
+    <!-- Meta Pixel (Facebook/Instagram Ads) -->
+    <!-- TODO: Replace YOUR_PIXEL_ID with your Meta Pixel ID when running ads -->
+    <!-- Uncomment when ready to use:
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', 'YOUR_PIXEL_ID');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+    /></noscript>
+    -->
+
     <!-- Custom Styles -->
     <style>
+        /* ========================================
+           GLOBAL FIXES
+           ======================================== */
+        html, body {
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            width: 100%;
+            max-width: 100%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         /* ========================================
            NAVIGATION
            ======================================== */
@@ -59,6 +115,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: var(--space-6); /* Added gap for better spacing */
         }
 
         .nav-logo {
@@ -66,7 +123,8 @@
             align-items: center;
             gap: var(--space-3);
             text-decoration: none;
-            transition: opacity var(--transition-base);
+            transition: all var(--transition-base);
+            flex-shrink: 0; /* Prevent logo from shrinking */
         }
 
         .nav-logo:hover {
@@ -74,9 +132,14 @@
         }
 
         .nav-brand {
-            font-size: var(--font-size-lg);
-            font-weight: var(--font-weight-bold);
-            color: var(--color-text-primary);
+            font-size: var(--font-size-xl);
+            font-weight: var(--font-weight-extrabold);
+            background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-forest) 70%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+            white-space: nowrap; /* Prevent wrapping */
         }
 
         /* ========================================
@@ -124,6 +187,7 @@
             background: linear-gradient(135deg, #FEF9F0 0%, #FFFFFF 100%);
             position: relative;
             overflow: hidden;
+            padding: var(--space-8) 0; /* Added padding for mobile */
         }
 
         .hero::before {
@@ -331,124 +395,6 @@
         }
 
         /* ========================================
-           CHOICE SECTION (Funnel Bifurcation)
-           ======================================== */
-        .choice-section {
-            background: var(--color-bg-primary);
-        }
-
-        .choice-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: var(--space-6);
-            margin-top: var(--space-10);
-        }
-
-        .choice-card {
-            background: var(--color-bg-subtle);
-            border: 2px solid var(--color-border);
-            border-radius: var(--radius-xl);
-            padding: var(--space-8);
-            display: flex;
-            flex-direction: column;
-            transition: all var(--transition-base);
-        }
-
-        .choice-card:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
-        }
-
-        .choice-call {
-            border-color: var(--brand-teal);
-        }
-
-        .choice-call:hover {
-            border-color: var(--brand-forest);
-            background: rgba(26, 92, 84, 0.02);
-        }
-
-        .choice-resources {
-            border-color: var(--brand-marigold);
-        }
-
-        .choice-resources:hover {
-            border-color: var(--brand-orange);
-            background: rgba(233, 168, 32, 0.02);
-        }
-
-        .choice-badge {
-            display: inline-block;
-            padding: var(--space-1) var(--space-3);
-            font-size: var(--font-size-xs);
-            font-weight: var(--font-weight-bold);
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-radius: var(--radius-full);
-            margin-bottom: var(--space-4);
-        }
-
-        .choice-call .choice-badge {
-            background: rgba(26, 92, 84, 0.1);
-            color: var(--brand-teal);
-        }
-
-        .choice-resources .choice-badge {
-            background: rgba(233, 168, 32, 0.1);
-            color: var(--brand-marigold);
-        }
-
-        .choice-card h3 {
-            font-size: var(--font-size-2xl);
-            margin-bottom: var(--space-3);
-        }
-
-        .choice-description {
-            color: var(--color-text-secondary);
-            margin-bottom: var(--space-4);
-            flex-grow: 1;
-        }
-
-        .choice-benefits {
-            list-style: none;
-            margin: var(--space-4) 0;
-        }
-
-        .choice-benefits li {
-            padding: var(--space-2) 0;
-            color: var(--color-text-secondary);
-            display: flex;
-            align-items: center;
-            gap: var(--space-2);
-        }
-
-        .choice-benefits li::before {
-            content: '✓';
-            font-weight: bold;
-            font-size: var(--font-size-lg);
-        }
-
-        .choice-call .choice-benefits li::before {
-            color: var(--brand-teal);
-        }
-
-        .choice-resources .choice-benefits li::before {
-            color: var(--brand-marigold);
-        }
-
-        .choice-cta {
-            margin-top: var(--space-6);
-            width: 100%;
-        }
-
-        .choice-note {
-            font-size: var(--font-size-xs);
-            color: var(--color-text-tertiary);
-            text-align: center;
-            margin-top: var(--space-3);
-        }
-
-        /* ========================================
            CTA SECTION
            ======================================== */
         .cta-section {
@@ -525,8 +471,32 @@
            MOBILE RESPONSIVENESS
            ======================================== */
         @media (max-width: 768px) {
+            .container {
+                padding-left: var(--space-3);
+                padding-right: var(--space-3);
+            }
+
+            .nav {
+                padding: var(--space-3) 0;
+            }
+
+            .nav-content {
+                gap: var(--space-3); /* Reduce gap on mobile */
+            }
+
             .nav-brand {
-                font-size: var(--font-size-base);
+                font-size: var(--font-size-sm);
+                letter-spacing: -0.01em;
+            }
+
+            .nav-logo img {
+                height: 32px; /* Slightly smaller logo on mobile */
+                width: 32px;
+            }
+
+            .btn {
+                padding: var(--space-2) var(--space-4);
+                font-size: var(--font-size-sm);
             }
 
             .countdown-content {
@@ -578,29 +548,13 @@
         <div class="container">
             <div class="nav-content">
                 <a href="/" class="nav-logo">
-                    <img src="rising-sun-logo.png" alt="Rising Sun Digital" height="40">
+                    <img src="rising-sun-logo.png" alt="Rising Sun Digital" width="40" height="40" loading="eager">
                     <span class="nav-brand">Rising Sun Digital</span>
                 </a>
                 <a href="#booking" class="btn btn-primary">Book Your Call</a>
             </div>
         </div>
     </nav>
-
-    <!-- ========================================
-         COUNTDOWN BANNER (Urgency)
-         ======================================== -->
-    <div class="countdown-banner">
-        <div class="container">
-            <div class="countdown-content">
-                <span class="countdown-text">
-                    <strong>Limited Availability:</strong> Only <span id="spots-left">3</span> strategy calls this week
-                </span>
-                <span class="countdown-timer">
-                    Spots reset in: <span id="countdown-display">--:--:--</span>
-                </span>
-            </div>
-        </div>
-    </div>
 
     <!-- ========================================
          HERO SECTION
@@ -619,8 +573,8 @@
                 </h1>
 
                 <p class="hero-description">
-                    We help small businesses build lead generation funnels that actually convert.
-                    Predictable leads. Automated systems. Built for the long game.
+                    Get More Leads. Increase Revenue.<br>
+                    The system that turns traffic into money.
                 </p>
 
                 <div class="hero-cta">
@@ -634,6 +588,22 @@
             </div>
         </div>
     </section>
+
+    <!-- ========================================
+         COUNTDOWN BANNER (Positioned After Value Prop)
+         ======================================== -->
+    <div class="countdown-banner">
+        <div class="container">
+            <div class="countdown-content">
+                <span class="countdown-text">
+                    <strong>Limited Availability:</strong> Only <span id="spots-left">3</span> strategy calls this week
+                </span>
+                <span class="countdown-timer">
+                    Spots reset in: <span id="countdown-display">--:--:--</span>
+                </span>
+            </div>
+        </div>
+    </div>
 
     <!-- ========================================
          LEAD MAGNETS SECTION
@@ -711,7 +681,7 @@
          ======================================== -->
     <section class="services section">
         <div class="container">
-            <div class="container-narrow">
+            <div class="container-narrow text-center">
                 <h2>What We Do</h2>
                 <p class="text-lg mt-4" style="color: var(--color-text-secondary);">
                     Lead generation and funnel systems for small businesses.
@@ -761,6 +731,14 @@
                     </p>
                 </div>
             </div>
+
+            <!-- Services CTA (CRITICAL: Prevents dead end) -->
+            <div class="text-center" style="margin-top: var(--space-10);">
+                <p class="text-lg" style="color: var(--color-text-secondary); margin-bottom: var(--space-4);">
+                    Ready to build a funnel that actually works?
+                </p>
+                <a href="#booking" class="btn btn-primary btn-lg">Let's Talk Strategy →</a>
+            </div>
         </div>
     </section>
 
@@ -774,6 +752,14 @@
                 <p class="text-lg mt-4" style="color: var(--color-text-secondary); text-align: center;">
                     I'm Deante Powell. I build lead generation funnels for small businesses.
                 </p>
+
+                <!-- Certification Badge -->
+                <div style="text-align: center; margin-top: var(--space-3);">
+                    <span class="badge badge-primary" style="font-size: var(--font-size-sm);">
+                        ✓ Certified in Responsive Web Design
+                    </span>
+                </div>
+
                 <p style="color: var(--color-text-secondary); margin-top: var(--space-4);">
                     No fluff. No over-promises. Just systems that turn traffic into predictable leads.
                     I've worked with businesses across industries — solar, roofing, professional services, local businesses —
@@ -784,68 +770,7 @@
                     let's talk. I keep it simple, honest, and focused on what actually drives leads.
                 </p>
                 <div class="about-cta" style="text-align: center; margin-top: var(--space-6);">
-                    <a href="#booking" class="btn btn-outline">Schedule a Call</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         CHOICE SECTION (Schedule Call or Free Resources)
-         FUNNEL LOGIC: Self-segmentation by intent
-         ======================================== -->
-    <section id="next-step" class="choice-section section">
-        <div class="container container-narrow">
-            <div class="text-center">
-                <h2>Choose Your Next Step</h2>
-                <p class="text-lg mt-4" style="color: var(--color-text-secondary);">
-                    Pick the path that makes sense for where you are right now.
-                </p>
-            </div>
-
-            <div class="choice-grid">
-                <!-- Option 1: Schedule Call (High Intent) -->
-                <div class="choice-card choice-call">
-                    <span class="choice-badge">Talk Strategy</span>
-                    <h3>Book a Free Call</h3>
-                    <p class="choice-description">
-                        15 minutes. We'll walk through your specific situation and show you what's possible.
-                    </p>
-
-                    <ul class="choice-benefits">
-                        <li>Live site audit</li>
-                        <li>Custom action plan</li>
-                        <li>Honest assessment</li>
-                        <li>Zero pressure</li>
-                    </ul>
-
-                    <a href="#booking" class="btn btn-primary btn-lg choice-cta">Schedule Your Call →</a>
-
-                    <p class="choice-note">
-                        No pitch. Just a real conversation.
-                    </p>
-                </div>
-
-                <!-- Option 2: Free Resources (Low Intent / Building Trust) -->
-                <div class="choice-card choice-resources">
-                    <span class="choice-badge">Start Learning</span>
-                    <h3>Get Free Resources</h3>
-                    <p class="choice-description">
-                        Not ready to talk? Grab our free guide or request a site audit.
-                    </p>
-
-                    <ul class="choice-benefits">
-                        <li>CTA Blueprint (PDF)</li>
-                        <li>Free website audit</li>
-                        <li>Instant access</li>
-                        <li>No calls required</li>
-                    </ul>
-
-                    <a href="#lead-magnets" class="btn btn-secondary btn-lg choice-cta">Browse Free Resources →</a>
-
-                    <p class="choice-note">
-                        Take your time. No pressure.
-                    </p>
+                    <a href="#booking" class="btn btn-primary btn-lg">Let's Talk →</a>
                 </div>
             </div>
         </div>
@@ -883,7 +808,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <img src="rising-sun-logo.png" alt="Rising Sun Digital" class="footer-logo">
+                <img src="rising-sun-logo.png" alt="Rising Sun Digital" class="footer-logo" width="120" height="40" loading="lazy">
 
                 <div class="footer-contact">
                     <a href="mailto:risingsundigital4@gmail.com">risingsundigital4@gmail.com</a>
@@ -897,8 +822,44 @@
         </div>
     </footer>
 
-    <!-- Calendly Script -->
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <!-- Calendly Script (Lazy Loaded for Performance) -->
+    <script>
+        // Lazy load Calendly only when user scrolls near booking section
+        (function() {
+            let calendlyLoaded = false;
+
+            function loadCalendly() {
+                if (calendlyLoaded) return;
+                calendlyLoaded = true;
+
+                const script = document.createElement('script');
+                script.src = 'https://assets.calendly.com/assets/external/widget.js';
+                script.async = true;
+                document.body.appendChild(script);
+            }
+
+            // Load when user scrolls 50% down page OR clicks a booking CTA
+            let hasScrolled = false;
+            window.addEventListener('scroll', function() {
+                if (hasScrolled) return;
+                const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+                if (scrollPercent > 50) {
+                    hasScrolled = true;
+                    loadCalendly();
+                }
+            }, { passive: true });
+
+            // Also load immediately if user clicks any booking CTA
+            document.addEventListener('click', function(e) {
+                if (e.target.closest('a[href="#booking"]')) {
+                    loadCalendly();
+                }
+            });
+
+            // Fallback: Load after 5 seconds if user hasn't scrolled
+            setTimeout(loadCalendly, 5000);
+        })();
+    </script>
 
     <!-- Countdown Timer -->
     <script>
@@ -955,6 +916,15 @@
                         mode: 'no-cors'
                     });
 
+                    // Track successful form submission in GA4
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'generate_lead', {
+                            'event_category': 'Form',
+                            'event_label': formLabel,
+                            'value': formLabel === 'audit_request' ? 200 : 100
+                        });
+                    }
+
                     btn.innerHTML = '✓ Check Your Email';
                     btn.style.background = 'var(--brand-teal)';
 
@@ -977,6 +947,150 @@
 
         enhanceFormSubmit(document.getElementById('pdf-form'), 'pdf_download');
         enhanceFormSubmit(document.getElementById('audit-form'), 'audit_request');
+    </script>
+
+    <!-- Conversion Tracking (CTA Clicks + Calendly Bookings) -->
+    <script>
+        // Track all CTA button clicks to booking section
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track primary CTA clicks
+            const ctaButtons = document.querySelectorAll('a[href="#booking"]');
+            ctaButtons.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'cta_click', {
+                            'event_category': 'Engagement',
+                            'event_label': 'Book Call CTA',
+                            'value': 50
+                        });
+                    }
+                });
+            });
+
+            // Track Calendly event scheduling (when user actually books)
+            window.addEventListener('message', function(e) {
+                if (e.data.event && e.data.event.indexOf('calendly') === 0) {
+                    if (e.data.event === 'calendly.event_scheduled') {
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'conversion', {
+                                'event_category': 'Booking',
+                                'event_label': 'Strategy Call Booked',
+                                'value': 500
+                            });
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+    <!-- Exit-Intent Capture -->
+    <div id="exit-intent-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; align-items: center; justify-content: center;">
+        <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); max-width: 500px; margin: var(--space-4); position: relative;">
+            <button id="exit-close" style="position: absolute; top: var(--space-3); right: var(--space-3); background: none; border: none; font-size: 24px; cursor: pointer; color: var(--neutral-600);">&times;</button>
+
+            <h3 style="margin-bottom: var(--space-3); color: var(--neutral-900);">Before You Go...</h3>
+            <p style="margin-bottom: var(--space-4); color: var(--neutral-600);">
+                Grab our free CTA Blueprint. 15 pages of conversion fixes you can implement today.
+            </p>
+
+            <form id="exit-intent-form" action="https://script.google.com/macros/s/AKfycbxo8BHA3MkiHYQGAy9RmE4ECKy97QKbuny_ebZTpNvBB73p0VvRsuRhKpuMEfD4oieZMg/exec" method="POST" style="display: flex; flex-direction: column; gap: var(--space-3);">
+                <input type="text" name="name" class="input" placeholder="Your name" required autocomplete="name">
+                <input type="email" name="email" class="input" placeholder="Your email" required autocomplete="email">
+                <input type="hidden" name="form_type" value="Exit Intent - CTA Guide">
+                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Me The Guide</button>
+            </form>
+
+            <p style="font-size: var(--font-size-xs); color: var(--neutral-500); text-align: center; margin-top: var(--space-3);">
+                No spam. Unsubscribe anytime.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Exit-Intent Detection (Shows once per session)
+        (function() {
+            const modal = document.getElementById('exit-intent-modal');
+            const closeBtn = document.getElementById('exit-close');
+            const form = document.getElementById('exit-intent-form');
+            let shown = sessionStorage.getItem('exitIntentShown');
+
+            // Show modal on exit intent
+            function showExitIntent(e) {
+                if (shown) return;
+
+                // Detect cursor leaving viewport at top (close/back button area)
+                if (e.clientY < 10 && !shown) {
+                    modal.style.display = 'flex';
+                    sessionStorage.setItem('exitIntentShown', 'true');
+                    shown = true;
+
+                    // Track in GA4
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'exit_intent_shown', {
+                            'event_category': 'Engagement',
+                            'event_label': 'Exit Intent Popup'
+                        });
+                    }
+                }
+            }
+
+            // Close modal
+            function closeModal() {
+                modal.style.display = 'none';
+            }
+
+            // Handle form submit
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Sending...';
+                btn.disabled = true;
+
+                const formData = new FormData(form);
+
+                try {
+                    await fetch(form.getAttribute('action'), {
+                        method: 'POST',
+                        body: formData,
+                        mode: 'no-cors'
+                    });
+
+                    // Track in GA4
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'generate_lead', {
+                            'event_category': 'Form',
+                            'event_label': 'exit_intent_capture',
+                            'value': 150
+                        });
+                    }
+
+                    btn.innerHTML = '✓ Check Your Email';
+                    btn.style.background = 'var(--brand-teal)';
+
+                    setTimeout(() => {
+                        window.location.href = 'thank-you.html';
+                    }, 1000);
+
+                } catch (error) {
+                    btn.innerHTML = '❌ Error - Try Again';
+                    btn.disabled = false;
+
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.background = '';
+                    }, 3000);
+                }
+            });
+
+            // Add event listeners
+            document.addEventListener('mouseleave', showExitIntent);
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) closeModal();
+            });
+        })();
     </script>
 
 </body>

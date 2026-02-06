@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OG Image Screenshot Helper - 1200x630</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: 1200px;
+            height: 630px;
+            position: relative;
+            border: 3px solid #00ff00;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+        }
+
+        .instructions {
+            position: absolute;
+            top: -80px;
+            left: 0;
+            right: 0;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .instructions strong {
+            color: #00ff00;
+            font-size: 16px;
+        }
+
+        iframe {
+            width: 1200px;
+            height: 630px;
+            border: none;
+            display: block;
+            background: white;
+        }
+
+        .dimensions {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #00ff00;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="instructions">
+            <strong>SCREENSHOT INSTRUCTIONS:</strong><br>
+            1. This green box is EXACTLY 1200x630 pixels<br>
+            2. Press <strong>Windows Key + Shift + S</strong> (Snipping Tool)<br>
+            3. Click and drag to capture ONLY the green box area<br>
+            4. Save as "og-primary.jpg" → Replace the existing file
+        </div>
+
+        <iframe src="og-light.html"></iframe>
+
+        <div class="dimensions">
+            1200 x 630 pixels (Perfect OG Image Size)
+        </div>
+    </div>
+
+    <script>
+        // Verify dimensions on load
+        window.addEventListener('load', function() {
+            const container = document.querySelector('.container');
+            const width = container.offsetWidth;
+            const height = container.offsetHeight;
+
+            if (width === 1200 && height === 630) {
+                console.log('✓ Perfect dimensions: 1200x630');
+            } else {
+                console.warn('⚠ Dimensions off:', width, 'x', height);
+                alert('WARNING: Dimensions are ' + width + 'x' + height + '\nShould be 1200x630\nTry zooming to 100% (Ctrl+0)');
+            }
+        });
+    </script>
+</body>
+</html>
