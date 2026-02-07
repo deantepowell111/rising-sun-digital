@@ -303,7 +303,12 @@
         .lead-card:hover {
             border-color: var(--brand-teal);
             transform: translateY(-4px);
-            box-shadow: var(--shadow-xl);
+            box-shadow: 0 20px 40px rgba(26, 92, 84, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .lead-card:hover .lead-card-badge {
+            background: rgba(233, 168, 32, 0.2);
+            transform: scale(1.05);
         }
 
         .lead-card-badge {
@@ -368,6 +373,22 @@
            ======================================== */
         .services {
             background: var(--brand-cream);
+            position: relative;
+        }
+
+        .services::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 20px 20px, rgba(26, 92, 84, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 60px 60px, rgba(233, 168, 32, 0.02) 1px, transparent 1px);
+            background-size: 80px 80px;
+            opacity: 0.5;
+            pointer-events: none;
         }
 
         .services-list {
@@ -381,6 +402,24 @@
             display: flex;
             flex-direction: column;
             gap: var(--space-3);
+            padding: var(--space-6);
+            border-radius: var(--radius-lg);
+            transition: all var(--transition-base);
+            cursor: default;
+        }
+
+        .service-item:hover {
+            background: rgba(255, 255, 255, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        .service-item svg {
+            transition: transform var(--transition-base);
+        }
+
+        .service-item:hover svg {
+            transform: scale(1.1) rotate(5deg);
         }
 
         .service-item h3 {
@@ -582,7 +621,19 @@
          HERO SECTION
          ======================================== -->
     <section class="hero">
-        <div class="container">
+        <div class="container" style="position: relative;">
+            <!-- Hero Illustration -->
+            <div style="position: absolute; right: 5%; top: 15%; width: 380px; height: 380px; opacity: 0.4; z-index: 0;">
+                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="url(#grad1)" d="M44.5,-76.2C58.1,-69.3,70,-58.1,77.8,-44.9C85.6,-31.7,89.3,-15.9,88.8,-0.3C88.3,15.3,83.6,30.6,75.8,43.8C68,57,57.1,68.1,44.3,74.8C31.5,81.5,15.7,83.7,0.5,82.8C-14.7,81.9,-29.4,78,-42.6,70.8C-55.8,63.6,-67.5,53.1,-74.9,40C-82.3,26.9,-85.4,13.4,-84.3,0.5C-83.2,-12.4,-77.9,-24.8,-70.3,-37.5C-62.7,-50.2,-52.8,-63.2,-39.8,-70.4C-26.8,-77.6,-13.4,-79,0.6,-80C14.6,-81,29.2,-81.6,44.5,-76.2Z" transform="translate(100 100)" />
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#1A5C54;stop-opacity:0.3" />
+                            <stop offset="100%" style="stop-color:#E9A820;stop-opacity:0.2" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="accent-dot"></span>
