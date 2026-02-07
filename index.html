@@ -1018,8 +1018,9 @@
             function showExitIntent(e) {
                 if (shown) return;
 
-                // Detect cursor leaving viewport at top (close/back button area)
-                if (e.clientY < 10 && !shown) {
+                // Detect cursor leaving viewport upward (to close tab/address bar)
+                // Check if cursor is near top AND moving out of viewport
+                if (e.clientY <= 0 || (e.clientY < 50 && e.relatedTarget == null)) {
                     modal.style.display = 'flex';
                     sessionStorage.setItem('exitIntentShown', 'true');
                     shown = true;
@@ -1084,7 +1085,7 @@
             });
 
             // Add event listeners
-            document.addEventListener('mouseleave', showExitIntent);
+            document.addEventListener('mouseout', showExitIntent);
             closeBtn.addEventListener('click', closeModal);
             modal.addEventListener('click', function(e) {
                 if (e.target === modal) closeModal();
