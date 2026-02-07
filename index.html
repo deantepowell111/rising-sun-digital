@@ -127,6 +127,13 @@
             flex-shrink: 0; /* Prevent logo from shrinking */
         }
 
+        .nav-logo img,
+        .footer-logo {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -webkit-font-smoothing: antialiased;
+        }
+
         .nav-logo:hover {
             opacity: 0.8;
         }
@@ -610,7 +617,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="/" class="nav-logo">
-                    <img src="images/logo-clean.svg" alt="Rising Sun Digital" width="140" height="42" loading="eager">
+                    <img src="images/logo-clean.svg" alt="Rising Sun Digital" width="200" height="60" loading="eager" style="height: auto;">
                 </a>
                 <a href="#booking" class="btn btn-primary">Book Your Call</a>
             </div>
@@ -870,7 +877,7 @@
         <div class="container">
             <div class="footer-content">
                 <div style="display: flex; flex-direction: column; gap: var(--space-3);">
-                    <img src="images/logo-clean.svg" alt="Rising Sun Digital" class="footer-logo" width="140" height="42" loading="lazy">
+                    <img src="images/logo-clean.svg" alt="Rising Sun Digital" class="footer-logo" width="180" height="54" loading="lazy" style="height: auto;">
                     <div style="display: flex; gap: var(--space-4); align-items: center;">
                         <!-- Social Icons -->
                         <a href="https://www.instagram.com/risingsundigital/" target="_blank" rel="noopener" aria-label="Instagram" style="color: var(--color-text-secondary); transition: color var(--transition-base); display: flex;">

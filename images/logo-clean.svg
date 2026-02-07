@@ -1,11 +1,24 @@
-<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Simple geometric sun icon -->
-  <circle cx="30" cy="30" r="12" fill="url(#gradient1)"/>
-  <path d="M30 8L30 12M30 48L30 52M52 30L48 30M12 30L8 30M44.5 15.5L41.5 18.5M18.5 41.5L15.5 44.5M44.5 44.5L41.5 41.5M18.5 18.5L15.5 15.5" stroke="url(#gradient1)" stroke-width="2.5" stroke-linecap="round"/>
+<svg width="240" height="72" viewBox="0 0 240 72" fill="none" xmlns="http://www.w3.org/2000/svg" style="shape-rendering: geometricPrecision;">
+  <!-- Simple geometric sun icon (larger, crisper) -->
+  <circle cx="36" cy="36" r="16" fill="url(#gradient1)"/>
+  <g stroke="url(#gradient1)" stroke-width="3" stroke-linecap="round">
+    <line x1="36" y1="6" x2="36" y2="14"/>
+    <line x1="36" y1="58" x2="36" y2="66"/>
+    <line x1="66" y1="36" x2="58" y2="36"/>
+    <line x1="14" y1="36" x2="6" y2="36"/>
+    <line x1="57" y1="15" x2="51" y2="21"/>
+    <line x1="21" y1="51" x2="15" y2="57"/>
+    <line x1="57" y1="57" x2="51" y2="51"/>
+    <line x1="21" y1="21" x2="15" y2="15"/>
+  </g>
 
-  <!-- Text: RISING SUN DIGITAL -->
-  <text x="62" y="27" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="800" letter-spacing="-0.02em" fill="#1A5C54">RISING SUN</text>
-  <text x="62" y="42" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600" letter-spacing="0.08em" fill="#6B7280">DIGITAL</text>
+  <!-- Text: RISING SUN (larger, bolder) -->
+  <text x="78" y="34" font-family="Inter, -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
+        font-size="22" font-weight="800" letter-spacing="-0.02em" fill="#1A5C54">RISING SUN</text>
+
+  <!-- Text: DIGITAL (larger) -->
+  <text x="78" y="52" font-family="Inter, -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
+        font-size="13" font-weight="600" letter-spacing="0.08em" fill="#6B7280">DIGITAL</text>
 
   <!-- Gradient definitions -->
   <defs>
