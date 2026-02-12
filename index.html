@@ -17,7 +17,7 @@
     <meta property="og:title" content="Rising Sun Digital — The Digital Growth Partner for Home Service Businesses">
     <meta property="og:description" content="The digital growth partner for local home-service businesses that need customers now — not vanity metrics. Lead generation systems that actually convert.">
     <meta property="og:image" content="https://www.risingsun.digital/og-primary.jpg">
-    <meta property="og:image:alt" content="Rising Sun Digital — Digital Growth Partner for Home Service Businesses">
+    <meta property="og:image:alt" content="Rising Sun Digital - Lead Generation and Website Design for Plumbers, HVAC Contractors, and Electricians">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
@@ -26,6 +26,127 @@
     <meta name="twitter:title" content="Rising Sun Digital — Digital Growth Partner for Home Service Businesses">
     <meta name="twitter:description" content="The digital growth partner for local home-service businesses that need customers now — not vanity metrics.">
     <meta name="twitter:image" content="https://www.risingsun.digital/og-primary.jpg">
+
+    <!-- Schema.org Structured Data for AI Entity Recognition -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://www.risingsun.digital/#organization",
+        "name": "Rising Sun Digital",
+        "alternateName": "Rising Sun Digital Marketing",
+        "description": "Digital marketing agency specializing in lead generation, websites, and growth systems for home service businesses including HVAC, plumbing, electrical, roofing, and car detailing contractors.",
+        "url": "https://www.risingsun.digital",
+        "logo": "https://www.risingsun.digital/images/logo-new.png",
+        "image": "https://www.risingsun.digital/og-primary.jpg",
+        "telephone": "+1-915-234-3570",
+        "email": "risingsundigital4@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "El Paso",
+            "addressRegion": "TX",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 31.7619,
+            "longitude": -106.4850
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "El Paso",
+                "containedInPlace": { "@type": "State", "name": "Texas" }
+            },
+            {
+                "@type": "Country",
+                "name": "United States"
+            }
+        ],
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 31.7619,
+                "longitude": -106.4850
+            },
+            "geoRadius": "2000 mi"
+        },
+        "founder": {
+            "@type": "Person",
+            "name": "Deante Powell",
+            "jobTitle": "Founder"
+        },
+        "foundingDate": "2024",
+        "priceRange": "$1000-$5000",
+        "paymentAccepted": ["Credit Card", "Bank Transfer"],
+        "currenciesAccepted": "USD",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+        },
+        "sameAs": [
+            "https://www.instagram.com/risingsundigital/",
+            "https://www.facebook.com/profile.php?id=61567085197749"
+        ],
+        "knowsAbout": [
+            "Digital Marketing for HVAC Companies",
+            "Digital Marketing for Plumbers",
+            "Digital Marketing for Electricians",
+            "Digital Marketing for Roofers",
+            "Digital Marketing for Car Detailers",
+            "Digital Marketing for Local Contractors",
+            "Lead Generation for Home Service Businesses",
+            "Local SEO for Contractors",
+            "Google Ads for Home Services",
+            "Website Design for Trades"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Digital Marketing Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Starter Website",
+                        "description": "Professional conversion-focused website for home service businesses"
+                    },
+                    "price": "1000",
+                    "priceCurrency": "USD"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Full Lead Generation System",
+                        "description": "Complete lead generation system with CRM, automations, and online booking"
+                    },
+                    "price": "2500",
+                    "priceCurrency": "USD"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Monthly Marketing Management",
+                        "description": "Ongoing optimization, ad management, and lead generation support"
+                    },
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "price": "500",
+                        "priceCurrency": "USD",
+                        "unitText": "MONTH",
+                        "minPrice": "500",
+                        "maxPrice": "1750"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
 
     <!-- Favicon -->
     <!-- Favicon - Multiple sizes for sharp rendering -->
@@ -46,13 +167,13 @@
 
     <!-- Preload Critical Assets -->
     <link rel="preload" href="images/logo-new.png" as="image">
-    <link rel="preload" href="minimal-design-system.css?v=2" as="style">
+    <link rel="preload" href="minimal-design-system.css?v=20260212" as="style">
 
     <!-- Fonts: Inter (Clean, Modern Sans-Serif) - Optimized Loading -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Design System -->
-    <link rel="stylesheet" href="minimal-design-system.css?v=2">
+    <!-- Design System (auto-versioned by date) -->
+    <link rel="stylesheet" href="minimal-design-system.css?v=20260212">
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3T8QXNWYV"></script>
@@ -417,6 +538,7 @@
             border-radius: var(--radius-lg);
             transition: all var(--transition-base);
             cursor: default;
+            position: relative;
         }
 
         .service-item:hover {
@@ -535,6 +657,513 @@
         }
 
         /* ========================================
+           PREMIUM ANIMATIONS
+           ======================================== */
+
+        /* Staggered Reveal Animation */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes glowPulse {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(26, 92, 84, 0.4),
+                            0 0 40px rgba(26, 92, 84, 0.2),
+                            0 0 60px rgba(26, 92, 84, 0.1);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(26, 92, 84, 0.6),
+                            0 0 60px rgba(26, 92, 84, 0.3),
+                            0 0 90px rgba(26, 92, 84, 0.15);
+            }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% center; }
+            100% { background-position: 200% center; }
+        }
+
+        /* Hero Staggered Reveal */
+        .hero-content .hero-badge {
+            opacity: 0;
+            animation: fadeUp 0.6s ease-out forwards;
+            animation-delay: 0.1s;
+        }
+
+        .hero-content h1 {
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out forwards;
+            animation-delay: 0.25s;
+        }
+
+        .hero-content .hero-description {
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out forwards;
+            animation-delay: 0.45s;
+        }
+
+        .hero-content .hero-cta {
+            opacity: 0;
+            animation: fadeUp 0.8s ease-out forwards;
+            animation-delay: 0.65s;
+        }
+
+        .hero-content .hero-note {
+            opacity: 0;
+            animation: fadeUp 0.6s ease-out forwards;
+            animation-delay: 0.85s;
+        }
+
+        /* CTA Button Glow Effect */
+        .btn-glow {
+            position: relative;
+            animation: glowPulse 3s ease-in-out infinite;
+            background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-forest) 100%);
+        }
+
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+
+        .btn-glow:hover {
+            animation: none;
+            box-shadow: 0 0 40px rgba(26, 92, 84, 0.5),
+                        0 0 80px rgba(26, 92, 84, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Scroll-triggered reveals */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .reveal-scale.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Premium Background - Gradient Mesh */
+        .hero-bg-premium {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .hero-bg-premium::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 70%;
+            height: 140%;
+            background:
+                radial-gradient(ellipse at 70% 20%, rgba(233, 168, 32, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 30% 80%, rgba(26, 92, 84, 0.1) 0%, transparent 40%),
+                radial-gradient(ellipse at 90% 60%, rgba(255, 107, 53, 0.08) 0%, transparent 35%);
+            animation: morphShape 25s ease-in-out infinite;
+        }
+
+        .hero-bg-premium::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -20%;
+            width: 60%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(26, 92, 84, 0.06) 0%, transparent 60%);
+            filter: blur(60px);
+        }
+
+        /* Grid Overlay for Premium Feel */
+        .hero-grid-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                linear-gradient(rgba(26, 92, 84, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(26, 92, 84, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            opacity: 0.5;
+            z-index: 0;
+        }
+
+        /* ========================================
+           PHASE 2: PREMIUM CARD INTERACTIONS
+           ======================================== */
+
+        /* 3D Tilt Effect for Service Cards */
+        .service-item {
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                        box-shadow 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+                        background 0.3s ease;
+        }
+
+        .service-item:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.08),
+                0 8px 16px rgba(26, 92, 84, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        .service-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            background: linear-gradient(135deg, rgba(26, 92, 84, 0.03) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+
+        .service-item:hover::before {
+            opacity: 1;
+        }
+
+        /* Glassmorphism Lead Card */
+        .lead-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow:
+                0 8px 32px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .lead-card:hover {
+            background: rgba(255, 255, 255, 0.85);
+            border-color: var(--brand-teal);
+            transform: translateY(-8px) scale(1.01);
+            box-shadow:
+                0 24px 48px rgba(26, 92, 84, 0.15),
+                0 8px 24px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(26, 92, 84, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+
+        /* Pricing Card Premium Hovers */
+        .pricing-card {
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            overflow: hidden;
+        }
+
+        .pricing-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(26, 92, 84, 0.03),
+                transparent
+            );
+            transition: left 0.6s ease;
+            pointer-events: none;
+        }
+
+        .pricing-card:hover::after {
+            left: 100%;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-6px);
+            box-shadow:
+                0 20px 40px rgba(0, 0, 0, 0.1),
+                0 0 0 1px rgba(26, 92, 84, 0.1);
+        }
+
+        /* Card Border Glow Effect */
+        .glow-border {
+            position: relative;
+        }
+
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: inherit;
+            background: linear-gradient(135deg, var(--brand-teal), var(--brand-marigold), var(--brand-teal));
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.4s ease;
+            filter: blur(8px);
+        }
+
+        .glow-border:hover::before {
+            opacity: 0.4;
+        }
+
+        /* Blog Card Tilt (for future) */
+        .blog-card {
+            transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-6px) rotateX(1deg);
+            box-shadow:
+                0 16px 32px rgba(0, 0, 0, 0.1),
+                0 4px 12px rgba(26, 92, 84, 0.08);
+        }
+
+        /* Icon Float Animation on Card Hover */
+        .service-item:hover svg {
+            transform: scale(1.15) translateY(-4px) rotate(8deg);
+            filter: drop-shadow(0 4px 8px rgba(233, 168, 32, 0.3));
+        }
+
+        /* Form Input Focus Glow */
+        .input:focus {
+            border-color: var(--brand-teal);
+            box-shadow:
+                0 0 0 3px rgba(26, 92, 84, 0.1),
+                0 0 20px rgba(26, 92, 84, 0.08);
+        }
+
+        /* ========================================
+           PHASE 3: MICRO-INTERACTIONS & POLISH
+           ======================================== */
+
+        /* Animated Gradient Text */
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .hero .highlight {
+            background: linear-gradient(
+                135deg,
+                var(--brand-marigold) 0%,
+                var(--brand-orange) 25%,
+                var(--brand-marigold) 50%,
+                var(--brand-orange) 75%,
+                var(--brand-marigold) 100%
+            );
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease-in-out infinite;
+        }
+
+        /* Nav Logo Hover */
+        .nav-logo:hover img {
+            transform: scale(1.05) rotate(-2deg);
+            filter: drop-shadow(0 4px 12px rgba(26, 92, 84, 0.2));
+        }
+
+        .nav-logo img {
+            transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1),
+                        filter 0.3s ease;
+        }
+
+        /* Nav CTA Button Ripple */
+        .nav .btn-primary {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .nav .btn-primary:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        /* Hero Badge Pulse */
+        .hero-badge .accent-dot {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.4); opacity: 0.6; }
+        }
+
+        /* Checkmark Animation */
+        .lead-card-includes li::before {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .lead-card-includes li:hover::before {
+            transform: scale(1.3);
+            color: var(--brand-marigold);
+        }
+
+        /* Section Heading Accent Line */
+        .text-center h2 {
+            position: relative;
+            display: inline-block;
+        }
+
+        .text-center h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--brand-teal), var(--brand-marigold));
+            border-radius: var(--radius-full);
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .reveal.visible h2::after {
+            transform: translateX(-50%) scaleX(1);
+        }
+
+        /* Footer Link Underline */
+        .footer ul a {
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer ul a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--brand-teal);
+            transition: width 0.3s ease;
+        }
+
+        .footer ul a:hover::after {
+            width: 100%;
+        }
+
+        /* Form Button Loading State */
+        .btn-loading {
+            position: relative;
+            color: transparent !important;
+            pointer-events: none;
+        }
+
+        .btn-loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            margin: -10px 0 0 -10px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Spots Counter Hover */
+        #spots-left {
+            display: inline-block;
+            transition: transform 0.3s ease;
+        }
+
+        #spots-left:hover {
+            transform: scale(1.2);
+        }
+
+        /* Industry Tags Hover */
+        .about [style*="padding: var(--space-2) var(--space-3)"][style*="border-radius"] {
+            transition: all 0.3s ease !important;
+            cursor: default;
+        }
+
+        .about [style*="padding: var(--space-2) var(--space-3)"][style*="border-radius"]:hover {
+            background: var(--brand-teal) !important;
+            color: white !important;
+            transform: translateY(-2px);
+        }
+
+        /* ========================================
            MOBILE RESPONSIVENESS
            ======================================== */
         @media (max-width: 768px) {
@@ -621,7 +1250,7 @@
         <div class="container">
             <div class="nav-content">
                 <a href="/" class="nav-logo">
-                    <img src="images/logo-new.png" alt="Rising Sun Digital" width="80" height="80" loading="eager" style="height: 70px; width: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
+                    <img src="images/logo-new.png" alt="Rising Sun Digital - Digital Marketing Agency for Home Service Businesses" width="80" height="80" loading="eager" style="height: 70px; width: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
                 </a>
                 <a href="#booking" class="btn btn-primary">Book Your Call</a>
             </div>
@@ -632,19 +1261,11 @@
          HERO SECTION
          ======================================== -->
     <section class="hero">
+        <!-- Premium Gradient Background -->
+        <div class="hero-bg-premium"></div>
+        <div class="hero-grid-overlay"></div>
+
         <div class="container" style="position: relative;">
-            <!-- Hero Illustration -->
-            <div style="position: absolute; right: 5%; top: 15%; width: 380px; height: 380px; opacity: 0.4; z-index: 0;">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="url(#grad1)" d="M44.5,-76.2C58.1,-69.3,70,-58.1,77.8,-44.9C85.6,-31.7,89.3,-15.9,88.8,-0.3C88.3,15.3,83.6,30.6,75.8,43.8C68,57,57.1,68.1,44.3,74.8C31.5,81.5,15.7,83.7,0.5,82.8C-14.7,81.9,-29.4,78,-42.6,70.8C-55.8,63.6,-67.5,53.1,-74.9,40C-82.3,26.9,-85.4,13.4,-84.3,0.5C-83.2,-12.4,-77.9,-24.8,-70.3,-37.5C-62.7,-50.2,-52.8,-63.2,-39.8,-70.4C-26.8,-77.6,-13.4,-79,0.6,-80C14.6,-81,29.2,-81.6,44.5,-76.2Z" transform="translate(100 100)" />
-                    <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#1A5C54;stop-opacity:0.3" />
-                            <stop offset="100%" style="stop-color:#E9A820;stop-opacity:0.2" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
             <div class="hero-content">
                 <div class="hero-badge">
                     <span class="accent-dot"></span>
@@ -661,7 +1282,7 @@
                 </p>
 
                 <div class="hero-cta">
-                    <a href="#lead-magnets" class="btn btn-primary btn-lg">Get Your Free Site Audit</a>
+                    <a href="#lead-magnets" class="btn btn-primary btn-lg btn-glow">Get Your Free Site Audit</a>
                 </div>
 
                 <p class="hero-note" style="margin-top: var(--space-3); font-size: var(--font-size-sm);">
@@ -679,10 +1300,10 @@
         <div class="container">
             <div class="countdown-content">
                 <span class="countdown-text">
-                    <strong><span id="spots-left">3</span> spots left this week</strong> — Free strategy calls filling fast
+                    <strong><span id="spots-left">2</span> spots left this week</strong> — Limited availability
                 </span>
                 <span class="countdown-timer">
-                    Resets in: <span id="countdown-display">--:--:--</span>
+                    Week resets: <span id="countdown-display">--:--:--</span>
                 </span>
             </div>
         </div>
@@ -693,14 +1314,14 @@
          ======================================== -->
     <section id="lead-magnets" class="lead-magnets section">
         <div class="container">
-            <div class="text-center container-reading">
+            <div class="text-center container-reading reveal">
                 <h2>Get Your Free Site Audit</h2>
                 <p class="text-lg mt-4" style="color: var(--color-text-secondary);">
                     We'll analyze your site and show you exactly where you're leaking conversions.
                 </p>
             </div>
 
-            <div class="lead-magnets-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+            <div class="lead-magnets-grid reveal-scale" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
                 <!-- Website Audit Card (Primary Offer) -->
                 <div class="lead-card">
                     <span class="lead-card-badge">Site Audit</span>
@@ -737,14 +1358,14 @@
          ======================================== -->
     <section class="services section">
         <div class="container">
-            <div class="container-narrow text-center">
+            <div class="container-narrow text-center reveal">
                 <h2>What We Do</h2>
                 <p class="text-lg mt-4" style="color: var(--color-text-secondary);">
                     Lead generation and funnel systems for small businesses.
                 </p>
             </div>
 
-            <div class="services-list">
+            <div class="services-list reveal">
                 <div class="service-item">
                     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #E9A820; margin-bottom: 12px;">
                         <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
@@ -814,7 +1435,7 @@
          ======================================== -->
     <section id="pricing" class="section" style="background: var(--color-bg-primary);">
         <div class="container">
-            <div class="text-center container-reading">
+            <div class="text-center container-reading reveal">
                 <h2>Simple, Transparent Pricing</h2>
                 <p class="text-lg mt-4" style="color: var(--color-text-secondary);">
                     No hidden fees. No long-term contracts. Just results.
@@ -827,7 +1448,7 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6); max-width: 700px; margin: 0 auto;">
 
                     <!-- Starter Site -->
-                    <div style="background: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); text-align: center;">
+                    <div class="pricing-card" style="background: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6); text-align: center;">
                         <h4 style="font-size: var(--font-size-xl); margin-bottom: var(--space-2);">Starter Site</h4>
                         <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold); color: var(--brand-teal);">$1,000</div>
                         <p style="color: var(--color-text-tertiary); font-size: var(--font-size-sm); margin-top: var(--space-2);">one-time</p>
@@ -840,7 +1461,7 @@
                     </div>
 
                     <!-- Full System -->
-                    <div style="background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-forest) 100%); border-radius: var(--radius-lg); padding: var(--space-6); text-align: center; color: white; position: relative;">
+                    <div class="pricing-card glow-border" style="background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-forest) 100%); border-radius: var(--radius-lg); padding: var(--space-6); text-align: center; color: white; position: relative;">
                         <span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--brand-marigold); color: var(--neutral-900); padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-bold); text-transform: uppercase;">Most Popular</span>
                         <h4 style="font-size: var(--font-size-xl); margin-bottom: var(--space-2);">Full Lead System</h4>
                         <div style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-extrabold);">$2,500</div>
@@ -862,7 +1483,7 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6);">
 
                     <!-- Tier 1 -->
-                    <div style="background: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6);">
+                    <div class="pricing-card" style="background: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6);">
                         <h4 style="font-size: var(--font-size-xl); margin-bottom: var(--space-2);">Tier 1 — Maintain</h4>
                         <div style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-extrabold); color: var(--brand-teal);">$500<span style="font-size: var(--font-size-base); font-weight: var(--font-weight-normal); color: var(--color-text-tertiary);">/month</span></div>
                         <p style="color: var(--color-text-secondary); margin-top: var(--space-3); font-size: var(--font-size-sm);">Keep your system running smooth</p>
@@ -875,7 +1496,7 @@
                     </div>
 
                     <!-- Tier 2 -->
-                    <div style="background: var(--color-bg-subtle); border: 2px solid var(--brand-teal); border-radius: var(--radius-lg); padding: var(--space-6); position: relative;">
+                    <div class="pricing-card glow-border" style="background: var(--color-bg-subtle); border: 2px solid var(--brand-teal); border-radius: var(--radius-lg); padding: var(--space-6); position: relative;">
                         <span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--brand-teal); color: white; padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-bold); text-transform: uppercase;">Best Value</span>
                         <h4 style="font-size: var(--font-size-xl); margin-bottom: var(--space-2);">Tier 2 — Grow</h4>
                         <div style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-extrabold); color: var(--brand-teal);">$1,000<span style="font-size: var(--font-size-base); font-weight: var(--font-weight-normal); color: var(--color-text-tertiary);">/month</span></div>
@@ -890,7 +1511,7 @@
                     </div>
 
                     <!-- Tier 3 -->
-                    <div style="background: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6);">
+                    <div class="pricing-card" style="background: var(--color-bg-subtle); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: var(--space-6);">
                         <h4 style="font-size: var(--font-size-xl); margin-bottom: var(--space-2);">Tier 3 — Scale</h4>
                         <div style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-extrabold); color: var(--brand-teal);">$1,750<span style="font-size: var(--font-size-base); font-weight: var(--font-weight-normal); color: var(--color-text-tertiary);">/month</span></div>
                         <p style="color: var(--color-text-secondary); margin-top: var(--space-3); font-size: var(--font-size-sm);">Maximum growth & priority support</p>
@@ -950,14 +1571,14 @@
     </section>
 
     <!-- ========================================
-         ABOUT SECTION
+         ABOUT SECTION (with GEO Entity Signals)
          ======================================== -->
-    <section class="about section-sm">
+    <section class="about section-sm" id="about">
         <div class="container container-reading">
-            <div class="about-content">
-                <h2 class="text-center">Who's Behind This</h2>
+            <div class="about-content reveal">
+                <h2 class="text-center">About Rising Sun Digital</h2>
                 <p class="text-lg mt-4" style="color: var(--color-text-secondary); text-align: center;">
-                    I'm Deante Powell, founder of Rising Sun Digital — the digital growth partner for local home-service businesses that need customers now, not vanity metrics.
+                    I'm <strong>Deante Powell</strong>, founder of <strong>Rising Sun Digital</strong> — the digital growth partner for local home-service businesses that need customers now, not vanity metrics.
                 </p>
 
                 <!-- Selectivity Badge -->
@@ -974,9 +1595,27 @@
                     <strong>Simple funnels. Clear positioning. Predictable leads.</strong>
                 </p>
                 <p style="color: var(--color-text-secondary); margin-top: var(--space-3);">
-                    I build websites, automations, and lead generation systems for plumbers, electricians, HVAC contractors, and home service businesses who want real customers — not reports full of impressions and clicks that don't pay the bills.
+                    Rising Sun Digital builds websites, automations, and lead generation systems for <strong>HVAC contractors, plumbers, electricians, roofers, car detailers, and general contractors</strong> who want real customers — not reports full of impressions and clicks that don't pay the bills.
                 </p>
-                <p style="color: var(--color-text-secondary); margin-top: var(--space-3);">
+
+                <!-- Industries Served (Entity Signal) -->
+                <div style="margin-top: var(--space-6); padding: var(--space-5); background: var(--color-bg-primary); border-radius: var(--radius-lg); border: 1px solid var(--color-border);">
+                    <p style="font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--space-3); text-align: center;">Industries We Specialize In</p>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-2);">
+                        <span style="padding: var(--space-2) var(--space-3); background: var(--brand-cream); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text-secondary);">HVAC</span>
+                        <span style="padding: var(--space-2) var(--space-3); background: var(--brand-cream); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text-secondary);">Plumbing</span>
+                        <span style="padding: var(--space-2) var(--space-3); background: var(--brand-cream); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text-secondary);">Electrical</span>
+                        <span style="padding: var(--space-2) var(--space-3); background: var(--brand-cream); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text-secondary);">Roofing</span>
+                        <span style="padding: var(--space-2) var(--space-3); background: var(--brand-cream); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text-secondary);">Car Detailing</span>
+                        <span style="padding: var(--space-2) var(--space-3); background: var(--brand-cream); border-radius: var(--radius-full); font-size: var(--font-size-sm); color: var(--color-text-secondary);">General Contracting</span>
+                    </div>
+                </div>
+
+                <p style="color: var(--color-text-secondary); margin-top: var(--space-5); text-align: center;">
+                    Based in <strong>El Paso, TX</strong> — serving home service businesses nationwide.
+                </p>
+
+                <p style="color: var(--color-text-secondary); margin-top: var(--space-3); text-align: center;">
                     If you're ready to stop leaking money on traffic that doesn't convert, let's talk.
                 </p>
                 <div class="about-cta" style="text-align: center; margin-top: var(--space-6);">
@@ -1013,42 +1652,76 @@
     </section>
 
     <!-- ========================================
-         FOOTER
+         FOOTER (with GEO Entity Signals)
          ======================================== -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div style="display: flex; flex-direction: column; gap: var(--space-3);">
-                    <img src="images/logo-new.png" alt="Rising Sun Digital" class="footer-logo" width="70" height="70" loading="lazy" style="height: 60px; width: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
-                    <div style="display: flex; gap: var(--space-4); align-items: center;">
-                        <!-- Social Icons -->
+            <!-- Entity Summary for AI Recognition -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-6); padding-bottom: var(--space-6); margin-bottom: var(--space-6); border-bottom: 1px solid var(--color-border);">
+
+                <!-- Brand & Mission -->
+                <div>
+                    <img src="images/logo-new.png" alt="Rising Sun Digital - Lead Generation for Plumbers, HVAC, and Electricians" class="footer-logo" width="70" height="70" loading="lazy" style="height: 50px; width: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; margin-bottom: var(--space-3);">
+                    <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-3);">
+                        <strong>Rising Sun Digital</strong> is a digital marketing agency specializing in lead generation for home service businesses.
+                    </p>
+                    <div style="display: flex; gap: var(--space-3); align-items: center;">
                         <a href="https://www.instagram.com/risingsundigital/" target="_blank" rel="noopener" aria-label="Instagram" style="color: var(--color-text-secondary); transition: color var(--transition-base); display: flex;">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
                         <a href="https://www.facebook.com/profile.php?id=61567085197749" target="_blank" rel="noopener" aria-label="Facebook" style="color: var(--color-text-secondary); transition: color var(--transition-base); display: flex;">
-                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </a>
                     </div>
                 </div>
 
-                <div style="display: flex; flex-direction: column; gap: var(--space-3); text-align: right;">
-                    <div class="footer-contact">
-                        <a href="mailto:risingsundigital4@gmail.com">risingsundigital4@gmail.com</a>
-                        <a href="tel:+19152343570">(915) 234-3570</a>
-                    </div>
-                    <div style="font-size: var(--font-size-sm); color: var(--color-text-secondary);">
-                        <a href="#exit-intent-trigger" onclick="document.getElementById('exit-intent-modal').style.display='flex'; return false;" style="color: var(--brand-teal); text-decoration: none; font-weight: var(--font-weight-semibold); transition: opacity var(--transition-base);">Download Free CTA Blueprint →</a>
-                    </div>
+                <!-- Industries Served -->
+                <div>
+                    <h4 style="font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); color: var(--color-text-primary); margin-bottom: var(--space-3); text-transform: uppercase; letter-spacing: 0.05em;">Industries We Serve</h4>
+                    <ul style="list-style: none; font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-hvac-companies.html" style="color: inherit; text-decoration: none;">HVAC Companies</a></li>
+                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-plumbers.html" style="color: inherit; text-decoration: none;">Plumbers</a></li>
+                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-electricians.html" style="color: inherit; text-decoration: none;">Electricians</a></li>
+                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-roofers.html" style="color: inherit; text-decoration: none;">Roofers</a></li>
+                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-car-detailers.html" style="color: inherit; text-decoration: none;">Car Detailers</a></li>
+                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-local-contractors.html" style="color: inherit; text-decoration: none;">General Contractors</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div>
+                    <h4 style="font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); color: var(--color-text-primary); margin-bottom: var(--space-3); text-transform: uppercase; letter-spacing: 0.05em;">Resources</h4>
+                    <ul style="list-style: none; font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+                        <li style="padding: var(--space-1) 0;"><a href="/blog/" style="color: inherit; text-decoration: none;">Blog</a></li>
+                        <li style="padding: var(--space-1) 0;"><a href="/industries/" style="color: inherit; text-decoration: none;">Industry Guides</a></li>
+                        <li style="padding: var(--space-1) 0;"><a href="#lead-magnets" style="color: inherit; text-decoration: none;">Free Site Audit</a></li>
+                        <li style="padding: var(--space-1) 0;"><a href="#exit-intent-trigger" onclick="document.getElementById('exit-intent-modal').style.display='flex'; return false;" style="color: inherit; text-decoration: none;">Free CTA Blueprint</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 style="font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); color: var(--color-text-primary); margin-bottom: var(--space-3); text-transform: uppercase; letter-spacing: 0.05em;">Contact</h4>
+                    <ul style="list-style: none; font-size: var(--font-size-sm); color: var(--color-text-secondary);">
+                        <li style="padding: var(--space-1) 0;"><a href="mailto:risingsundigital4@gmail.com" style="color: inherit; text-decoration: none;">risingsundigital4@gmail.com</a></li>
+                        <li style="padding: var(--space-1) 0;"><a href="tel:+19152343570" style="color: inherit; text-decoration: none;">(915) 234-3570</a></li>
+                        <li style="padding: var(--space-1) 0;">El Paso, TX</li>
+                        <li style="padding: var(--space-1) 0; color: var(--color-text-tertiary);">Serving clients nationwide</li>
+                    </ul>
                 </div>
             </div>
 
             <p style="text-align: center; color: var(--color-text-tertiary); font-size: var(--font-size-sm); margin-bottom: var(--space-4); font-style: italic;">
-                The digital growth partner for local home-service businesses that need customers now — not vanity metrics.
+                Rising Sun Digital — The digital growth partner for local home-service businesses that need customers now, not vanity metrics.
             </p>
             <div class="footer-copyright">
                 &copy; 2026 Rising Sun Digital. El Paso, TX.
                 <span style="margin: 0 var(--space-2);">•</span>
                 <a href="/privacy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
+                <span style="margin: 0 var(--space-2);">•</span>
+                <a href="/blog/" style="color: inherit; text-decoration: none;">Blog</a>
+                <span style="margin: 0 var(--space-2);">•</span>
+                <a href="/industries/" style="color: inherit; text-decoration: none;">Industries</a>
             </div>
         </div>
     </footer>
@@ -1095,7 +1768,10 @@
     <!-- Countdown Timer -->
     <script>
         // Countdown to end of week (resets every Monday)
+        // Reflects real weekly capacity
         function startCountdown() {
+            const SPOTS_PER_WEEK = 2;
+
             function updateCountdown() {
                 const now = new Date();
                 const dayOfWeek = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
@@ -1109,9 +1785,20 @@
                 const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
+                // Calculate spots remaining based on day of week
+                // Mon-Tue: 2, Wed-Thu: 1, Fri-Sun: 1 (urgency)
+                let spotsLeft = SPOTS_PER_WEEK;
+                if (dayOfWeek >= 3 && dayOfWeek <= 4) spotsLeft = 1; // Wed-Thu
+                if (dayOfWeek >= 5 || dayOfWeek === 0) spotsLeft = 1; // Fri-Sun
+
                 const display = document.getElementById('countdown-display');
+                const spotsDisplay = document.getElementById('spots-left');
+
                 if (display) {
                     display.textContent = `${hours}h ${minutes}m ${seconds}s`;
+                }
+                if (spotsDisplay) {
+                    spotsDisplay.textContent = spotsLeft;
                 }
             }
 
@@ -1134,18 +1821,29 @@
                 if (!btn) return;
 
                 const originalText = btn.innerHTML;
-                btn.innerHTML = 'Sending...';
+                btn.classList.add('btn-loading');
                 btn.disabled = true;
 
                 const formData = new FormData(form);
                 const actionUrl = form.getAttribute('action');
 
+                // Create abort controller for timeout
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 10000); // 10s timeout
+
                 try {
-                    await fetch(actionUrl, {
+                    const response = await fetch(actionUrl, {
                         method: 'POST',
                         body: formData,
-                        mode: 'no-cors'
+                        signal: controller.signal
                     });
+
+                    clearTimeout(timeoutId);
+
+                    // Check if response is ok (2xx status)
+                    if (!response.ok) {
+                        throw new Error(`Server returned ${response.status}`);
+                    }
 
                     // Track successful form submission in GA4
                     if (typeof gtag !== 'undefined') {
@@ -1164,8 +1862,16 @@
                     }, 1000);
 
                 } catch (error) {
+                    clearTimeout(timeoutId);
                     console.error('Form submission error:', error);
-                    btn.innerHTML = '❌ Error - Try Again';
+                    btn.classList.remove('btn-loading');
+
+                    // Distinguish between network errors and timeouts
+                    if (error.name === 'AbortError') {
+                        btn.innerHTML = '⏱ Timeout - Try Again';
+                    } else {
+                        btn.innerHTML = '❌ Error - Try Again';
+                    }
                     btn.disabled = false;
 
                     setTimeout(() => {
@@ -1213,6 +1919,27 @@
                 }
             });
         });
+    </script>
+
+    <!-- Scroll-Triggered Reveal Animation -->
+    <script>
+        (function() {
+            const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-scale');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            revealElements.forEach(el => observer.observe(el));
+        })();
     </script>
 
     <!-- Exit-Intent Capture -->
@@ -1277,17 +2004,25 @@
                 e.preventDefault();
                 const btn = form.querySelector('button[type="submit"]');
                 const originalText = btn.innerHTML;
-                btn.innerHTML = 'Sending...';
+                btn.classList.add('btn-loading');
                 btn.disabled = true;
 
                 const formData = new FormData(form);
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 10000);
 
                 try {
-                    await fetch(form.getAttribute('action'), {
+                    const response = await fetch(form.getAttribute('action'), {
                         method: 'POST',
                         body: formData,
-                        mode: 'no-cors'
+                        signal: controller.signal
                     });
+
+                    clearTimeout(timeoutId);
+
+                    if (!response.ok) {
+                        throw new Error(`Server returned ${response.status}`);
+                    }
 
                     // Track in GA4
                     if (typeof gtag !== 'undefined') {
@@ -1306,7 +2041,9 @@
                     }, 1000);
 
                 } catch (error) {
-                    btn.innerHTML = '❌ Error - Try Again';
+                    clearTimeout(timeoutId);
+                    btn.classList.remove('btn-loading');
+                    btn.innerHTML = error.name === 'AbortError' ? '⏱ Timeout - Try Again' : '❌ Error - Try Again';
                     btn.disabled = false;
 
                     setTimeout(() => {

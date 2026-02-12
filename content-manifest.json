@@ -1,0 +1,98 @@
+{
+  "lastUpdated": "2026-02-11",
+  "categories": ["hvac", "plumbers", "electricians", "roofers", "detailing", "contractors", "local", "strategy"],
+  "posts": [
+    {
+      "slug": "how-do-hvac-companies-get-more-leads",
+      "category": "hvac",
+      "title": "How Do HVAC Companies Get More Leads?",
+      "topics": ["HVAC", "lead generation", "marketing strategies"],
+      "keywords": ["hvac leads", "hvac marketing", "hvac lead generation"]
+    },
+    {
+      "slug": "seo-vs-google-ads-hvac-companies",
+      "category": "hvac",
+      "title": "SEO vs Google Ads for HVAC Companies",
+      "topics": ["HVAC", "SEO", "Google Ads", "comparison"],
+      "keywords": ["hvac seo", "hvac google ads", "hvac ppc vs seo"]
+    },
+    {
+      "slug": "google-ads-vs-seo-for-plumbers",
+      "category": "plumbers",
+      "title": "Is Google Ads or SEO Better for Plumbers?",
+      "topics": ["plumbing", "SEO", "Google Ads", "comparison"],
+      "keywords": ["plumber seo", "plumber google ads", "plumber marketing"]
+    },
+    {
+      "slug": "why-facebook-ads-fail-for-plumbers",
+      "category": "plumbers",
+      "title": "Why Facebook Ads Fail for Plumbers",
+      "topics": ["plumbing", "Facebook Ads", "social media"],
+      "keywords": ["plumber facebook ads", "plumber social media", "facebook ads plumbing"]
+    },
+    {
+      "slug": "why-electricians-struggle-with-marketing",
+      "category": "electricians",
+      "title": "Why Electricians Struggle With Marketing",
+      "topics": ["electricians", "marketing mistakes", "common problems"],
+      "keywords": ["electrician marketing", "electrician leads", "electrical contractor marketing"]
+    },
+    {
+      "slug": "home-service-marketing-el-paso",
+      "category": "local",
+      "title": "Home Service Marketing in El Paso",
+      "topics": ["El Paso", "local marketing", "home services"],
+      "keywords": ["el paso marketing", "el paso contractors", "el paso home services"]
+    },
+    {
+      "slug": "best-marketing-strategy-contractors-el-paso",
+      "category": "local",
+      "title": "Best Marketing Strategy for Contractors in El Paso",
+      "topics": ["El Paso", "contractor marketing", "local strategy"],
+      "keywords": ["el paso contractor marketing", "el paso digital marketing"]
+    },
+    {
+      "slug": "why-local-contractors-struggle-online-leads",
+      "category": "local",
+      "title": "Why Local Contractors Struggle With Online Leads",
+      "topics": ["local marketing", "lead generation", "common problems"],
+      "keywords": ["contractor online leads", "local contractor marketing", "contractor lead problems"]
+    },
+    {
+      "slug": "how-much-should-contractors-spend-on-ads",
+      "category": "strategy",
+      "title": "How Much Should a Contractor Spend on Ads?",
+      "topics": ["ad budget", "contractor marketing", "paid ads"],
+      "keywords": ["contractor ad budget", "contractor advertising cost", "marketing budget contractors"]
+    },
+    {
+      "slug": "best-marketing-for-local-service-businesses",
+      "category": "strategy",
+      "title": "What's the Best Marketing for Local Service Businesses?",
+      "topics": ["marketing channels", "ROI", "strategy"],
+      "keywords": ["local service marketing", "best marketing channels", "home service marketing"]
+    },
+    {
+      "slug": "truth-about-lead-gen-companies-contractors",
+      "category": "strategy",
+      "title": "The Truth About Lead Gen Companies for Contractors",
+      "topics": ["lead gen companies", "HomeAdvisor", "Angi", "Thumbtack"],
+      "keywords": ["homeadvisor review", "angi leads", "thumbtack for contractors"]
+    },
+    {
+      "slug": "why-agency-websites-dont-convert-contractors",
+      "category": "strategy",
+      "title": "Why Most Agency Websites Don't Get Contractors Leads",
+      "topics": ["website conversion", "web design mistakes", "contractor websites"],
+      "keywords": ["contractor website conversion", "website mistakes", "contractor web design"]
+    }
+  ],
+  "pillarPages": [
+    "digital-marketing-for-hvac-companies",
+    "digital-marketing-for-plumbers",
+    "digital-marketing-for-electricians",
+    "digital-marketing-for-roofers",
+    "digital-marketing-for-car-detailers",
+    "digital-marketing-for-local-contractors"
+  ]
+}
