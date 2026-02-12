@@ -1854,11 +1854,16 @@
                         });
                     }
 
-                    btn.innerHTML = '✓ Check Your Email';
+                    btn.innerHTML = '✓ Success!';
                     btn.style.background = 'var(--brand-teal)';
 
+                    // Redirect to appropriate thank-you page
+                    const redirectUrl = formLabel === 'audit_request'
+                        ? 'thank-you-audit.html'
+                        : 'thank-you-pdf.html';
+
                     setTimeout(() => {
-                        window.location.href = 'thank-you.html';
+                        window.location.href = redirectUrl;
                     }, 1000);
 
                 } catch (error) {
@@ -1882,7 +1887,6 @@
             });
         }
 
-        enhanceFormSubmit(document.getElementById('pdf-form'), 'pdf_download');
         enhanceFormSubmit(document.getElementById('audit-form'), 'audit_request');
     </script>
 
@@ -2037,7 +2041,7 @@
                     btn.style.background = 'var(--brand-teal)';
 
                     setTimeout(() => {
-                        window.location.href = 'thank-you.html';
+                        window.location.href = 'thank-you-pdf.html';
                     }, 1000);
 
                 } catch (error) {
