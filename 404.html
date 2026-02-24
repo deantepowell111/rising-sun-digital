@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Not Found | Rising Sun Digital</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -62,19 +62,96 @@
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 8px 24px rgba(10,122,92,0.3);
+            margin: 0.5rem;
         }
         .btn:hover {
             transform: translateY(-3px);
             box-shadow: 0 12px 36px rgba(10,122,92,0.4);
         }
+        .btn-secondary {
+            background: #f5f5f5;
+            color: #333;
+            box-shadow: none;
+        }
+        .btn-secondary:hover {
+            background: #e5e5e5;
+            box-shadow: none;
+        }
+        .redirecting {
+            color: #0A7A5C;
+            font-weight: 600;
+        }
     </style>
+    <script>
+        // Smart redirect for blog posts
+        (function() {
+            const path = window.location.pathname;
+
+            // List of known blog post slugs
+            const blogSlugs = [
+                'how-do-hvac-companies-get-more-leads',
+                'seo-vs-google-ads-hvac-companies',
+                'google-ads-vs-seo-for-plumbers',
+                'why-facebook-ads-fail-for-plumbers',
+                'why-electricians-struggle-with-marketing',
+                'home-service-marketing-el-paso',
+                'best-marketing-strategy-contractors-el-paso',
+                'why-local-contractors-struggle-online-leads',
+                'how-much-should-contractors-spend-on-ads',
+                'best-marketing-for-local-service-businesses',
+                'truth-about-lead-gen-companies-contractors',
+                'why-agency-websites-dont-convert-contractors'
+            ];
+
+            // List of known industry page slugs
+            const industrySlugs = [
+                'digital-marketing-for-hvac-companies',
+                'digital-marketing-for-plumbers',
+                'digital-marketing-for-electricians',
+                'digital-marketing-for-roofers',
+                'digital-marketing-for-car-detailers',
+                'digital-marketing-for-local-contractors'
+            ];
+
+            // Check if URL matches a blog post
+            for (const slug of blogSlugs) {
+                if (path.includes(slug)) {
+                    window.location.replace('/blog/' + slug + '.html');
+                    return;
+                }
+            }
+
+            // Check if URL matches an industry page
+            for (const slug of industrySlugs) {
+                if (path.includes(slug)) {
+                    window.location.replace('/industries/' + slug + '.html');
+                    return;
+                }
+            }
+
+            // Check for /blog without trailing slash
+            if (path === '/blog') {
+                window.location.replace('/blog/');
+                return;
+            }
+
+            // Check for /industries without trailing slash
+            if (path === '/industries') {
+                window.location.replace('/industries/');
+                return;
+            }
+        })();
+    </script>
 </head>
 <body>
     <div class="container">
         <div class="error-code">404</div>
         <h1>Page Not Found</h1>
-        <p>Oops! The page you're looking for doesn't exist. Let's get you back on track.</p>
-        <a href="/" class="btn">← Back to Home</a>
+        <p>Oops! The page you're looking for doesn't exist or may have moved.</p>
+        <div>
+            <a href="/" class="btn">Back to Home</a>
+            <a href="/blog/" class="btn btn-secondary">View Blog</a>
+        </div>
     </div>
 </body>
 </html>
