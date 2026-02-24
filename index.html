@@ -275,81 +275,64 @@
         }
 
         /* ========================================
-           PREMIUM BRAND TITLE
+           PREMIUM BRAND TITLE - Enterprise Class
            ======================================== */
         .brand-title {
             display: flex;
-            flex-direction: column;
-            line-height: 1.1;
+            align-items: baseline;
+            gap: 0.35rem;
             position: relative;
+            padding-left: 1rem;
+            border-left: 2px solid rgba(26, 92, 84, 0.15);
         }
 
         .brand-rising {
-            font-size: 1.4rem;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            background: linear-gradient(135deg, #1A5C54 0%, #0D3D37 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            position: relative;
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #1a1a2e;
         }
 
         .brand-sun {
-            font-size: 1.8rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #E9A820 0%, #F4C430 50%, #FFD700 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: #1A5C54;
             position: relative;
-            display: inline-block;
-            animation: sunGlow 3s ease-in-out infinite;
         }
 
         .brand-sun::after {
             content: '';
             position: absolute;
-            bottom: -2px;
+            bottom: 2px;
             left: 0;
             width: 100%;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #E9A820, #FFD700, #E9A820, transparent);
-            border-radius: 2px;
-            opacity: 0.6;
+            height: 6px;
+            background: linear-gradient(90deg, rgba(233, 168, 32, 0.3), rgba(233, 168, 32, 0.5), rgba(233, 168, 32, 0.3));
+            z-index: -1;
+            border-radius: 1px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .brand-digital {
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.35em;
-            text-transform: uppercase;
-            color: var(--color-text-tertiary);
-            margin-top: 2px;
+            font-size: 1.35rem;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+            color: #6b7280;
         }
 
-        @keyframes sunGlow {
-            0%, 100% {
-                filter: drop-shadow(0 0 0px rgba(233, 168, 32, 0));
-            }
-            50% {
-                filter: drop-shadow(0 0 8px rgba(233, 168, 32, 0.4));
-            }
-        }
-
-        /* Hover effect for entire brand */
-        .nav-logo:hover .brand-sun {
-            animation: sunGlow 1s ease-in-out infinite;
-        }
-
+        /* Elegant hover state */
         .nav-logo:hover .brand-sun::after {
-            opacity: 1;
-            background: linear-gradient(90deg, transparent, #FFD700, #FFF, #FFD700, transparent);
+            height: 8px;
+            background: linear-gradient(90deg, rgba(233, 168, 32, 0.4), rgba(233, 168, 32, 0.7), rgba(233, 168, 32, 0.4));
+            bottom: 1px;
         }
 
-        /* Responsive adjustments */
+        .nav-logo:hover .brand-title {
+            border-left-color: rgba(26, 92, 84, 0.3);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .brand-title {
                 display: none;
@@ -357,9 +340,61 @@
         }
 
         @media (min-width: 769px) and (max-width: 1024px) {
-            .brand-rising { font-size: 1.2rem; }
-            .brand-sun { font-size: 1.5rem; }
-            .brand-digital { font-size: 0.6rem; letter-spacing: 0.25em; }
+            .brand-title { padding-left: 0.75rem; }
+            .brand-rising, .brand-sun, .brand-digital { font-size: 1.1rem; }
+        }
+
+        /* ========================================
+           PREMIUM NAV LINK - Blog Button
+           ======================================== */
+        .nav-link {
+            position: relative;
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+            padding: 0.5rem 0;
+            transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #1A5C54, #E9A820);
+            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 1px;
+        }
+
+        .nav-link:hover {
+            color: #1A5C54;
+        }
+
+        .nav-link:hover::before {
+            width: 100%;
+        }
+
+        /* Optional: Add subtle icon */
+        .nav-link-icon {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .nav-link-icon svg {
+            width: 16px;
+            height: 16px;
+            opacity: 0.7;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover svg {
+            opacity: 1;
+            transform: translateX(2px);
         }
 
         /* ========================================
@@ -1338,15 +1373,20 @@
         <div class="container">
             <div class="nav-content">
                 <a href="/" class="nav-logo">
-                    <img src="images/logo-new.png" alt="Rising Sun Digital - Digital Marketing Agency for Home Service Businesses" width="80" height="80" loading="eager" style="height: 70px; width: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
+                    <img src="images/logo-new.png" alt="Rising Sun Digital - Digital Marketing Agency for Home Service Businesses" width="50" height="50" loading="eager" style="height: 50px; width: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
                     <span class="brand-title">
                         <span class="brand-rising">Rising</span>
                         <span class="brand-sun">Sun</span>
                         <span class="brand-digital">Digital</span>
                     </span>
                 </a>
-                <div style="display: flex; align-items: center; gap: var(--space-4);">
-                    <a href="/blog/" style="color: var(--color-text-secondary); text-decoration: none; font-weight: var(--font-weight-medium); font-size: var(--font-size-sm); transition: color 0.2s;">Blog</a>
+                <div style="display: flex; align-items: center; gap: var(--space-6);">
+                    <a href="/blog/" class="nav-link nav-link-icon">
+                        <span>Insights</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                        </svg>
+                    </a>
                     <a href="#booking" class="btn btn-primary">Book Your Call</a>
                 </div>
             </div>
