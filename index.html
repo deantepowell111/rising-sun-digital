@@ -1341,9 +1341,12 @@
                     </ul>
 
                     <form class="lead-form" id="audit-form" action="https://script.google.com/macros/s/AKfycbxOj8XsNxwV3aeRDHvtTeF2rgMhfXl1HAtf04mfjxnMuqp9Cng04gJX7lMvchySFY0U9w/exec" method="POST">
-                        <input type="text" name="name" class="input" placeholder="Your name" required autocomplete="name">
-                        <input type="email" name="email" class="input" placeholder="Your email" required autocomplete="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
-                        <input type="text" name="website" class="input" placeholder="example.com (with or without https://)" required autocomplete="url">
+                        <input type="text" name="name" class="input" placeholder="Your name" required autocomplete="name" minlength="2">
+                        <input type="email" name="email" class="input" placeholder="Your business email" required autocomplete="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
+                        <input type="tel" name="phone" class="input" placeholder="Your phone number" required autocomplete="tel" pattern="[\d\s\-\+\(\)]{10,}" title="Please enter a valid phone number">
+                        <input type="url" name="website" class="input" placeholder="https://yourbusiness.com" required autocomplete="url" pattern="https?://.+\..+" title="Please enter your full website URL (e.g., https://yourbusiness.com)">
+                        <!-- Honeypot field - hidden from humans, bots fill it -->
+                        <input type="text" name="company_website" style="position: absolute; left: -9999px; opacity: 0; height: 0;" tabindex="-1" autocomplete="off">
                         <input type="hidden" name="form_type" value="Website Audit Request">
                         <button type="submit" class="btn btn-primary btn-lg">Get My Free Audit →</button>
                     </form>
@@ -1820,6 +1823,13 @@
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
 
+                // Honeypot check - if filled, silently reject (it's a bot)
+                const honeypot = form.querySelector('input[name="company_website"]');
+                if (honeypot && honeypot.value) {
+                    console.log('Bot detected');
+                    return; // Silently fail for bots
+                }
+
                 const btn = form.querySelector('button[type="submit"]');
                 if (!btn) return;
 
@@ -1828,6 +1838,8 @@
                 btn.disabled = true;
 
                 const formData = new FormData(form);
+                // Remove honeypot from submission
+                formData.delete('company_website');
                 const actionUrl = form.getAttribute('action');
 
                 // Create abort controller for timeout
