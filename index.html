@@ -1797,74 +1797,244 @@
     <!-- ========================================
          FOOTER (with GEO Entity Signals)
          ======================================== -->
+    <style>
+        .footer {
+            background: linear-gradient(180deg, var(--color-bg-primary) 0%, #f8f9fa 100%);
+            border-top: 1px solid var(--color-border);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr repeat(3, 1fr);
+            gap: var(--space-8);
+            padding: var(--space-10) 0 var(--space-8);
+        }
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: var(--space-6);
+            }
+        }
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer-brand-section { align-items: center; }
+            .footer-social { justify-content: center; }
+        }
+        .footer-brand-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            margin-bottom: var(--space-4);
+        }
+        .footer-brand img {
+            height: 56px;
+            width: auto;
+            image-rendering: -webkit-optimize-contrast;
+        }
+        .footer-brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer-brand-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            letter-spacing: -0.01em;
+        }
+        .footer-brand-tagline {
+            font-size: var(--font-size-xs);
+            color: var(--brand-teal);
+            font-weight: 500;
+            letter-spacing: 0.02em;
+        }
+        .footer-description {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-bottom: var(--space-4);
+            max-width: 280px;
+        }
+        .footer-social {
+            display: flex;
+            gap: var(--space-2);
+        }
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-md);
+            background: var(--color-bg-subtle);
+            color: var(--color-text-secondary);
+            transition: all 0.2s ease;
+        }
+        .footer-social a:hover {
+            background: var(--brand-teal);
+            color: white;
+            transform: translateY(-2px);
+        }
+        .footer-column h4 {
+            font-size: var(--font-size-xs);
+            font-weight: 700;
+            color: var(--color-text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: var(--space-4);
+            padding-bottom: var(--space-2);
+            border-bottom: 2px solid var(--brand-teal);
+            display: inline-block;
+        }
+        .footer-column ul {
+            list-style: none;
+        }
+        .footer-column li {
+            padding: var(--space-2) 0;
+        }
+        .footer-column a {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-secondary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .footer-column a:hover {
+            color: var(--brand-teal);
+        }
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+        }
+        .footer-contact-item svg {
+            color: var(--brand-teal);
+            flex-shrink: 0;
+        }
+        @media (max-width: 600px) {
+            .footer-contact-item { justify-content: center; }
+        }
+        .footer-bottom {
+            border-top: 1px solid var(--color-border);
+            padding: var(--space-6) 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-4);
+        }
+        @media (max-width: 600px) {
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+        .footer-copyright-text {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-tertiary);
+        }
+        .footer-legal-links {
+            display: flex;
+            gap: var(--space-4);
+        }
+        .footer-legal-links a {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-tertiary);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .footer-legal-links a:hover {
+            color: var(--brand-teal);
+        }
+    </style>
     <footer class="footer">
         <div class="container">
-            <!-- Entity Summary for AI Recognition -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-6); padding-bottom: var(--space-6); margin-bottom: var(--space-6); border-bottom: 1px solid var(--color-border);">
-
+            <div class="footer-grid">
                 <!-- Brand & Mission -->
-                <div>
-                    <img src="images/logo-new.png" alt="Rising Sun Digital - Lead Generation for Plumbers, HVAC, and Electricians" class="footer-logo" width="70" height="70" loading="lazy" style="height: 50px; width: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; margin-bottom: var(--space-3);">
-                    <p style="font-size: var(--font-size-sm); color: var(--color-text-secondary); margin-bottom: var(--space-3);">
-                        <strong>Rising Sun Digital</strong> is a digital marketing agency specializing in lead generation for home service businesses.
+                <div class="footer-brand-section">
+                    <div class="footer-brand">
+                        <img src="images/logo-new.png" alt="Rising Sun Digital" width="56" height="56" loading="lazy">
+                        <div class="footer-brand-text">
+                            <span class="footer-brand-name">Rising Sun Digital</span>
+                            <span class="footer-brand-tagline">Digital Growth Partner</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Lead generation and marketing systems for home service businesses that need customers now — not vanity metrics.
                     </p>
-                    <div style="display: flex; gap: var(--space-3); align-items: center;">
-                        <a href="https://www.instagram.com/risingsundigital/" target="_blank" rel="noopener" aria-label="Instagram" style="color: var(--color-text-secondary); transition: color var(--transition-base); display: flex;">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/risingsundigital/" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
-                        <a href="https://www.facebook.com/profile.php?id=61567085197749" target="_blank" rel="noopener" aria-label="Facebook" style="color: var(--color-text-secondary); transition: color var(--transition-base); display: flex;">
-                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <a href="https://www.facebook.com/profile.php?id=61567085197749" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </a>
                     </div>
                 </div>
 
-                <!-- Industries Served -->
-                <div>
-                    <h4 style="font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); color: var(--color-text-primary); margin-bottom: var(--space-3); text-transform: uppercase; letter-spacing: 0.05em;">Industries We Serve</h4>
-                    <ul style="list-style: none; font-size: var(--font-size-sm); color: var(--color-text-secondary);">
-                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-hvac-companies.html" style="color: inherit; text-decoration: none;">HVAC Companies</a></li>
-                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-plumbers.html" style="color: inherit; text-decoration: none;">Plumbers</a></li>
-                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-electricians.html" style="color: inherit; text-decoration: none;">Electricians</a></li>
-                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-roofers.html" style="color: inherit; text-decoration: none;">Roofers</a></li>
-                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-car-detailers.html" style="color: inherit; text-decoration: none;">Car Detailers</a></li>
-                        <li style="padding: var(--space-1) 0;"><a href="/industries/digital-marketing-for-local-contractors.html" style="color: inherit; text-decoration: none;">General Contractors</a></li>
+                <!-- Industries -->
+                <div class="footer-column">
+                    <h4>Industries</h4>
+                    <ul>
+                        <li><a href="/industries/digital-marketing-for-hvac-companies.html">HVAC Companies</a></li>
+                        <li><a href="/industries/digital-marketing-for-plumbers.html">Plumbers</a></li>
+                        <li><a href="/industries/digital-marketing-for-electricians.html">Electricians</a></li>
+                        <li><a href="/industries/digital-marketing-for-roofers.html">Roofers</a></li>
+                        <li><a href="/industries/digital-marketing-for-car-detailers.html">Car Detailers</a></li>
+                        <li><a href="/industries/digital-marketing-for-local-contractors.html">Contractors</a></li>
                     </ul>
                 </div>
 
                 <!-- Resources -->
-                <div>
-                    <h4 style="font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); color: var(--color-text-primary); margin-bottom: var(--space-3); text-transform: uppercase; letter-spacing: 0.05em;">Resources</h4>
-                    <ul style="list-style: none; font-size: var(--font-size-sm); color: var(--color-text-secondary);">
-                        <li style="padding: var(--space-1) 0;"><a href="/blog/" style="color: inherit; text-decoration: none;">Blog</a></li>
-                        <li style="padding: var(--space-1) 0;"><a href="/industries/" style="color: inherit; text-decoration: none;">Industry Guides</a></li>
-                        <li style="padding: var(--space-1) 0;"><a href="#lead-magnets" style="color: inherit; text-decoration: none;">Free Site Audit</a></li>
-                        <li style="padding: var(--space-1) 0;"><a href="#exit-intent-trigger" onclick="document.getElementById('exit-intent-modal').style.display='flex'; return false;" style="color: inherit; text-decoration: none;">Free CTA Blueprint</a></li>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog/">Blog & Insights</a></li>
+                        <li><a href="/industries/">Industry Guides</a></li>
+                        <li><a href="#lead-magnets">Free Site Audit</a></li>
+                        <li><a href="#exit-intent-trigger" onclick="document.getElementById('exit-intent-modal').style.display='flex'; return false;">CTA Blueprint</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
-                <div>
-                    <h4 style="font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); color: var(--color-text-primary); margin-bottom: var(--space-3); text-transform: uppercase; letter-spacing: 0.05em;">Contact</h4>
-                    <ul style="list-style: none; font-size: var(--font-size-sm); color: var(--color-text-secondary);">
-                        <li style="padding: var(--space-1) 0;"><a href="mailto:risingsundigital4@gmail.com" style="color: inherit; text-decoration: none;">risingsundigital4@gmail.com</a></li>
-                        <li style="padding: var(--space-1) 0;"><a href="tel:+19152343570" style="color: inherit; text-decoration: none;">(915) 234-3570</a></li>
-                        <li style="padding: var(--space-1) 0;">El Paso, TX</li>
-                        <li style="padding: var(--space-1) 0; color: var(--color-text-tertiary);">Serving clients nationwide</li>
+                <div class="footer-column">
+                    <h4>Get In Touch</h4>
+                    <ul>
+                        <li class="footer-contact-item">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <a href="mailto:risingsundigital4@gmail.com">risingsundigital4@gmail.com</a>
+                        </li>
+                        <li class="footer-contact-item">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <a href="tel:+19152343570">(915) 234-3570</a>
+                        </li>
+                        <li class="footer-contact-item">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span style="color: var(--color-text-secondary); font-size: var(--font-size-sm);">El Paso, TX</span>
+                        </li>
+                        <li style="padding-top: var(--space-2);">
+                            <span style="font-size: var(--font-size-xs); color: var(--color-text-tertiary);">Serving clients nationwide</span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <p style="text-align: center; color: var(--color-text-tertiary); font-size: var(--font-size-sm); margin-bottom: var(--space-4); font-style: italic;">
-                Rising Sun Digital — The digital growth partner for local home-service businesses that need customers now, not vanity metrics.
-            </p>
-            <div class="footer-copyright">
-                &copy; 2026 Rising Sun Digital. El Paso, TX.
-                <span style="margin: 0 var(--space-2);">•</span>
-                <a href="/privacy.html" style="color: inherit; text-decoration: none;">Privacy Policy</a>
-                <span style="margin: 0 var(--space-2);">•</span>
-                <a href="/blog/" style="color: inherit; text-decoration: none;">Blog</a>
-                <span style="margin: 0 var(--space-2);">•</span>
-                <a href="/industries/" style="color: inherit; text-decoration: none;">Industries</a>
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p class="footer-copyright-text">
+                    &copy; 2026 Rising Sun Digital LLC. All rights reserved.
+                </p>
+                <div class="footer-legal-links">
+                    <a href="/privacy.html">Privacy Policy</a>
+                    <a href="#lead-magnets">Get Started</a>
+                    <a href="#booking">Book a Call</a>
+                </div>
             </div>
         </div>
     </footer>
