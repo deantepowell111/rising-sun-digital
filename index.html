@@ -275,6 +275,94 @@
         }
 
         /* ========================================
+           PREMIUM BRAND TITLE
+           ======================================== */
+        .brand-title {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.1;
+            position: relative;
+        }
+
+        .brand-rising {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #1A5C54 0%, #0D3D37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .brand-sun {
+            font-size: 1.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #E9A820 0%, #F4C430 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            display: inline-block;
+            animation: sunGlow 3s ease-in-out infinite;
+        }
+
+        .brand-sun::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #E9A820, #FFD700, #E9A820, transparent);
+            border-radius: 2px;
+            opacity: 0.6;
+        }
+
+        .brand-digital {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: var(--color-text-tertiary);
+            margin-top: 2px;
+        }
+
+        @keyframes sunGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 0px rgba(233, 168, 32, 0));
+            }
+            50% {
+                filter: drop-shadow(0 0 8px rgba(233, 168, 32, 0.4));
+            }
+        }
+
+        /* Hover effect for entire brand */
+        .nav-logo:hover .brand-sun {
+            animation: sunGlow 1s ease-in-out infinite;
+        }
+
+        .nav-logo:hover .brand-sun::after {
+            opacity: 1;
+            background: linear-gradient(90deg, transparent, #FFD700, #FFF, #FFD700, transparent);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .brand-title {
+                display: none;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .brand-rising { font-size: 1.2rem; }
+            .brand-sun { font-size: 1.5rem; }
+            .brand-digital { font-size: 0.6rem; letter-spacing: 0.25em; }
+        }
+
+        /* ========================================
            COUNTDOWN BANNER (Urgency)
            ======================================== */
         .countdown-banner {
@@ -1251,6 +1339,11 @@
             <div class="nav-content">
                 <a href="/" class="nav-logo">
                     <img src="images/logo-new.png" alt="Rising Sun Digital - Digital Marketing Agency for Home Service Businesses" width="80" height="80" loading="eager" style="height: 70px; width: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges;">
+                    <span class="brand-title">
+                        <span class="brand-rising">Rising</span>
+                        <span class="brand-sun">Sun</span>
+                        <span class="brand-digital">Digital</span>
+                    </span>
                 </a>
                 <div style="display: flex; align-items: center; gap: var(--space-4);">
                     <a href="/blog/" style="color: var(--color-text-secondary); text-decoration: none; font-weight: var(--font-weight-medium); font-size: var(--font-size-sm); transition: color 0.2s;">Blog</a>
