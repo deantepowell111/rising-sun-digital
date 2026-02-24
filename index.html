@@ -1974,6 +1974,9 @@
             <form id="exit-intent-form" action="https://script.google.com/macros/s/AKfycbxOj8XsNxwV3aeRDHvtTeF2rgMhfXl1HAtf04mfjxnMuqp9Cng04gJX7lMvchySFY0U9w/exec" method="POST" style="display: flex; flex-direction: column; gap: var(--space-3);">
                 <input type="text" name="name" class="input" placeholder="Your name" required autocomplete="name">
                 <input type="email" name="email" class="input" placeholder="Your email" required autocomplete="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
+                <input type="tel" name="phone" class="input" placeholder="Your phone (optional)" autocomplete="tel">
+                <!-- Honeypot field - hidden from humans, bots fill it -->
+                <input type="text" name="company_website" style="position: absolute; left: -9999px; opacity: 0; height: 0;" tabindex="-1" autocomplete="off">
                 <input type="hidden" name="form_type" value="Exit Intent - CTA Guide">
                 <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Me The Guide</button>
             </form>
@@ -2021,12 +2024,22 @@
             // Handle form submit
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
+
+                // Honeypot check - if filled, silently reject (it's a bot)
+                const honeypot = form.querySelector('input[name="company_website"]');
+                if (honeypot && honeypot.value) {
+                    console.log('Bot detected');
+                    return;
+                }
+
                 const btn = form.querySelector('button[type="submit"]');
                 const originalText = btn.innerHTML;
                 btn.classList.add('btn-loading');
                 btn.disabled = true;
 
                 const formData = new FormData(form);
+                // Remove honeypot from submission
+                formData.delete('company_website');
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 10000);
 
