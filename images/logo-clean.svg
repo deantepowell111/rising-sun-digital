@@ -14,7 +14,7 @@
 
   <!-- Text: RISING SUN (larger, bolder) -->
   <text x="78" y="34" font-family="Inter, -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
-        font-size="22" font-weight="800" letter-spacing="-0.02em" fill="#1A5C54">RISING SUN</text>
+        font-size="22" font-weight="800" letter-spacing="-0.02em" fill="#4E7C65">RISING SUN</text>
 
   <!-- Text: DIGITAL (larger) -->
   <text x="78" y="52" font-family="Inter, -apple-system, BlinkMacSystemFont, system-ui, sans-serif"
@@ -23,8 +23,8 @@
   <!-- Gradient definitions -->
   <defs>
     <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#E9A820;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#C9924A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C08080;stop-opacity:1" />
     </linearGradient>
   </defs>
 </svg>
