@@ -1422,12 +1422,11 @@
                 </p>
 
                 <div class="hero-cta">
-                    <a href="#lead-magnets" class="btn btn-primary btn-lg btn-glow">Get Your Free Wellness Audit</a>
+                    <a href="#booking" class="btn btn-primary btn-lg btn-glow">Book a Strategy Call</a>
                 </div>
 
                 <p class="hero-note" style="margin-top: var(--space-3); font-size: var(--font-size-sm);">
-                    Already know what you need? <a href="#booking" style="color: var(--brand-teal); text-decoration: underline; font-weight: var(--font-weight-semibold);">Skip to booking →</a><br>
-                    <span style="color: var(--color-text-tertiary); font-size: var(--font-size-xs); margin-top: var(--space-1); display: inline-block;">Or grab our <a href="#exit-intent-trigger" onclick="document.getElementById('exit-intent-modal').style.display='flex'; return false;" style="color: var(--brand-teal); text-decoration: none;">$15 CTA Blueprint free</a></span>
+                    Already know what you need? <a href="#booking" style="color: var(--brand-teal); text-decoration: underline; font-weight: var(--font-weight-semibold);">Skip to booking →</a>
                 </p>
             </div>
         </div>
@@ -1448,53 +1447,6 @@
             </div>
         </div>
     </div>
-
-    <!-- ========================================
-         LEAD MAGNETS SECTION
-         ======================================== -->
-    <section id="lead-magnets" class="lead-magnets section">
-        <div class="container">
-            <div class="text-center container-reading reveal">
-                <h2>Get Your Free Wellness Business Audit</h2>
-                <p class="text-lg mt-4" style="color: var(--color-text-secondary);">
-                    We'll analyze your site and show you exactly where you're losing potential bookings.
-                </p>
-            </div>
-
-            <div class="lead-magnets-grid reveal-scale" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
-                <!-- Website Audit Card (Primary Offer) -->
-                <div class="lead-card">
-                    <span class="lead-card-badge">Free Audit</span>
-                    <h3>Free Wellness Business Audit</h3>
-                    <p class="lead-card-description">
-                        We'll review your website and marketing to find every place you're losing potential clients and bookings.
-                    </p>
-
-                    <ul class="lead-card-includes">
-                        <li>Full SEO health check & local search visibility</li>
-                        <li>Booking flow & conversion analysis</li>
-                        <li>Mobile & page speed review</li>
-                        <li>Competitor gap report</li>
-                    </ul>
-
-                    <form class="lead-form" id="audit-form" action="https://script.google.com/macros/s/AKfycbxOj8XsNxwV3aeRDHvtTeF2rgMhfXl1HAtf04mfjxnMuqp9Cng04gJX7lMvchySFY0U9w/exec" method="POST">
-                        <input type="text" name="name" class="input" placeholder="Your name" required autocomplete="name" minlength="2">
-                        <input type="email" name="email" class="input" placeholder="Your business email" required autocomplete="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
-                        <input type="tel" name="phone" class="input" placeholder="Your phone number" required autocomplete="tel" pattern="[\d\s\-\+\(\)]{10,}" title="Please enter a valid phone number">
-                        <input type="url" name="website" class="input" placeholder="https://yourbusiness.com" required autocomplete="url" pattern="https?://.+\..+" title="Please enter your full website URL (e.g., https://yourbusiness.com)">
-                        <!-- Honeypot field - hidden from humans, bots fill it -->
-                        <input type="text" name="company_website" style="position: absolute; left: -9999px; opacity: 0; height: 0;" tabindex="-1" autocomplete="off">
-                        <input type="hidden" name="form_type" value="Website Audit Request">
-                        <button type="submit" class="btn btn-primary btn-lg">Get My Free Audit →</button>
-                    </form>
-
-                    <p class="lead-form-disclaimer">
-                        ✓ Delivered in 48 hours • No obligation
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ========================================
          SERVICES SECTION
@@ -1573,16 +1525,10 @@
         </div>
     </section>
 
-    <!-- ========================================
-         PRICING SECTION (GEO-Optimized)
-         ======================================== -->
-    <section id="pricing" class="section" style="background: var(--color-bg-primary);">
+    <!-- PRICING SECTION PLACEHOLDER — rebuilding for wellness niche -->
+    <section id="pricing" style="display:none;">
         <div class="container">
             <div class="text-center container-reading reveal">
-                <h2>Simple, Transparent Pricing</h2>
-                <p class="text-lg mt-4" style="color: var(--color-text-secondary);">
-                    No hidden fees. No long-term contracts. Just results.
-                </p>
             </div>
 
             <!-- One-Time Builds -->
@@ -1996,9 +1942,7 @@
                     <ul>
                         <li><a href="/blog/">Blog & Insights</a></li>
                         <li><a href="/industries/">Industry Guides</a></li>
-                        <li><a href="#lead-magnets">Free Site Audit</a></li>
-                        <li><a href="#exit-intent-trigger" onclick="document.getElementById('exit-intent-modal').style.display='flex'; return false;">CTA Blueprint</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#booking">Book a Call</a></li>
                     </ul>
                 </div>
 
@@ -2032,7 +1976,7 @@
                 </p>
                 <div class="footer-legal-links">
                     <a href="/privacy.html">Privacy Policy</a>
-                    <a href="#lead-magnets">Get Started</a>
+                    <a href="#booking">Get Started</a>
                     <a href="#booking">Book a Call</a>
                 </div>
             </div>
@@ -2268,138 +2212,6 @@
         })();
     </script>
 
-    <!-- Exit-Intent Capture -->
-    <div id="exit-intent-modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; align-items: center; justify-content: center;">
-        <div style="background: white; border-radius: var(--radius-xl); padding: var(--space-8); max-width: 500px; margin: var(--space-4); position: relative;">
-            <button id="exit-close" style="position: absolute; top: var(--space-3); right: var(--space-3); background: none; border: none; font-size: 24px; cursor: pointer; color: var(--neutral-600);">&times;</button>
-
-            <h3 style="margin-bottom: var(--space-3); color: var(--neutral-900);">Before You Go - Get $15 Value FREE</h3>
-            <p style="margin-bottom: var(--space-4); color: var(--neutral-600);">
-                The CTA Blueprint (Normally $15) - Yours free. 15 pages of conversion fixes you can implement today.
-            </p>
-
-            <form id="exit-intent-form" action="https://script.google.com/macros/s/AKfycbxOj8XsNxwV3aeRDHvtTeF2rgMhfXl1HAtf04mfjxnMuqp9Cng04gJX7lMvchySFY0U9w/exec" method="POST" style="display: flex; flex-direction: column; gap: var(--space-3);">
-                <input type="text" name="name" class="input" placeholder="Your name" required autocomplete="name">
-                <input type="email" name="email" class="input" placeholder="Your email" required autocomplete="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Please enter a valid email address">
-                <input type="tel" name="phone" class="input" placeholder="Your phone (optional)" autocomplete="tel">
-                <!-- Honeypot field - hidden from humans, bots fill it -->
-                <input type="text" name="company_website" style="position: absolute; left: -9999px; opacity: 0; height: 0;" tabindex="-1" autocomplete="off">
-                <input type="hidden" name="form_type" value="Exit Intent - CTA Guide">
-                <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Send Me The Guide</button>
-            </form>
-
-            <p style="font-size: var(--font-size-xs); color: var(--neutral-500); text-align: center; margin-top: var(--space-3);">
-                No spam. Unsubscribe anytime.
-            </p>
-        </div>
-    </div>
-
-    <script>
-        // Exit-Intent Detection (Shows once per session)
-        (function() {
-            const modal = document.getElementById('exit-intent-modal');
-            const closeBtn = document.getElementById('exit-close');
-            const form = document.getElementById('exit-intent-form');
-            let shown = sessionStorage.getItem('exitIntentShown');
-
-            // Show modal on exit intent
-            function showExitIntent(e) {
-                if (shown) return;
-
-                // Detect cursor leaving viewport upward (to close tab/address bar)
-                // Check if cursor is near top AND moving out of viewport
-                if (e.clientY <= 0 || (e.clientY < 50 && e.relatedTarget == null)) {
-                    modal.style.display = 'flex';
-                    sessionStorage.setItem('exitIntentShown', 'true');
-                    shown = true;
-
-                    // Track in GA4
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'exit_intent_shown', {
-                            'event_category': 'Engagement',
-                            'event_label': 'Exit Intent Popup'
-                        });
-                    }
-                }
-            }
-
-            // Close modal
-            function closeModal() {
-                modal.style.display = 'none';
-            }
-
-            // Handle form submit
-            form.addEventListener('submit', async (e) => {
-                e.preventDefault();
-
-                // Honeypot check - if filled, silently reject (it's a bot)
-                const honeypot = form.querySelector('input[name="company_website"]');
-                if (honeypot && honeypot.value) {
-                    console.log('Bot detected');
-                    return;
-                }
-
-                const btn = form.querySelector('button[type="submit"]');
-                const originalText = btn.innerHTML;
-                btn.classList.add('btn-loading');
-                btn.disabled = true;
-
-                const formData = new FormData(form);
-                // Remove honeypot from submission
-                formData.delete('company_website');
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 10000);
-
-                try {
-                    const response = await fetch(form.getAttribute('action'), {
-                        method: 'POST',
-                        body: formData,
-                        signal: controller.signal
-                    });
-
-                    clearTimeout(timeoutId);
-
-                    if (!response.ok) {
-                        throw new Error(`Server returned ${response.status}`);
-                    }
-
-                    // Track in GA4
-                    if (typeof gtag !== 'undefined') {
-                        gtag('event', 'generate_lead', {
-                            'event_category': 'Form',
-                            'event_label': 'exit_intent_capture',
-                            'value': 150
-                        });
-                    }
-
-                    btn.innerHTML = '✓ Check Your Email';
-                    btn.style.background = 'var(--brand-teal)';
-
-                    setTimeout(() => {
-                        window.location.href = 'thank-you-pdf.html';
-                    }, 1000);
-
-                } catch (error) {
-                    clearTimeout(timeoutId);
-                    btn.classList.remove('btn-loading');
-                    btn.innerHTML = error.name === 'AbortError' ? '⏱ Timeout - Try Again' : '❌ Error - Try Again';
-                    btn.disabled = false;
-
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        btn.style.background = '';
-                    }, 3000);
-                }
-            });
-
-            // Add event listeners
-            document.addEventListener('mouseout', showExitIntent);
-            closeBtn.addEventListener('click', closeModal);
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) closeModal();
-            });
-        })();
-    </script>
 
 </body>
 </html>
