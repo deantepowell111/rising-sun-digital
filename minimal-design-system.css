@@ -11,12 +11,12 @@
 
 /* Root Variables */
 :root {
-  /* Brand Colors */
-  --brand-teal: #1A5C54;
-  --brand-forest: #0D3D38;
-  --brand-marigold: #E9A820;
-  --brand-orange: #FF6B35;
-  --brand-cream: #FEF9F0;
+  /* Brand Colors — Wellness Palette */
+  --brand-teal: #4E7C65;
+  --brand-forest: #2D4E3D;
+  --brand-marigold: #C9924A;
+  --brand-orange: #C08080;
+  --brand-cream: #FAF6EF;
 
   /* Neutral Colors */
   --neutral-50: #FAFAFA;
@@ -111,9 +111,11 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', 'Georgia', serif;
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
+  letter-spacing: -0.01em;
 }
 
 h1 { font-size: var(--font-size-4xl); }

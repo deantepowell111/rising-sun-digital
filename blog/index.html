@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Blog — Rising Sun Digital | Marketing Tips for Home Service Businesses</title>
-    <meta name="description" content="Marketing guides, tips, and strategies for plumbers, electricians, HVAC contractors, roofers, and home service businesses. Learn how to get more leads without the fluff.">
+    <title>Blog — Rising Sun Digital | Marketing Tips for Yoga Studios, Med Spas & Wellness Businesses</title>
+    <meta name="description" content="Marketing guides, tips, and strategies for yoga studios, med spas, pilates studios, personal trainers, and wellness businesses. Learn how to get more bookings without the fluff.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.risingsun.digital/blog/">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.risingsun.digital/blog/">
-    <meta property="og:title" content="Blog — Rising Sun Digital">
-    <meta property="og:description" content="Marketing guides for home service businesses. Real strategies, no fluff.">
+    <meta property="og:title" content="Blog — Rising Sun Digital | Wellness Business Marketing">
+    <meta property="og:description" content="Marketing guides for yoga studios, med spas, and wellness businesses. Real strategies, no fluff.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <meta name="theme-color" content="#1A5C54">
+    <meta name="theme-color" content="#4E7C65">
 
     <!-- Fonts & Styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/minimal-design-system.css">
 
     <style>
@@ -44,7 +44,6 @@
             margin: 0 auto;
         }
 
-        /* Sticky Category Filter Bar */
         .category-filter {
             background: white;
             border-bottom: 1px solid var(--color-border);
@@ -64,14 +63,8 @@
             -webkit-overflow-scrolling: touch;
         }
 
-        .category-filter-inner::-webkit-scrollbar {
-            height: 4px;
-        }
-
-        .category-filter-inner::-webkit-scrollbar-thumb {
-            background: var(--color-border);
-            border-radius: 2px;
-        }
+        .category-filter-inner::-webkit-scrollbar { height: 4px; }
+        .category-filter-inner::-webkit-scrollbar-thumb { background: var(--color-border); border-radius: 2px; }
 
         .filter-label {
             font-size: var(--font-size-sm);
@@ -111,11 +104,8 @@
             font-size: var(--font-size-xs);
         }
 
-        .filter-btn.active .count {
-            background: rgba(255,255,255,0.2);
-        }
+        .filter-btn.active .count { background: rgba(255,255,255,0.2); }
 
-        /* Main Layout */
         .blog-layout {
             display: grid;
             grid-template-columns: 240px 1fr;
@@ -126,24 +116,17 @@
         }
 
         @media (max-width: 900px) {
-            .blog-layout {
-                grid-template-columns: 1fr;
-            }
-            .blog-sidebar {
-                display: none;
-            }
+            .blog-layout { grid-template-columns: 1fr; }
+            .blog-sidebar { display: none; }
         }
 
-        /* Sidebar */
         .blog-sidebar {
             position: sticky;
             top: 80px;
             height: fit-content;
         }
 
-        .sidebar-section {
-            margin-bottom: var(--space-8);
-        }
+        .sidebar-section { margin-bottom: var(--space-8); }
 
         .sidebar-title {
             font-size: var(--font-size-xs);
@@ -152,6 +135,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: var(--space-3);
+            font-family: 'Inter', sans-serif;
         }
 
         .sidebar-nav {
@@ -172,20 +156,8 @@
             transition: all 0.15s;
         }
 
-        .sidebar-link:hover {
-            background: var(--color-bg-subtle);
-            color: var(--brand-teal);
-        }
-
-        .sidebar-link.active {
-            background: var(--brand-cream);
-            color: var(--brand-teal);
-            font-weight: var(--font-weight-semibold);
-        }
-
-        .sidebar-link .icon {
-            margin-right: var(--space-2);
-        }
+        .sidebar-link:hover { background: var(--color-bg-subtle); color: var(--brand-teal); }
+        .sidebar-link.active { background: var(--brand-cream); color: var(--brand-teal); font-weight: var(--font-weight-semibold); }
 
         .sidebar-link .count {
             font-size: var(--font-size-xs);
@@ -195,9 +167,7 @@
             border-radius: var(--radius-full);
         }
 
-        .sidebar-link.active .count {
-            background: white;
-        }
+        .sidebar-link.active .count { background: white; }
 
         .pillar-cta {
             background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-forest) 100%);
@@ -207,18 +177,8 @@
             text-align: center;
         }
 
-        .pillar-cta h4 {
-            color: white;
-            font-size: var(--font-size-sm);
-            margin-bottom: var(--space-2);
-        }
-
-        .pillar-cta p {
-            font-size: var(--font-size-xs);
-            opacity: 0.9;
-            margin-bottom: var(--space-3);
-        }
-
+        .pillar-cta h4 { color: white; font-size: var(--font-size-sm); margin-bottom: var(--space-2); }
+        .pillar-cta p { font-size: var(--font-size-xs); opacity: 0.9; margin-bottom: var(--space-3); }
         .pillar-cta a {
             display: block;
             background: white;
@@ -230,10 +190,7 @@
             text-decoration: none;
         }
 
-        /* Blog Content */
-        .blog-content {
-            min-width: 0;
-        }
+        .blog-content { min-width: 0; }
 
         .category-section {
             margin-bottom: var(--space-10);
@@ -267,10 +224,7 @@
             flex: 1;
         }
 
-        .category-header .post-count {
-            font-size: var(--font-size-sm);
-            color: var(--color-text-tertiary);
-        }
+        .category-header .post-count { font-size: var(--font-size-sm); color: var(--color-text-tertiary); }
 
         .pillar-link {
             display: inline-flex;
@@ -285,10 +239,7 @@
             border-radius: var(--radius-full);
         }
 
-        .pillar-link:hover {
-            background: var(--brand-teal);
-            color: white;
-        }
+        .pillar-link:hover { background: var(--brand-teal); color: white; }
 
         .blog-grid {
             display: grid;
@@ -321,6 +272,7 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: var(--space-2);
+            font-family: 'Inter', sans-serif;
         }
 
         .blog-card h3 {
@@ -343,9 +295,9 @@
             margin-top: auto;
             padding-top: var(--space-3);
             border-top: 1px solid var(--color-border);
+            font-family: 'Inter', sans-serif;
         }
 
-        /* Featured Pillar Card */
         .pillar-featured {
             background: linear-gradient(135deg, var(--brand-teal) 0%, var(--brand-forest) 100%);
             border-radius: var(--radius-lg);
@@ -359,7 +311,7 @@
 
         .pillar-featured:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(26, 92, 84, 0.3);
+            box-shadow: 0 8px 24px rgba(78, 124, 101, 0.3);
         }
 
         .pillar-featured-badge {
@@ -372,19 +324,11 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: var(--space-3);
+            font-family: 'Inter', sans-serif;
         }
 
-        .pillar-featured h3 {
-            color: white;
-            font-size: var(--font-size-lg);
-            margin-bottom: var(--space-2);
-        }
-
-        .pillar-featured p {
-            color: rgba(255,255,255,0.85);
-            font-size: var(--font-size-sm);
-            margin-bottom: var(--space-3);
-        }
+        .pillar-featured h3 { color: white; font-size: var(--font-size-lg); margin-bottom: var(--space-2); }
+        .pillar-featured p { color: rgba(255,255,255,0.85); font-size: var(--font-size-sm); margin-bottom: var(--space-3); }
 
         .pillar-featured-cta {
             display: inline-flex;
@@ -395,12 +339,7 @@
             font-size: var(--font-size-sm);
         }
 
-        /* Mobile category filter visible only on mobile */
-        @media (min-width: 901px) {
-            .category-filter {
-                display: none;
-            }
-        }
+        @media (min-width: 901px) { .category-filter { display: none; } }
     </style>
 </head>
 <body>
@@ -419,22 +358,22 @@
     <!-- Blog Header -->
     <header class="blog-header">
         <div class="container">
-            <h1>Marketing Guides for Home Service Businesses</h1>
-            <p>Real strategies to get more leads. No fluff, no vanity metrics — just what works.</p>
+            <h1>Marketing Guides for Wellness Businesses</h1>
+            <p>Real strategies to get more bookings. No fluff — just what actually works for yoga studios, med spas, and fitness businesses.</p>
         </div>
     </header>
 
-    <!-- Mobile Category Filter (sticky) -->
+    <!-- Mobile Category Filter -->
     <div class="category-filter">
         <div class="container">
             <div class="category-filter-inner">
                 <span class="filter-label">Filter:</span>
-                <a href="#all" class="filter-btn active">All <span class="count">12</span></a>
-                <a href="#hvac" class="filter-btn">HVAC <span class="count">2</span></a>
-                <a href="#plumbers" class="filter-btn">Plumbers <span class="count">2</span></a>
-                <a href="#electricians" class="filter-btn">Electricians <span class="count">1</span></a>
-                <a href="#local" class="filter-btn">Local <span class="count">3</span></a>
-                <a href="#strategy" class="filter-btn">Strategy <span class="count">4</span></a>
+                <a href="#all" class="filter-btn active">All <span class="count">10</span></a>
+                <a href="#yoga" class="filter-btn">Yoga <span class="count">2</span></a>
+                <a href="#medspa" class="filter-btn">Med Spas <span class="count">2</span></a>
+                <a href="#fitness" class="filter-btn">Fitness <span class="count">2</span></a>
+                <a href="#wellness" class="filter-btn">Wellness <span class="count">2</span></a>
+                <a href="#strategy" class="filter-btn">Strategy <span class="count">2</span></a>
             </div>
         </div>
     </div>
@@ -449,35 +388,27 @@
                 <nav class="sidebar-nav">
                     <a href="#all" class="sidebar-link active">
                         <span><span class="icon">&#128218;</span> All Posts</span>
-                        <span class="count">12</span>
+                        <span class="count">10</span>
                     </a>
-                    <a href="#hvac" class="sidebar-link">
-                        <span><span class="icon">&#10052;</span> HVAC</span>
+                    <a href="#yoga" class="sidebar-link">
+                        <span><span class="icon">&#129496;</span> Yoga Studios</span>
                         <span class="count">2</span>
                     </a>
-                    <a href="#plumbers" class="sidebar-link">
-                        <span><span class="icon">&#128167;</span> Plumbers</span>
+                    <a href="#medspa" class="sidebar-link">
+                        <span><span class="icon">&#10024;</span> Med Spas</span>
                         <span class="count">2</span>
                     </a>
-                    <a href="#electricians" class="sidebar-link">
-                        <span><span class="icon">&#9889;</span> Electricians</span>
-                        <span class="count">1</span>
+                    <a href="#fitness" class="sidebar-link">
+                        <span><span class="icon">&#127947;</span> Fitness Studios</span>
+                        <span class="count">2</span>
                     </a>
-                    <a href="#roofers" class="sidebar-link">
-                        <span><span class="icon">&#127968;</span> Roofers</span>
-                        <span class="count">0</span>
-                    </a>
-                    <a href="#detailing" class="sidebar-link">
-                        <span><span class="icon">&#128663;</span> Car Detailing</span>
-                        <span class="count">0</span>
-                    </a>
-                    <a href="#local" class="sidebar-link">
-                        <span><span class="icon">&#128205;</span> Local Marketing</span>
-                        <span class="count">3</span>
+                    <a href="#wellness" class="sidebar-link">
+                        <span><span class="icon">&#127807;</span> Wellness Centers</span>
+                        <span class="count">2</span>
                     </a>
                     <a href="#strategy" class="sidebar-link">
                         <span><span class="icon">&#128200;</span> Strategy</span>
-                        <span class="count">4</span>
+                        <span class="count">2</span>
                     </a>
                 </nav>
             </div>
@@ -493,173 +424,149 @@
             </div>
 
             <div class="pillar-cta">
-                <h4>Need Help?</h4>
-                <p>Get a free audit of your marketing</p>
-                <a href="/#lead-magnets">Free Site Audit</a>
+                <h4>Ready to Grow?</h4>
+                <p>Get a free audit of your wellness business marketing</p>
+                <a href="/#lead-magnets">Free Business Audit</a>
             </div>
         </aside>
 
         <!-- Blog Content -->
         <main class="blog-content">
 
-            <!-- HVAC Category -->
-            <section class="category-section" id="hvac">
+            <!-- Yoga Studios -->
+            <section class="category-section" id="yoga">
                 <div class="category-header">
-                    <div class="category-icon">&#10052;</div>
-                    <h2>HVAC Marketing</h2>
+                    <div class="category-icon">&#129496;</div>
+                    <h2>Yoga Studio Marketing</h2>
                     <span class="post-count">2 posts</span>
                 </div>
-                <a href="/industries/digital-marketing-for-hvac-companies.html" class="pillar-featured">
+                <a href="/industries/digital-marketing-for-yoga-studios.html" class="pillar-featured">
                     <span class="pillar-featured-badge">Complete Guide</span>
-                    <h3>Digital Marketing for HVAC Companies</h3>
-                    <p>Everything you need to know about marketing your HVAC business — how customers buy, best channels, common mistakes, and growth strategies.</p>
+                    <h3>Digital Marketing for Yoga Studios</h3>
+                    <p>How to attract new students, fill your classes, and build a loyal community — the complete marketing playbook for yoga studio owners.</p>
                     <span class="pillar-featured-cta">Read the Full Guide &rarr;</span>
                 </a>
                 <div class="blog-grid">
-                    <a href="/blog/how-do-hvac-companies-get-more-leads.html" class="blog-card">
-                        <span class="blog-card-category">HVAC</span>
-                        <h3>How Do HVAC Companies Get More Leads?</h3>
-                        <p>The exact strategies HVAC contractors use to generate 20-50 leads per month.</p>
+                    <a href="/blog/how-yoga-studios-get-more-clients.html" class="blog-card">
+                        <span class="blog-card-category">Yoga Studios</span>
+                        <h3>How Yoga Studios Get More Clients (Without Constant Discounting)</h3>
+                        <p>The exact strategies yoga studios use to grow their membership base without racing to the bottom on price.</p>
+                        <div class="blog-card-meta">6 min read</div>
+                    </a>
+                    <a href="/blog/online-booking-systems-for-yoga-studios.html" class="blog-card">
+                        <span class="blog-card-category">Yoga Studios</span>
+                        <h3>The Best Online Booking Setup for Yoga Studios</h3>
+                        <p>How to set up a booking system that reduces no-shows, automates reminders, and makes signing up effortless for new students.</p>
                         <div class="blog-card-meta">5 min read</div>
                     </a>
-                    <a href="/blog/seo-vs-google-ads-hvac-companies.html" class="blog-card">
-                        <span class="blog-card-category">HVAC</span>
-                        <h3>SEO vs Google Ads for HVAC Companies</h3>
-                        <p>A balanced comparison of organic vs paid traffic for HVAC businesses.</p>
-                        <div class="blog-card-meta">8 min read</div>
-                    </a>
                 </div>
             </section>
 
-            <!-- Plumbers Category -->
-            <section class="category-section" id="plumbers">
+            <!-- Med Spas -->
+            <section class="category-section" id="medspa">
                 <div class="category-header">
-                    <div class="category-icon">&#128167;</div>
-                    <h2>Plumber Marketing</h2>
+                    <div class="category-icon">&#10024;</div>
+                    <h2>Med Spa Marketing</h2>
                     <span class="post-count">2 posts</span>
                 </div>
-                <a href="/industries/digital-marketing-for-plumbers.html" class="pillar-featured">
+                <a href="/industries/digital-marketing-for-med-spas.html" class="pillar-featured">
                     <span class="pillar-featured-badge">Complete Guide</span>
-                    <h3>Digital Marketing for Plumbers</h3>
-                    <p>The complete playbook for plumbing businesses — emergency vs scheduled work, Google dominance, review strategies, and 6-month growth plans.</p>
+                    <h3>Digital Marketing for Med Spas</h3>
+                    <p>How med spas attract high-value clients, build trust online, and fill their treatment books — the complete growth guide.</p>
                     <span class="pillar-featured-cta">Read the Full Guide &rarr;</span>
                 </a>
                 <div class="blog-grid">
-                    <a href="/blog/google-ads-vs-seo-for-plumbers.html" class="blog-card">
-                        <span class="blog-card-category">Plumbers</span>
-                        <h3>Is Google Ads or SEO Better for Plumbers?</h3>
-                        <p>A direct comparison of paid vs organic traffic for plumbing businesses.</p>
-                        <div class="blog-card-meta">6 min read</div>
-                    </a>
-                    <a href="/blog/why-facebook-ads-fail-for-plumbers.html" class="blog-card">
-                        <span class="blog-card-category">Plumbers</span>
-                        <h3>Why Facebook Ads Fail for Plumbers</h3>
-                        <p>The real reason social ads underperform for plumbing businesses — and when they can work.</p>
-                        <div class="blog-card-meta">6 min read</div>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Electricians Category -->
-            <section class="category-section" id="electricians">
-                <div class="category-header">
-                    <div class="category-icon">&#9889;</div>
-                    <h2>Electrician Marketing</h2>
-                    <span class="post-count">1 post</span>
-                </div>
-                <a href="/industries/digital-marketing-for-electricians.html" class="pillar-featured">
-                    <span class="pillar-featured-badge">Complete Guide</span>
-                    <h3>Digital Marketing for Electricians</h3>
-                    <p>How to market your electrical business — licensing advantages, high-value jobs like EV chargers, trust signals, and proven growth strategies.</p>
-                    <span class="pillar-featured-cta">Read the Full Guide &rarr;</span>
-                </a>
-                <div class="blog-grid">
-                    <a href="/blog/why-electricians-struggle-with-marketing.html" class="blog-card">
-                        <span class="blog-card-category">Electricians</span>
-                        <h3>Why Electricians Struggle With Marketing</h3>
-                        <p>The 5 most common marketing mistakes electricians make — and how to fix them.</p>
-                        <div class="blog-card-meta">4 min read</div>
-                    </a>
-                </div>
-            </section>
-
-            <!-- Roofers Category (placeholder for future) -->
-            <section class="category-section" id="roofers" style="display: none;">
-                <div class="category-header">
-                    <div class="category-icon">&#127968;</div>
-                    <h2>Roofing Marketing</h2>
-                    <span class="post-count">0 posts</span>
-                </div>
-                <a href="/industries/digital-marketing-for-roofers.html" class="pillar-featured">
-                    <span class="pillar-featured-badge">Complete Guide</span>
-                    <h3>Digital Marketing for Roofers</h3>
-                    <p>High-ticket roofing marketing — storm damage opportunities, trust building, before/after strategies, and lead generation systems.</p>
-                    <span class="pillar-featured-cta">Read the Full Guide &rarr;</span>
-                </a>
-                <div class="blog-grid">
-                    <p style="color: var(--color-text-tertiary); font-style: italic;">Blog posts coming soon...</p>
-                </div>
-            </section>
-
-            <!-- Local Marketing Category -->
-            <section class="category-section" id="local">
-                <div class="category-header">
-                    <div class="category-icon">&#128205;</div>
-                    <h2>Local Marketing</h2>
-                    <span class="post-count">3 posts</span>
-                </div>
-                <div class="blog-grid">
-                    <a href="/blog/home-service-marketing-el-paso.html" class="blog-card">
-                        <span class="blog-card-category">El Paso</span>
-                        <h3>Home Service Marketing in El Paso</h3>
-                        <p>Local marketing strategies for El Paso contractors and home service businesses.</p>
+                    <a href="/blog/seo-for-med-spas.html" class="blog-card">
+                        <span class="blog-card-category">Med Spas</span>
+                        <h3>SEO for Med Spas: How to Rank When Clients Search</h3>
+                        <p>How to show up when someone searches "botox near me" or "best med spa in [city]" — and turn those clicks into booked appointments.</p>
                         <div class="blog-card-meta">7 min read</div>
                     </a>
-                    <a href="/blog/best-marketing-strategy-contractors-el-paso.html" class="blog-card">
-                        <span class="blog-card-category">El Paso</span>
-                        <h3>Best Marketing Strategy for Contractors in El Paso</h3>
-                        <p>What works and what doesn't in the El Paso market.</p>
+                    <a href="/blog/how-med-spas-increase-repeat-clients.html" class="blog-card">
+                        <span class="blog-card-category">Med Spas</span>
+                        <h3>How Med Spas Increase Repeat Client Revenue</h3>
+                        <p>The retention strategies that turn first-time visitors into loyal, high-value regulars who refer their friends.</p>
                         <div class="blog-card-meta">6 min read</div>
-                    </a>
-                    <a href="/blog/why-local-contractors-struggle-online-leads.html" class="blog-card">
-                        <span class="blog-card-category">Local</span>
-                        <h3>Why Local Contractors Struggle With Online Leads</h3>
-                        <p>The real reasons local trades fail at digital marketing — and the fixes.</p>
-                        <div class="blog-card-meta">5 min read</div>
                     </a>
                 </div>
             </section>
 
-            <!-- Strategy Category -->
+            <!-- Fitness Studios -->
+            <section class="category-section" id="fitness">
+                <div class="category-header">
+                    <div class="category-icon">&#127947;</div>
+                    <h2>Fitness Studio Marketing</h2>
+                    <span class="post-count">2 posts</span>
+                </div>
+                <a href="/industries/digital-marketing-for-fitness-gyms.html" class="pillar-featured">
+                    <span class="pillar-featured-badge">Complete Guide</span>
+                    <h3>Digital Marketing for Fitness Studios & Gyms</h3>
+                    <p>From CrossFit boxes to boutique fitness studios — how to fill your schedule, reduce churn, and build a community that markets itself.</p>
+                    <span class="pillar-featured-cta">Read the Full Guide &rarr;</span>
+                </a>
+                <div class="blog-grid">
+                    <a href="/blog/google-ads-vs-seo-for-fitness-studios.html" class="blog-card">
+                        <span class="blog-card-category">Fitness</span>
+                        <h3>Google Ads vs SEO for Fitness Studios: Which Is Better?</h3>
+                        <p>A direct comparison of paid vs organic traffic for gyms and fitness studios — what to use, when, and how to combine them.</p>
+                        <div class="blog-card-meta">7 min read</div>
+                    </a>
+                    <a href="/blog/instagram-marketing-for-wellness-businesses.html" class="blog-card">
+                        <span class="blog-card-category">Fitness</span>
+                        <h3>Instagram Marketing for Fitness & Wellness Businesses</h3>
+                        <p>How to use Instagram to attract new clients, showcase transformations, and build a following that actually converts.</p>
+                        <div class="blog-card-meta">6 min read</div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Wellness Centers -->
+            <section class="category-section" id="wellness">
+                <div class="category-header">
+                    <div class="category-icon">&#127807;</div>
+                    <h2>Wellness Center Marketing</h2>
+                    <span class="post-count">2 posts</span>
+                </div>
+                <a href="/industries/digital-marketing-for-wellness-centers.html" class="pillar-featured">
+                    <span class="pillar-featured-badge">Complete Guide</span>
+                    <h3>Digital Marketing for Wellness Centers</h3>
+                    <p>How holistic wellness centers, massage studios, and acupuncture clinics attract their ideal clients and build sustainable practices.</p>
+                    <span class="pillar-featured-cta">Read the Full Guide &rarr;</span>
+                </a>
+                <div class="blog-grid">
+                    <a href="/industries/digital-marketing-for-pilates-studios.html" class="blog-card">
+                        <span class="blog-card-category">Wellness</span>
+                        <h3>Digital Marketing for Pilates Studios</h3>
+                        <p>How pilates studios attract premium clients, build membership loyalty, and stand out in a competitive wellness market.</p>
+                        <div class="blog-card-meta">Complete Guide</div>
+                    </a>
+                    <a href="/industries/digital-marketing-for-personal-trainers.html" class="blog-card">
+                        <span class="blog-card-category">Wellness</span>
+                        <h3>Digital Marketing for Personal Trainers</h3>
+                        <p>How personal trainers build their client roster online, command premium rates, and create a steady stream of referrals.</p>
+                        <div class="blog-card-meta">Complete Guide</div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Strategy -->
             <section class="category-section" id="strategy">
                 <div class="category-header">
                     <div class="category-icon">&#128200;</div>
                     <h2>Marketing Strategy</h2>
-                    <span class="post-count">4 posts</span>
+                    <span class="post-count">2 posts</span>
                 </div>
                 <div class="blog-grid">
-                    <a href="/blog/how-much-should-contractors-spend-on-ads.html" class="blog-card">
-                        <span class="blog-card-category">Ads</span>
-                        <h3>How Much Should a Contractor Spend on Ads?</h3>
-                        <p>Real ad budget numbers. What to expect at $500, $1,000, and $2,500/month.</p>
-                        <div class="blog-card-meta">5 min read</div>
-                    </a>
-                    <a href="/blog/best-marketing-for-local-service-businesses.html" class="blog-card">
+                    <a href="/blog/google-ads-vs-seo-for-fitness-studios.html" class="blog-card">
                         <span class="blog-card-category">Strategy</span>
-                        <h3>What's the Best Marketing for Local Service Businesses?</h3>
-                        <p>Ranked breakdown of marketing channels — from highest ROI to biggest waste.</p>
+                        <h3>Paid vs Organic: What Works Best for Wellness Businesses?</h3>
+                        <p>A channel-by-channel breakdown of where wellness businesses see the highest ROI — and what to avoid.</p>
                         <div class="blog-card-meta">7 min read</div>
                     </a>
-                    <a href="/blog/truth-about-lead-gen-companies-contractors.html" class="blog-card">
+                    <a href="/blog/instagram-marketing-for-wellness-businesses.html" class="blog-card">
                         <span class="blog-card-category">Strategy</span>
-                        <h3>The Truth About Lead Gen Companies for Contractors</h3>
-                        <p>An honest analysis of HomeAdvisor, Angi, Thumbtack — pros, cons, and alternatives.</p>
-                        <div class="blog-card-meta">7 min read</div>
-                    </a>
-                    <a href="/blog/why-agency-websites-dont-convert-contractors.html" class="blog-card">
-                        <span class="blog-card-category">Strategy</span>
-                        <h3>Why Most Agency Websites Don't Get Contractors Leads</h3>
-                        <p>The 7 design mistakes that kill conversions — and what actually works.</p>
+                        <h3>Building a Social Media Strategy That Actually Books Clients</h3>
+                        <p>Most wellness businesses waste time on social media. Here's how to build a strategy that drives real bookings.</p>
                         <div class="blog-card-meta">6 min read</div>
                     </a>
                 </div>
@@ -673,7 +580,7 @@
         <div class="container">
             <h2>Want Us to Handle Your Marketing?</h2>
             <p style="color: var(--color-text-secondary); margin-top: var(--space-3); margin-bottom: var(--space-6);">
-                We're the digital growth partner for home service businesses that need customers now — not vanity metrics.
+                We're the digital growth partner for wellness businesses that need clients now — not vanity metrics.
             </p>
             <a href="/#booking" class="btn btn-primary btn-lg">Book a Free Strategy Call</a>
         </div>
@@ -683,10 +590,10 @@
     <footer class="footer">
         <div class="container">
             <p style="text-align: center; color: var(--color-text-tertiary); font-size: var(--font-size-sm); margin-bottom: var(--space-3);">
-                <em>Rising Sun Digital — The digital growth partner for home service businesses that need customers now, not vanity metrics.</em>
+                <em>Rising Sun Digital — The digital growth partner for yoga studios, med spas, and wellness businesses.</em>
             </p>
             <p style="text-align: center; color: var(--color-text-tertiary); font-size: var(--font-size-sm);">
-                &copy; 2026 Rising Sun Digital. El Paso, TX.
+                &copy; 2026 Rising Sun Digital.
                 <span style="margin: 0 var(--space-2);">&bull;</span>
                 <a href="/" style="color: inherit;">Home</a>
                 <span style="margin: 0 var(--space-2);">&bull;</span>
@@ -698,23 +605,16 @@
     </footer>
 
     <script>
-        // Simple category filtering
         document.querySelectorAll('.sidebar-link, .filter-btn').forEach(link => {
             link.addEventListener('click', function(e) {
                 const href = this.getAttribute('href');
                 if (href.startsWith('#')) {
                     e.preventDefault();
                     const category = href.slice(1);
-
-                    // Update active states
                     document.querySelectorAll('.sidebar-link, .filter-btn').forEach(l => l.classList.remove('active'));
                     document.querySelectorAll(`[href="${href}"]`).forEach(l => l.classList.add('active'));
-
-                    // Show/hide sections
                     if (category === 'all') {
-                        document.querySelectorAll('.category-section').forEach(s => {
-                            s.style.display = 'block';
-                        });
+                        document.querySelectorAll('.category-section').forEach(s => s.style.display = 'block');
                     } else {
                         document.querySelectorAll('.category-section').forEach(s => {
                             if (s.id === category) {
