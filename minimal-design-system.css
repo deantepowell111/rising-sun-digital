@@ -167,44 +167,66 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 12px 24px;
+  gap: 0.75rem;
+  padding: 10px 10px 10px 24px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1;
-  border-radius: 6px;
-  border: none;
+  border-radius: 9999px;
+  border: 2px solid transparent;
   cursor: pointer;
-  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
   text-decoration: none;
   font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.btn::after {
+  content: '';
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover::after {
+  transform: scale(0.9);
 }
 
 .btn-primary {
   background: #F59E0B;
   color: #1a1a1a;
+  border-color: #1a1a1a;
 }
 
 .btn-primary:hover {
-  background: #D97706;
+  background: #FAF6EF;
   color: #1a1a1a;
+  border-color: #1a1a1a;
 }
 
 .btn-ghost {
   background: transparent;
   color: #ffffff;
-  border: 1px solid rgba(255,255,255,0.35);
+  border: 2px solid rgba(255,255,255,0.45);
 }
 
 .btn-ghost:hover {
   background: rgba(255,255,255,0.08);
-  border-color: rgba(255,255,255,0.55);
+  border-color: rgba(255,255,255,0.7);
   color: #ffffff;
 }
 
 .btn-lg {
-  padding: 14px 32px;
+  padding: 12px 12px 12px 32px;
   font-size: 16px;
+}
+
+.btn-lg::after {
+  width: 40px;
+  height: 40px;
 }
 
 /* kept for any legacy references */
