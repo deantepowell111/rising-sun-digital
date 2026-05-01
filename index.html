@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- SEO Meta Tags (GEO-Optimized) -->
-    <title>Rising Sun Digital — Digital Growth Partner for Yoga Studios, Med Spas & Wellness Businesses</title>
-    <meta name="description" content="Rising Sun Digital helps yoga studios, med spas, pilates studios, and wellness businesses grow with conversion-focused websites, automations, and lead generation systems that fill your schedule.">
+    <title>Rising Sun Digital — Client Acquisition Systems for Yoga Studios, Med Spas & Wellness Businesses</title>
+    <meta name="description" content="Rising Sun Digital builds automated client acquisition systems for yoga studios, med spas, pilates studios, and wellness businesses — website, local SEO, booking flow, and follow-up automation in 30 days.">
     <meta name="author" content="Rising Sun Digital">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.risingsun.digital">
@@ -14,17 +14,17 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.risingsun.digital">
-    <meta property="og:title" content="Rising Sun Digital — Digital Growth Partner for Yoga Studios, Med Spas & Wellness Businesses">
-    <meta property="og:description" content="The digital growth partner for wellness businesses that need clients now — not vanity metrics. Lead generation systems built for yoga studios, med spas, and fitness studios.">
+    <meta property="og:title" content="Rising Sun Digital — Client Acquisition Systems for Wellness Businesses">
+    <meta property="og:description" content="We build automated client acquisition systems for wellness businesses — not campaigns, not vanity metrics. Website, SEO, booking automation, and follow-up. All live in 30 days.">
     <meta property="og:image" content="https://www.risingsun.digital/og-primary.jpg">
-    <meta property="og:image:alt" content="Rising Sun Digital - Lead Generation and Website Design for Yoga Studios, Med Spas, and Wellness Businesses">
+    <meta property="og:image:alt" content="Rising Sun Digital — Client Acquisition Systems for Yoga Studios, Med Spas, and Wellness Businesses">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Rising Sun Digital — Digital Growth Partner for Yoga Studios & Med Spas">
-    <meta name="twitter:description" content="The digital growth partner for wellness businesses that need clients now — not vanity metrics.">
+    <meta name="twitter:title" content="Rising Sun Digital — Client Acquisition Systems for Wellness Businesses">
+    <meta name="twitter:description" content="We build automated client acquisition systems for wellness businesses — not campaigns. Website, SEO, booking flow, follow-up. Live in 30 days.">
     <meta name="twitter:image" content="https://www.risingsun.digital/og-primary.jpg">
 
     <!-- Schema.org Structured Data for AI Entity Recognition -->
@@ -35,7 +35,7 @@
         "@id": "https://www.risingsun.digital/#organization",
         "name": "Rising Sun Digital",
         "alternateName": "Rising Sun Digital Marketing",
-        "description": "Digital marketing agency specializing in lead generation, websites, and growth systems for wellness businesses including yoga studios, med spas, pilates studios, personal trainers, and fitness gyms.",
+        "description": "Rising Sun Digital builds automated client acquisition systems for wellness businesses — website, local SEO, booking automation, and follow-up sequences for yoga studios, med spas, pilates studios, personal trainers, and fitness gyms.",
         "url": "https://www.risingsun.digital",
         "logo": "https://www.risingsun.digital/images/logo-new.png",
         "image": "https://www.risingsun.digital/og-primary.jpg",
@@ -167,13 +167,13 @@
 
     <!-- Preload Critical Assets -->
     <link rel="preload" href="images/logo-new.png" as="image">
-    <link rel="preload" href="minimal-design-system.css?v=20260212" as="style">
+    <link rel="preload" href="minimal-design-system.css?v=20260501" as="style">
 
     <!-- Fonts: Inter + Cormorant Garamond for wellness/premium feel -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Design System (auto-versioned by date) -->
-    <link rel="stylesheet" href="minimal-design-system.css?v=20260212">
+    <link rel="stylesheet" href="minimal-design-system.css?v=20260501">
 
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3T8QXNWYV"></script>
@@ -212,6 +212,7 @@
         /* =============================================
            GLOBAL
         ============================================= */
+        html { scroll-behavior: smooth; }
         html, body { overflow-x: hidden; width: 100%; }
         * { box-sizing: border-box; }
 
@@ -412,62 +413,15 @@
             animation: fadeUp 0.8s ease-out 0.65s forwards;
         }
 
-        .btn-primary-hero {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: 1rem 2.25rem;
-            background: linear-gradient(135deg, #4E7C65, #2D4E3D);
-            color: white;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border-radius: 100px;
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 20px rgba(78,124,101,0.35);
+        /* hero CTA ghost — overrides on light background */
+        .hero-cta-row .btn-ghost {
+            color: #2D4E3D;
+            border-color: rgba(45,78,61,0.35);
         }
-
-        .btn-primary-hero::before {
-            content: '';
-            position: absolute; inset: 0;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
-            background-size: 200% 100%;
-            animation: shimmer 3s ease-in-out infinite;
-        }
-
-        .btn-primary-hero:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(78,124,101,0.45);
-            color: white;
-        }
-
-        @keyframes shimmer {
-            0%   { background-position: -200% center; }
-            100% { background-position: 200% center; }
-        }
-
-        .btn-ghost-hero {
-            display: inline-flex;
-            align-items: center;
-            gap: var(--space-2);
-            padding: 1rem 1.75rem;
-            border: 1.5px solid rgba(78,124,101,0.3);
-            color: #4E7C65;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border-radius: 100px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .btn-ghost-hero:hover {
-            border-color: #4E7C65;
-            background: rgba(78,124,101,0.06);
-            color: #4E7C65;
+        .hero-cta-row .btn-ghost:hover {
+            background: rgba(45,78,61,0.06);
+            border-color: rgba(45,78,61,0.55);
+            color: #2D4E3D;
         }
 
         .hero-stats {
@@ -513,42 +467,47 @@
         }
 
         /* =============================================
-           COUNTDOWN STRIP
+           AVAILABILITY STRIP
         ============================================= */
-        .countdown-banner {
-            background: linear-gradient(135deg, #2D4E3D 0%, #1a2e22 100%);
-            color: white;
-            padding: var(--space-3) 0;
+        .availability-banner {
+            background: #1a2e22;
+            color: rgba(255,255,255,0.85);
+            padding: 10px 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
             text-align: center;
         }
 
-        .countdown-content {
+        .availability-banner .container {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: var(--space-6);
-            flex-wrap: wrap;
+            gap: 8px;
         }
 
-        .countdown-text { font-size: var(--font-size-sm); font-family: 'Inter', sans-serif; }
+        .availability-banner strong { color: white; font-weight: 600; }
 
-        .countdown-timer {
-            font-size: var(--font-size-sm);
-            font-weight: 600;
-            background: rgba(255,255,255,0.12);
-            padding: var(--space-1) var(--space-4);
-            border-radius: 100px;
-            font-family: 'Inter', sans-serif;
+        .availability-banner a {
+            color: #F59E0B;
+            font-weight: 500;
+            text-decoration: none;
         }
 
-        #countdown-display { color: #C9924A; font-variant-numeric: tabular-nums; }
+        .availability-banner a:hover { text-decoration: underline; }
+
+        .availability-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: #4ade80;
+            flex-shrink: 0;
+            box-shadow: 0 0 6px rgba(74,222,128,0.6);
+        }
 
         /* =============================================
            PAIN SECTION
         ============================================= */
         .pain-section {
             background: #f5f0e8;
-            padding: var(--space-16) 0;
         }
 
         .pain-headline {
@@ -572,63 +531,87 @@
 
         .pain-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: var(--space-5);
         }
 
+        /* 3 cards: go straight to single column so no lone card on row 2 */
+        @media (max-width: 900px) { .pain-grid { grid-template-columns: 1fr; } }
+
         .pain-card {
             background: white;
+            border: 1px solid rgba(0,0,0,0.07);
             border-radius: 20px;
             padding: var(--space-7) var(--space-6);
-            box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+            transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
         }
 
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #4E7C65, #C9924A);
+            border-radius: 20px 20px 0 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s cubic-bezier(0.23,1,0.32,1);
+        }
+
+        .pain-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(78,124,101,0.18);
+            box-shadow: 0 20px 48px rgba(78,124,101,0.1), 0 6px 20px rgba(0,0,0,0.06);
+        }
+
+        .pain-card:hover::before { transform: scaleX(1); }
+
         .pain-icon {
-            width: 48px; height: 48px;
-            background: var(--brand-cream);
-            border-radius: 14px;
+            width: 56px; height: 56px;
+            background: linear-gradient(135deg, rgba(78,124,101,0.12) 0%, rgba(78,124,101,0.06) 100%);
+            box-shadow: inset 0 1px 0 rgba(78,124,101,0.15);
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 22px;
-            margin-bottom: var(--space-4);
+            margin-bottom: var(--space-5);
+            transition: transform 0.35s cubic-bezier(0.23,1,0.32,1);
+            flex-shrink: 0;
         }
+
+        .pain-card:hover .pain-icon { transform: scale(1.08) rotate(3deg); }
 
         .pain-card h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: var(--space-2);
+            color: #111;
+            margin-bottom: var(--space-3);
         }
 
         .pain-card p {
             color: #6b7280;
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             line-height: 1.7;
             font-family: 'Inter', sans-serif;
+            flex-grow: 1;
+            overflow-wrap: break-word;
         }
 
         /* =============================================
            SERVICES
         ============================================= */
         .services-section {
-            background: white;
-            padding: var(--space-20) 0;
+            background: #f5f0e8;
         }
 
-        .section-eyebrow {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #4E7C65;
-            text-align: center;
-            margin-bottom: var(--space-3);
-            display: block;
-        }
+        /* .section-label defined in minimal-design-system.css — override center alignment here */
+        .section-label { text-align: center; }
+        .section-label--left { text-align: left; }
 
         .section-heading {
             font-family: 'Cormorant Garamond', serif;
@@ -660,15 +643,15 @@
         @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
 
         .service-card {
-            background: rgba(250,246,239,0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(78,124,101,0.1);
+            background: white;
+            border: 1px solid rgba(0,0,0,0.07);
             border-radius: 20px;
             padding: var(--space-7) var(--space-6);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
             transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
             position: relative;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .service-card::before {
@@ -677,39 +660,54 @@
             top: 0; left: 0; right: 0;
             height: 3px;
             background: linear-gradient(90deg, #4E7C65, #C9924A);
+            border-radius: 20px 20px 0 0;
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.4s cubic-bezier(0.23,1,0.32,1);
         }
 
         .service-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(78,124,101,0.2);
-            box-shadow: 0 24px 60px rgba(78,124,101,0.1), 0 8px 24px rgba(0,0,0,0.06);
-            background: white;
+            transform: translateY(-6px);
+            border-color: rgba(78,124,101,0.18);
+            box-shadow: 0 20px 48px rgba(78,124,101,0.1), 0 6px 20px rgba(0,0,0,0.06);
         }
 
         .service-card:hover::before { transform: scaleX(1); }
 
         .service-card-icon {
-            width: 52px; height: 52px;
-            background: linear-gradient(135deg, rgba(78,124,101,0.1), rgba(201,146,74,0.1));
-            border-radius: 14px;
+            width: 56px; height: 56px;
+            border-radius: 16px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: var(--space-4);
-            transition: transform 0.3s ease;
+            margin-bottom: var(--space-5);
+            transition: transform 0.35s cubic-bezier(0.23,1,0.32,1);
+            flex-shrink: 0;
         }
 
-        .service-card:hover .service-card-icon { transform: scale(1.1) rotate(4deg); }
+        .service-card-icon--teal {
+            background: linear-gradient(135deg, rgba(78,124,101,0.12) 0%, rgba(78,124,101,0.06) 100%);
+            box-shadow: inset 0 1px 0 rgba(78,124,101,0.15);
+        }
+
+        .service-card-icon--gold {
+            background: linear-gradient(135deg, rgba(201,146,74,0.12) 0%, rgba(201,146,74,0.06) 100%);
+            box-shadow: inset 0 1px 0 rgba(201,146,74,0.15);
+        }
+
+        .service-card-icon--rose {
+            background: linear-gradient(135deg, rgba(192,128,128,0.12) 0%, rgba(192,128,128,0.06) 100%);
+            box-shadow: inset 0 1px 0 rgba(192,128,128,0.15);
+        }
+
+        .service-card:hover .service-card-icon { transform: scale(1.08) rotate(3deg); }
 
         .service-card h3 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.45rem;
             font-weight: 600;
             color: #111;
-            margin-bottom: var(--space-2);
+            margin-bottom: var(--space-3);
         }
 
         .service-card p {
@@ -717,6 +715,27 @@
             font-size: 0.9rem;
             line-height: 1.7;
             font-family: 'Inter', sans-serif;
+            flex-grow: 1;
+            overflow-wrap: break-word;
+        }
+
+        .service-card-arrow {
+            margin-top: var(--space-5);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #4E7C65;
+            opacity: 0;
+            transform: translateX(-6px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .service-card:hover .service-card-arrow {
+            opacity: 1;
+            transform: translateX(0);
         }
 
         /* =============================================
@@ -724,7 +743,6 @@
         ============================================= */
         .process-section {
             background: linear-gradient(160deg, #f0ede6 0%, #faf6ef 100%);
-            padding: var(--space-20) 0;
             position: relative;
             overflow: hidden;
         }
@@ -762,7 +780,18 @@
 
         @media (max-width: 768px) { .process-grid::before { display: none; } }
 
-        .process-step { text-align: center; }
+        .process-step {
+            text-align: center;
+            padding: var(--space-6);
+            border-radius: 20px;
+            transition: background 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .process-step:hover {
+            background: white;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+        }
 
         .step-badge {
             width: 64px; height: 64px;
@@ -803,7 +832,6 @@
         ============================================= */
         .faq-section {
             background: white;
-            padding: var(--space-20) 0;
         }
 
         .faq-list { margin-top: var(--space-10); max-width: 760px; margin-left: auto; margin-right: auto; }
@@ -820,7 +848,10 @@
             cursor: pointer;
             user-select: none;
             gap: var(--space-4);
+            transition: opacity 0.2s;
         }
+
+        .faq-question:hover { opacity: 0.75; }
 
         .faq-question h3 {
             font-family: 'Cormorant Garamond', serif;
@@ -878,7 +909,6 @@
         ============================================= */
         .about-section {
             background: linear-gradient(160deg, #faf6ef 0%, #f5f0e8 100%);
-            padding: var(--space-20) 0;
         }
 
         .about-grid {
@@ -888,10 +918,15 @@
             align-items: center;
         }
 
-        @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; gap: var(--space-8); } }
+        @media (max-width: 768px) {
+            .about-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+            .about-visual { padding-bottom: 0; }
+            .about-badge { position: static; margin-top: var(--space-5); display: inline-flex; }
+        }
 
         .about-visual {
             position: relative;
+            padding-bottom: 28px;
         }
 
         .about-quote-card {
@@ -900,6 +935,12 @@
             padding: var(--space-8);
             box-shadow: 0 8px 40px rgba(0,0,0,0.07);
             position: relative;
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .about-quote-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.11);
         }
 
         .about-quote-card::before {
@@ -955,8 +996,6 @@
             margin-bottom: 2px;
         }
 
-        .about-content {}
-
         .about-content h2 {
             font-family: 'Cormorant Garamond', serif;
             font-size: clamp(2rem, 4vw, 3.2rem);
@@ -997,7 +1036,6 @@
         ============================================= */
         .booking-section {
             background: linear-gradient(160deg, #0d1a10 0%, #0f1e13 100%);
-            padding: var(--space-20) 0;
             position: relative;
             overflow: hidden;
         }
@@ -1028,16 +1066,7 @@
             text-align: center;
         }
 
-        .booking-eyebrow {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.72rem;
-            font-weight: 700;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #C9924A;
-            margin-bottom: var(--space-4);
-            display: block;
-        }
+        /* booking-eyebrow — uses .section-label from design system */
 
         .booking-section h2 {
             font-family: 'Cormorant Garamond', serif;
@@ -1182,6 +1211,22 @@
         .footer-legal-links a:hover { color: #4E7C65; }
 
         /* =============================================
+           MODIFIERS / EXTRACTED INLINE STYLES
+        ============================================= */
+        /* .section-eyebrow--left removed — use .section-label--left */
+
+        .booking-note strong { color: rgba(255,255,255,0.6); }
+
+        .footer-contact-item--top { align-items: flex-start; gap: 8px; }
+        .footer-contact-item--top svg { margin-top: 2px; }
+
+        .footer-location {
+            color: #9ca3af;
+            font-size: 0.88rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* =============================================
            SCROLL REVEAL
         ============================================= */
         [data-reveal] {
@@ -1205,24 +1250,26 @@
         .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 var(--space-6); }
         @media (max-width: 640px) { .container { padding: 0 var(--space-4); } }
 
-        .btn {
-            display: inline-flex; align-items: center; justify-content: center;
-            padding: var(--space-3) var(--space-6);
-            font-size: var(--font-size-base); font-weight: 600;
-            border-radius: 100px; border: none; cursor: pointer;
-            transition: all 0.3s ease; text-decoration: none;
-            font-family: 'Inter', sans-serif;
+        /* section-padding — defined here so it beats section-specific rules above */
+        .section-padding { padding-top: 96px; padding-bottom: 96px; }
+        @media (max-width: 768px) { .section-padding { padding-top: 64px; padding-bottom: 64px; } }
+
+        /* btn base + primary + ghost + lg come from minimal-design-system.css */
+
+        /* =============================================
+           ACCESSIBILITY
+        ============================================= */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            [data-reveal] { opacity: 1; transform: none; transition: none; }
+            .hero-eyebrow, .hero h1, .hero-sub, .hero-cta-row, .hero-stats {
+                opacity: 1; animation: none;
+            }
         }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #4E7C65, #2D4E3D);
-            color: white;
-            box-shadow: 0 4px 16px rgba(78,124,101,0.3);
-        }
-
-        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(78,124,101,0.4); color: white; }
-
-        .btn-lg { padding: var(--space-4) var(--space-8); font-size: var(--font-size-lg); }
     </style>
 </head>
 <body>
@@ -1262,25 +1309,25 @@
                 </span>
 
                 <h1>
-                    Your Studio Deserves<br>
-                    <span class="hero-accent">A Full Schedule.</span>
+                    We Build the System<br>
+                    <span class="hero-accent">That Fills Your Schedule.</span>
                 </h1>
 
                 <p class="hero-sub">
-                    We build the websites, automations, and booking funnels that turn searchers into loyal clients — so you can focus on the work that matters.
+                    Website, local SEO, booking automation, and client follow-up — one connected system, built for wellness businesses, live in 30 days.
                 </p>
 
                 <div class="hero-cta-row">
-                    <a href="#booking" class="btn-primary-hero">
+                    <a href="#booking" class="btn btn-primary">
                         Book a Strategy Call
-                        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                     </a>
-                    <a href="#how-it-works" class="btn-ghost-hero">See How It Works</a>
+                    <a href="#how-it-works" class="btn btn-ghost">See How It Works</a>
                 </div>
 
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number" data-count="30">0</span>
+                        <span class="stat-number" data-target="30">30</span>
                         <span class="stat-label">Day Launch</span>
                     </div>
                     <div class="stat-divider"></div>
@@ -1298,39 +1345,33 @@
         </div>
     </section>
 
-    <!-- COUNTDOWN STRIP -->
-    <div class="countdown-banner">
+    <!-- AVAILABILITY STRIP -->
+    <div class="availability-banner">
         <div class="container">
-            <div class="countdown-content">
-                <span class="countdown-text">
-                    <strong><span id="spots-left">3</span> spots left this month</strong> — Limited new client availability
-                </span>
-                <span class="countdown-timer">
-                    Resets in: <span id="countdown-display">--:--:--</span>
-                </span>
-            </div>
+            <span class="availability-dot"></span>
+            Now accepting <strong>3 new clients</strong> for <span id="avail-month">May</span> — <a href="#booking">See if you qualify →</a>
         </div>
     </div>
 
     <!-- PAIN SECTION -->
-    <section class="pain-section">
+    <section class="pain-section section-padding">
         <div class="container">
             <h2 class="pain-headline" data-reveal>You're exceptional at your craft.<br>Here's what's holding you back.</h2>
             <p class="pain-sub" data-reveal data-delay="1">Most wellness businesses lose clients before they ever walk through the door.</p>
 
             <div class="pain-grid">
                 <div class="pain-card" data-reveal data-delay="1">
-                    <div class="pain-icon">🔍</div>
+                    <div class="pain-icon"><svg width="24" height="24" fill="none" stroke="#4E7C65" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div>
                     <h3>You're invisible in search</h3>
                     <p>Clients in your city are searching for your exact service right now — and finding your competitors instead. Local SEO is the fastest-ROI channel most wellness businesses ignore.</p>
                 </div>
                 <div class="pain-card" data-reveal data-delay="2">
-                    <div class="pain-icon">📉</div>
+                    <div class="pain-icon"><svg width="24" height="24" fill="none" stroke="#4E7C65" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg></div>
                     <h3>Your website doesn't convert</h3>
                     <p>Visitors land on your site, browse for 20 seconds, and leave without booking. A beautiful website that doesn't convert is just an expensive brochure.</p>
                 </div>
                 <div class="pain-card" data-reveal data-delay="3">
-                    <div class="pain-icon">⏳</div>
+                    <div class="pain-icon"><svg width="24" height="24" fill="none" stroke="#4E7C65" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
                     <h3>Marketing drains your time</h3>
                     <p>You got into wellness to help people — not to manage Instagram, chase leads, and figure out Google Ads. Your energy belongs with your clients.</p>
                 </div>
@@ -1339,97 +1380,103 @@
     </section>
 
     <!-- SERVICES SECTION -->
-    <section class="services-section">
+    <section class="services-section section-padding">
         <div class="container">
-            <span class="section-eyebrow" data-reveal>What We Do</span>
-            <h2 class="section-heading" data-reveal data-delay="1">Everything your wellness<br>business needs to grow.</h2>
-            <p class="section-sub" data-reveal data-delay="2">One partner. End-to-end systems. Built specifically for the wellness industry.</p>
+            <span class="section-label" data-reveal>Systems We Build</span>
+            <h2 class="section-heading" data-reveal data-delay="1">One connected system.<br>Not a bundle of campaigns.</h2>
+            <p class="section-sub" data-reveal data-delay="2">Every piece is built to work together — so clients find you, book automatically, and keep coming back.</p>
 
             <div class="services-grid">
                 <div class="service-card" data-reveal data-delay="1">
-                    <div class="service-card-icon">
+                    <div class="service-card-icon service-card-icon--teal">
                         <svg width="24" height="24" fill="none" stroke="#4E7C65" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
                     </div>
-                    <h3>Wellness Web Design</h3>
-                    <p>Beautiful, fast, conversion-focused sites that reflect your brand and turn visitors into booked clients.</p>
+                    <h3>Conversion-Ready Website</h3>
+                    <p>Fast, mobile-first sites engineered to turn visitors into booked clients — not just look good in a portfolio.</p>
+                    <span class="service-card-arrow">Learn more <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                 </div>
 
                 <div class="service-card" data-reveal data-delay="2">
-                    <div class="service-card-icon">
+                    <div class="service-card-icon service-card-icon--teal">
                         <svg width="24" height="24" fill="none" stroke="#4E7C65" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
                     </div>
-                    <h3>Local SEO & Discovery</h3>
-                    <p>Get found when clients search "yoga studio near me" or "best med spa in [city]." Own your local search results.</p>
+                    <h3>Local Search System</h3>
+                    <p>Dominate "near me" searches in your city. We build the SEO infrastructure that keeps you visible without ongoing ad spend.</p>
+                    <span class="service-card-arrow">Learn more <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                 </div>
 
                 <div class="service-card" data-reveal data-delay="3">
-                    <div class="service-card-icon">
+                    <div class="service-card-icon service-card-icon--gold">
                         <svg width="24" height="24" fill="none" stroke="#C9924A" stroke-width="2" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                     </div>
-                    <h3>Client Acquisition</h3>
-                    <p>Automated lead capture and follow-up systems that bring new clients in and keep them coming back.</p>
+                    <h3>Lead Capture System</h3>
+                    <p>Automated lead capture and follow-up that runs 24/7 — so no inquiry goes cold while you're in session.</p>
+                    <span class="service-card-arrow">Learn more <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                 </div>
 
                 <div class="service-card" data-reveal data-delay="4">
-                    <div class="service-card-icon">
+                    <div class="service-card-icon service-card-icon--gold">
                         <svg width="24" height="24" fill="none" stroke="#C9924A" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                     </div>
-                    <h3>Online Booking Systems</h3>
-                    <p>Seamless booking that reduces no-shows, automates reminders, and makes scheduling effortless for clients.</p>
+                    <h3>Automated Booking Flow</h3>
+                    <p>Booking, reminders, and confirmations on autopilot — fewer no-shows, less back-and-forth, more time with clients.</p>
+                    <span class="service-card-arrow">Learn more <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                 </div>
 
                 <div class="service-card" data-reveal data-delay="5">
-                    <div class="service-card-icon">
+                    <div class="service-card-icon service-card-icon--gold">
                         <svg width="24" height="24" fill="none" stroke="#C9924A" stroke-width="2" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/></svg>
                     </div>
-                    <h3>Content & Social</h3>
-                    <p>Strategic content that builds authority, attracts your ideal clients, and keeps your community engaged.</p>
+                    <h3>Content Engine</h3>
+                    <p>A repeatable content system that builds local authority, attracts ideal clients, and gives your community a reason to stay.</p>
+                    <span class="service-card-arrow">Learn more <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                 </div>
 
                 <div class="service-card" data-reveal data-delay="6">
-                    <div class="service-card-icon">
+                    <div class="service-card-icon service-card-icon--rose">
                         <svg width="24" height="24" fill="none" stroke="#C08080" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                     </div>
-                    <h3>Strategy & Consulting</h3>
-                    <p>Clear growth roadmaps tailored to your market. We tell you exactly what works — no guesswork.</p>
+                    <h3>Growth Blueprint</h3>
+                    <p>A clear, step-by-step growth plan built for your market and budget — so you know exactly what to build, and in what order.</p>
+                    <span class="service-card-arrow">Learn more <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section class="process-section" id="how-it-works">
+    <section class="process-section section-padding" id="how-it-works">
         <div class="container">
-            <span class="section-eyebrow" data-reveal>The Process</span>
-            <h2 class="section-heading" data-reveal data-delay="1">From invisible to fully booked<br>in 30 days.</h2>
-            <p class="section-sub" data-reveal data-delay="2">A simple, proven system we've built specifically for wellness businesses.</p>
+            <span class="section-label" data-reveal>How It Works</span>
+            <h2 class="section-heading" data-reveal data-delay="1">Your system, live<br>in 30 days.</h2>
+            <p class="section-sub" data-reveal data-delay="2">Three focused steps. No bloated retainers. No months of back-and-forth.</p>
 
             <div class="process-grid">
                 <div class="process-step" data-reveal data-delay="1">
                     <div class="step-badge">1</div>
-                    <h3>We Audit</h3>
-                    <p>We dig into your current online presence, competitors, and every missed booking opportunity — and give you a clear picture of exactly what's not working.</p>
+                    <h3>We Diagnose</h3>
+                    <p>We map your current online presence, find every gap competitors are exploiting, and identify exactly where your system is leaking clients.</p>
                 </div>
 
                 <div class="process-step" data-reveal data-delay="3">
                     <div class="step-badge">2</div>
                     <h3>We Build</h3>
-                    <p>Custom website, local SEO, booking system, and automation — all tailored to your wellness business and your ideal client. Done in 30 days.</p>
+                    <p>We build your complete client acquisition system — website, local SEO, automated booking flow, and follow-up sequences — in 30 days.</p>
                 </div>
 
                 <div class="process-step" data-reveal data-delay="5">
                     <div class="step-badge">3</div>
-                    <h3>You Fill Up</h3>
-                    <p>New clients find you, book online, and come back consistently. Your schedule fills. You focus on your craft. We handle the growth.</p>
+                    <h3>System Runs</h3>
+                    <p>Your system attracts, converts, and follows up with clients automatically. You focus on your craft. The pipeline keeps moving.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- FAQ SECTION -->
-    <section class="faq-section">
+    <section class="faq-section section-padding">
         <div class="container">
-            <span class="section-eyebrow" data-reveal>FAQ</span>
+            <span class="section-label" data-reveal>FAQ</span>
             <h2 class="section-heading" data-reveal data-delay="1">Questions we hear<br>all the time.</h2>
 
             <div class="faq-list" data-reveal data-delay="2">
@@ -1509,12 +1556,12 @@
     </section>
 
     <!-- ABOUT SECTION -->
-    <section class="about-section" id="about">
+    <section class="about-section section-padding" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-visual" data-reveal>
                     <div class="about-quote-card">
-                        <p class="about-quote-text">Simple funnels. Clear positioning. Predictable bookings.</p>
+                        <p class="about-quote-text">We build systems. Not campaigns.</p>
                         <span class="about-quote-attr">— Deante Powell, Founder</span>
                     </div>
                     <div class="about-badge">
@@ -1524,10 +1571,10 @@
                 </div>
 
                 <div class="about-content" data-reveal data-delay="2">
-                    <span class="section-eyebrow" style="text-align:left;">About Rising Sun Digital</span>
-                    <h2>Built for wellness.<br>Obsessed with results.</h2>
-                    <p>I'm <strong>Deante Powell</strong>, founder of Rising Sun Digital. Most agencies will take your money and send you reports full of vanity metrics. I don't.</p>
-                    <p>Rising Sun Digital builds websites, automations, and client acquisition systems for yoga studios, med spas, pilates studios, and wellness centers that want a full schedule — not a pretty dashboard.</p>
+                    <span class="section-label section-label--left">About Rising Sun Digital</span>
+                    <h2>We build systems.<br>Not campaigns.</h2>
+                    <p>I'm <strong>Deante Powell</strong>, founder of Rising Sun Digital. Most agencies sell you campaigns, reports, and retainers. I build infrastructure — the kind that keeps working whether you're in session or on vacation.</p>
+                    <p>Rising Sun Digital builds the complete client acquisition system for yoga studios, med spas, pilates studios, and wellness centers: website, local SEO, booking automation, and follow-up sequences — all connected, all measurable.</p>
                     <p>Based in <strong>El Paso, TX</strong> — serving wellness businesses nationwide.</p>
 
                     <div class="about-tags">
@@ -1539,21 +1586,21 @@
                         <span class="about-tag">Wellness Centers</span>
                     </div>
 
-                    <a href="#booking" class="btn btn-primary btn-lg">Claim Your Spot →</a>
+                    <a href="#booking" class="btn btn-primary">Claim Your Spot</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- BOOKING SECTION -->
-    <section id="booking" class="booking-section">
+    <section id="booking" class="booking-section section-padding">
         <div class="booking-orb-1"></div>
         <div class="booking-orb-2"></div>
         <div class="container">
             <div class="booking-inner">
-                <span class="booking-eyebrow" data-reveal>Ready When You Are</span>
-                <h2 data-reveal data-delay="1">Let's fill<br>your schedule.</h2>
-                <p data-reveal data-delay="2">Pick a time. We'll talk about your business, where you're losing clients, and what we'd do about it. No pitch, no pressure.</p>
+                <span class="section-label" data-reveal>Ready When You Are</span>
+                <h2 data-reveal data-delay="1">Let's build<br>your system.</h2>
+                <p data-reveal data-delay="2">Pick a time. We'll map out your client acquisition system, identify where you're losing people, and show you exactly what we'd build first. No pitch, no pressure.</p>
 
                 <div class="calendly-wrap" data-reveal data-delay="3">
                     <div class="calendly-inline-widget"
@@ -1562,7 +1609,7 @@
                     </div>
                 </div>
 
-                <p class="booking-note" data-reveal data-delay="4">Taking <strong style="color:rgba(255,255,255,0.6);">3 new clients</strong> this month — spots go fast.</p>
+                <p class="booking-note" data-reveal data-delay="4">Taking <strong>3 new clients</strong> this month — spots go fast.</p>
             </div>
         </div>
     </section>
@@ -1576,11 +1623,11 @@
                         <img src="images/logo-new.png" alt="Rising Sun Digital" width="48" height="48" loading="lazy">
                         <div class="footer-brand-text">
                             <span class="footer-brand-name">Rising Sun Digital</span>
-                            <span class="footer-brand-tagline">Digital Growth Partner</span>
+                            <span class="footer-brand-tagline">Client Acquisition Systems</span>
                         </div>
                     </div>
                     <p class="footer-description">
-                        Lead generation and booking systems for yoga studios, med spas, and wellness businesses that need clients now.
+                        Automated client acquisition systems for yoga studios, med spas, and wellness businesses — built to run without you.
                     </p>
                     <div class="footer-social">
                         <a href="https://www.instagram.com/risingsundigital/" target="_blank" rel="noopener" aria-label="Instagram">
@@ -1618,15 +1665,16 @@
                     <ul>
                         <li class="footer-contact-item">
                             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <!-- TODO: replace with hello@risingsun.digital once custom domain email is set up -->
                             <a href="mailto:risingsundigital4@gmail.com">risingsundigital4@gmail.com</a>
                         </li>
                         <li class="footer-contact-item">
                             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                             <a href="tel:+19152343570">(915) 234-3570</a>
                         </li>
-                        <li class="footer-contact-item" style="align-items:flex-start; gap:8px;">
-                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="margin-top:2px;flex-shrink:0;"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                            <span style="color:#9ca3af;font-size:0.88rem;font-family:'Inter',sans-serif;">El Paso, TX — Serving clients nationwide</span>
+                        <li class="footer-contact-item footer-contact-item--top">
+                            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <span class="footer-location">El Paso, TX — Serving clients nationwide</span>
                         </li>
                     </ul>
                 </div>
@@ -1653,33 +1701,12 @@
         });
     </script>
 
-    <!-- Countdown Timer -->
+    <!-- Availability month auto-update -->
     <script>
         (function() {
-            function getNextMonday() {
-                const now = new Date();
-                const day = now.getDay();
-                const daysUntilMonday = day === 0 ? 1 : 8 - day;
-                const monday = new Date(now);
-                monday.setDate(now.getDate() + daysUntilMonday);
-                monday.setHours(0, 0, 0, 0);
-                return monday;
-            }
-
-            function updateCountdown() {
-                const now = new Date();
-                const target = getNextMonday();
-                const diff = target - now;
-                if (diff <= 0) { updateCountdown(); return; }
-                const h = Math.floor(diff / 3600000);
-                const m = Math.floor((diff % 3600000) / 60000);
-                const s = Math.floor((diff % 60000) / 1000);
-                const el = document.getElementById('countdown-display');
-                if (el) el.textContent = `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
-            }
-
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
+            var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+            var el = document.getElementById('avail-month');
+            if (el) el.textContent = months[new Date().getMonth()];
         })();
     </script>
 
@@ -1716,12 +1743,12 @@
     <!-- Counter Animation -->
     <script>
         (function() {
-            const counters = document.querySelectorAll('[data-count]');
+            const counters = document.querySelectorAll('[data-target]');
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(function(entry) {
                     if (!entry.isIntersecting) return;
                     const el = entry.target;
-                    const target = parseInt(el.dataset.count);
+                    const target = parseInt(el.dataset.target);
                     const duration = 1400;
                     const start = performance.now();
                     function step(now) {
